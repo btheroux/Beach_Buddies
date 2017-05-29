@@ -1,3 +1,3 @@
 class Country < ApplicationRecord
-  belongs_to :federation
+  has_many :federations
 end
