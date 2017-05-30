@@ -6,8 +6,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @result = Result.new
-    @
   end
 
   def destroy
