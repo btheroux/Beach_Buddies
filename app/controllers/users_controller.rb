@@ -10,13 +10,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
-
+    @user.destroy
   end
 
   def edit
   end
 
   def update
+
   end
 
   private
@@ -24,4 +25,7 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+
+  def user_params
+    params.require(:user).permit()
 end
