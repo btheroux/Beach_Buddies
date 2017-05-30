@@ -33,32 +33,35 @@ ActiveRecord::Schema.define(version: 20170530151721) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
-    t.integer  "federation_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["federation_id"], name: "index_countries_on_federation_id", using: :btree
   end
 
   create_table "federations", force: :cascade do |t|
     t.string   "name"
+    t.integer  "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_federations_on_country_id", using: :btree
   end
 
   create_table "rankings", force: :cascade do |t|
     t.integer  "score"
+    t.date     "date"
     t.integer  "federation_id"
+    t.integer  "user_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["federation_id"], name: "index_rankings_on_federation_id", using: :btree
+    t.index ["user_id"], name: "index_rankings_on_user_id", using: :btree
   end
 
   create_table "results", force: :cascade do |t|
     t.string   "game_name"
     t.string   "game_type"
     t.string   "description"
-    t.string   "results"
-    t.integer  "date_year"
+    t.string   "achievement"
+    t.date     "date"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -110,12 +113,16 @@ ActiveRecord::Schema.define(version: 20170530151721) do
 
   create_table "videos", force: :cascade do |t|
     t.string   "url"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_videos_on_user_id", using: :btree
   end
 
-  add_foreign_key "countries", "federations"
+  add_foreign_key "federations", "countries"
   add_foreign_key "rankings", "federations"
+  add_foreign_key "rankings", "users"
   add_foreign_key "results", "users"
   add_foreign_key "users", "teams"
+  add_foreign_key "videos", "users"
 end
