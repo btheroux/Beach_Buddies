@@ -6,18 +6,21 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    @result = Result.new
+    @
   end
 
   def destroy
     @user.destroy
+    redirect_to users_path
   end
 
   def edit
   end
 
   def update
-
+    @user.update(user_params)
+    redirect_to user_path(@user)
   end
 
   private
@@ -27,5 +30,5 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit()
+    params.require(:user).permit(:first_name, :last_name, :phone_number, :level, :facebook_page, :instagram_account, :description, :gender, :usual_court_address)
 end
