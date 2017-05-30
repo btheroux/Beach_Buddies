@@ -1,2 +1,28 @@
 <h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<% @users.each do |user| %>
+  <p><%= user.level %></p>
+  <p><%= user.email %></p>
+  <p><%= user.first_name %></p>
+  <p><%= user.last_name %></p>
+  <p><%= user.gender %></p>
+  <p><%= user.usual_court_address %></p>
+  <p><%= user.phone_number %></p>
+  <p><%= user.facebook_page %></p>
+  <p><%= user.instagram_account %></p>
+  <p><%= user.description %></p>
+  <p><%= user.photo %></p>
+user.ranking.score
+user.ranking.federation.name
+user.ranking.federation.country.country
+user.result.game_name
+user.result.game_type
+user.result.description
+user.result.results
+user.result.date_year
+user.team.name
+user.team.facebook_page
+user.team.Instagram_account
+user.team.facebook_page_likes
+user.video
+<% end %>
