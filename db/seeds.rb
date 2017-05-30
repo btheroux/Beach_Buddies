@@ -14,51 +14,51 @@ end
 puts "All records deleted, creating new records"
 
 
-country1 = Country.new(name:"Albania")
+country1 = Country.new(country:"Albania")
 country1.save
 
-country2 = Country.new(name:"Andorra")
+country2 = Country.new(country:"Andorra")
 country2.save
 
-country3 = Country.new(name:"Armenia")
+country3 = Country.new(country:"Armenia")
 country3.save
 
-country4 = Country.new(name:"Austria")
+country4 = Country.new(country:"Austria")
 country4.save
 
-country5 = Country.new(name:"Azerbaijan")
+country5 = Country.new(country:"Azerbaijan")
 country5.save
 
-country6 = Country.new(name:"Belarus")
+country6 = Country.new(country:"Belarus")
 country6.save
 
-country7 = Country.new(name:"Belgium")
+country7 = Country.new(country:"Belgium")
 country7.save
 
-country8 = Country.new(name:"Bosnia-Herzegovina")
+country8 = Country.new(country:"Bosnia-Herzegovina")
 country8.save
 
-country9 = Country.new(name:"Bulgaria")
+country9 = Country.new(country:"Bulgaria")
 country9.save
 
-country10 = Country.new(name:"Croatia")
+country10 = Country.new(country:"Croatia")
 country10.save
 
-country11 = Country.new(name:"Cyprus")
+country11 = Country.new(country:"Cyprus")
 country11.save
 
-country12 = Country.new(name:"Czech Republic")
+country12 = Country.new(country:"Czech Republic")
 country12.save
 
-country13 = Country.new(name:"Denmark")
+country13 = Country.new(country:"Denmark")
 country13.save
 
-country14 = Country.new(name:"England")
+country14 = Country.new(country:"England")
 country14.save
 
 
 federation1 = Federation.new(name:"FEDERATA SHQIPTARE E VOLEJBOLLIT", url:"fshv.org.al")
-federation1.country = country1
+federation1.country << country1
 federation1.save
 
 federation2 = Federation.new(name:"FEDERACIÓ ANDORRANA DE VOLEIBOL", url:"www.fav.ad")
@@ -115,53 +115,94 @@ federation14.country = country14
 federation14.save
 
 
-user1 = User.new(email:"maria@dudu.com", first_name: "Maria",
-  last_name: "Tyndeskov", level: , gender: "female", password: "123456")
+user1 = User.new(email:"maria@dudu.com", first_name:"Maria",
+  last_name:"Tyndeskov", level: , gender:"female", password:"123456")
 
-user2 = User.new(email:"line@dudu.com", first_name: "Line",
-  last_name: "Trans", level: , gender: "female", password: "123456")
+user2 = User.new(email:"line@dudu.com", first_name:"Line",
+  last_name:"Trans", level: , gender:"female", password:"123456")
 
-user3 = User.new(email:"lærke@dudu.com", first_name: "Lærke",
-  last_name: "Mygind", level: , gender: "female", password: "123456")
+user3 = User.new(email:"lærke@dudu.com", first_name:"Lærke",
+  last_name:"Mygind", level: , gender:"female", password:"123456")
 
-user4 = User.new(email:"cecilie@dudu.com", first_name: "Cecilie",
-  last_name: "Olsen", level: , gender: "female", password: "123456")
+user4 = User.new(email:"cecilie@dudu.com", first_name:"Cecilie",
+  last_name:"Olsen", level: , gender:"female", password:"123456")
 
-user5 = User.new(email:"pernille@dudu.com", first_name: "Pernille",
-  last_name: "Witt", level: , gender: "female", password: "123456")
+user5 = User.new(email:"pernille@dudu.com", first_name:"Pernille",
+  last_name:"Witt", level: , gender:"female", password:"123456")
 
-user6 = User.new(email:"trine@dudu.com", first_name: "Trine",
-  last_name: "Bak", level: , gender: "female", password: "123456")
+user6 = User.new(email:"trine@dudu.com", first_name:"Trine",
+  last_name:"Bak", level: , gender:"female", password:"123456")
 
-user7 = User.new(email:"sara@dudu.com", first_name: "Sara",
-  last_name: "Stief", level: , gender: "female", password: "123456")
+user7 = User.new(email:"sara@dudu.com", first_name:"Sara",
+  last_name:"Stief", level: , gender:"female", password:"123456")
 
-user8 = User.new(email:"frederikke@dudu.com", first_name: "Frederikke",
-  last_name: "Schade Jensen", level: , gender: "female", password: "123456")
+user8 = User.new(email:"frederikke@dudu.com", first_name:"Frederikke",
+  last_name:"Schade Jensen", level: , gender:"female", password:"123456")
 
-user9 = User.new(email:"jesper@dudu.com", first_name: "Jesper",
-  last_name: "Skovmark", level: , gender: "male", password: "123456")
+user9 = User.new(email:"jesper@dudu.com", first_name:"Jesper",
+  last_name:"Skovmark", level: , gender:"male", password:"123456")
 
-user10 = User.new(email:"patrick@dudu.com", first_name: "Patrick",
-  last_name: "Jørgensen", level: , gender: "male", password: "123456")
+user10 = User.new(email:"patrick@dudu.com", first_name:"Patrick",
+  last_name:"Jørgensen", level: , gender:"male", password:"123456")
 
-user11 = User.new(email:"daniel@dudu.com", first_name: "Daniel",
-  last_name: "Jonassen", level: , gender: "male", password: "123456")
+user11 = User.new(email:"daniel@dudu.com", first_name:"Daniel",
+  last_name:"Jonassen", level: , gender:"male", password:"123456")
 
-user12 = User.new(email:"morten@dudu.com", first_name: "Morten",
-  last_name: "Overgaard", level: , gender: "male", password: "123456")
+user12 = User.new(email:"morten@dudu.com", first_name:"Morten",
+  last_name:"Overgaard", level: , gender:"male", password:"123456")
 
-user13 = User.new(email:"danielt@dudu.com", first_name: "Daniel",
-  last_name: "Thomsen", level: , gender: "male", password: "123456")
+user13 = User.new(email:"danielt@dudu.com", first_name:"Daniel",
+  last_name:"Thomsen", level: , gender:"male", password:"123456")
 
-user14 = User.new(email:"kristoffer@dudu.com", first_name: "Kristoffer",
-  last_name: "Abell", level: , gender: "male", password: "123456")
+user14 = User.new(email:"kristoffer@dudu.com", first_name:"Kristoffer",
+  last_name:"Abell", level: , gender:"male", password:"123456")
 
-user15 = User.new(email:"livia@dudu.com", first_name: "Livia",
-  last_name: "Sebök", level: , gender: "female", password: "123456" )
+user15 = User.new(email:"livia@dudu.com", first_name:"Livia",
+  last_name:"Sebök", level: , gender:"female", password:"123456")
+
+federation14 = Federation.new(name:"VOLLEYBALL ENGLAND", url:"www.volleyballengland.org")
+federation14.country = country14
+federation14.save
+
+team1 = Team.new(name:"Teamtyndeskovtrans")
+team1.users << user1
+team1.users << user2
+team1.save
+
+team2 = Team.new(name:"teammygindolsen")
+team2.user << user3
+team2.user << user4
+team2.save
+
+team3 = Team.new(name:"TeamBakWitt")
+team3.user << user5
+team3.user << user6
+team3.save
+
+team4 = Team.new(name:"TeamStiefSchade")
+team4.user << user7
+team4.user << user8
+team4.save
+
+team5 = Team.new(name:"jorgensenskovmark")
+team5.user << user9
+team5.user << user10
+team5.save
+
+team6 = Team.new(name:"Team-JonassenOvergaard")
+team6.user << user11
+team6.user << user12
+team6.save
+
+team7 = Team.new(name:"Thomsen-Abell")
+team7.user << user13
+team7.user << user14
+team7.save
 
 
-team1.user = user1
+ranking1 = Ranking.new(score:"9")
+ranking1.federation1 = federation1
+federation1.save
 
 
 
@@ -169,10 +210,9 @@ team1.user = user1
 
 
 
+user1.ranking = ranking
 
-user1.ranking = rankring
-
-federation1.ranking = rankring
+federation1.ranking = ranking
 
 user1.video = video
 

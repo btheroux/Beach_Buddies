@@ -1,4 +1,4 @@
 class Federation < ApplicationRecord
-  has_many :country
-  has_many :ranking
+  has_many :countries
+  has_many :rankings
 end
