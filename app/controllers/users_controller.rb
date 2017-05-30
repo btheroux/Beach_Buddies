@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  has_attachments :photos, maximum: 20
   before_action :set_user, except: [:index]
 
   def index
@@ -28,5 +29,5 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :phone_number, :level, :facebook_page, :instagram_account, :description, :gender, :usual_court_address)
+    params.require(:user).permit(:first_name, :last_name, :phone_number, :level, :facebook_page, :instagram_account, :description, :gender, :usual_court_address, photos: [])
 end
