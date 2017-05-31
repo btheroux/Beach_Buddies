@@ -1,16 +1,5 @@
-# This file is auto-generated from the current state of the database. Instead
-# of editing this file, please use the migrations feature of Active Record to
-# incrementally modify your database, and then regenerate this schema definition.
-#
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
-#
-# It's strongly recommended that you check this file into your version control system.
+ActiveRecord::Schema.define(version: 20170530151721) do
 
-ActiveRecord::Schema.define(version: 20170531082638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,31 +21,35 @@ ActiveRecord::Schema.define(version: 20170531082638) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "federations", force: :cascade do |t|
     t.string   "name"
+    t.integer  "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "country_id"
+    t.index ["country_id"], name: "index_federations_on_country_id", using: :btree
   end
 
   create_table "rankings", force: :cascade do |t|
     t.integer  "score"
+    t.date     "date"
     t.integer  "federation_id"
+    t.integer  "user_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["federation_id"], name: "index_rankings_on_federation_id", using: :btree
+    t.index ["user_id"], name: "index_rankings_on_user_id", using: :btree
   end
 
   create_table "results", force: :cascade do |t|
     t.string   "game_name"
     t.string   "game_type"
     t.string   "description"
-    t.string   "score"
-    t.integer  "date_year"
+    t.string   "achievement"
+    t.date     "date"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -108,13 +101,15 @@ ActiveRecord::Schema.define(version: 20170531082638) do
 
   create_table "videos", force: :cascade do |t|
     t.string   "url"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
+    t.index ["user_id"], name: "index_videos_on_user_id", using: :btree
   end
 
   add_foreign_key "federations", "countries"
   add_foreign_key "rankings", "federations"
+  add_foreign_key "rankings", "users"
   add_foreign_key "results", "users"
   add_foreign_key "users", "teams"
   add_foreign_key "videos", "users"
