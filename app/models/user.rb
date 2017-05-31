@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :videos
   has_many :results
   has_many :rankings
+  has_many :federations, through: :rankings
+  has_many :countries, through: :federations
   belongs_to :team
 
   validates :email, presence: true, uniqueness: true

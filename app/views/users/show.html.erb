@@ -10,18 +10,42 @@
   <p><%= @user.facebook_page %></p>
   <p><%= @user.instagram_account %></p>
   <p><%= @user.description %></p>
-  <p><%= @user.photos %></p>
+  <% @user.photos.each do |p| %>
+    <%= cl_image_tag @user.p.path, width: 600, crop: :fit, class: "photo" if @user.p %>
+  <% end %>
+
+  <% @user.rankings.each do |r| %>
+    <p>
+      <%= r.score %>
+      <%= r.date %>
+      <%= r.federation.name %>
+      <%= r.federation.country.name %>
+    </p>
+  <% end %>
+
+  <% @user.results.each do |r| %>
+    <p>
+      <%= r.game_name %>
+      <%= r.game_type %>
+      <%= r.description %>
+      <%= r.achievement %>
+      <%= r.date %>
+    </p>
+  <% end %>
+
 <%# @user.rankings.score %>
-<%= @user.rankings.federation.name %>
-<%= @user.rankings.federation.country.country %>
-<%= @user.result.game_name %>
-<%= @user.result.game_type %>
-<%= @user.result.description %>
-<%= @user.result.results %>
-<%= @user.result.date_year %>
+<%# @user.rankings.federation.name %>
+<%# @user.rankings.federation.country.country %>
+<%# @user.result.game_name %>
+<%# @user.result.game_type %>
+<%# @user.result.description %>
+<%# @user.result.results %>
+<%# @user.result.date_year %>
 <%= @user.team.name %>
 <%= @user.team.facebook_page %>
-<%= @user.team.Instagram_account %>
-<%= @user.team.facebook_page_likes %>
-<%= @user.video %>
+<%= @user.team.instagram_account %>
+<%= @user.team.facebook_pages_likes %>
+<% @user.videos.each do |v| %>
+  <iframe height="400" width="400" src=<%= v.url.gsub(/watch.v=/, "embed/") %> ></iframe>
+<% end %>
 
