@@ -1,0 +1,65 @@
+<h1>Profile</h1>
+
+<%= simple_form_for [@user, @ranking] do |f| %>
+  <%= f.input :score, label: "Rank", as: :string %>
+  <%= f.input :date, label: "Date", as: :string %>
+  <%= f.input :federation, collection: Federation.all, prompt: "select a federation" %>
+  <%= f.submit "Add a ranking", class: "btn btn-success"%>
+<% end %>
+
+<%= simple_form_for [@user, @result] do |f| %>
+  <%= f.input :game_name, label: "Game name", as: :string %>
+  <%= f.input :game_type, label: "Game Type", as: :string %>
+  <%= f.input :description, label: "Description", as: :string %>
+  <%= f.input :achievement, label: "Achievement", as: :string %>
+  <%= f.input :date, label: "Date", as: :string %>
+  <%= f.submit "Add a result", class: "btn btn-success"%>
+<% end %>
+
+  <p><%= @user.level %></p>
+  <p><%= @user.email %></p>
+  <p><%= @user.first_name %></p>
+  <p><%= @user.last_name %></p>
+  <p><%= @user.gender %></p>
+  <p><%= @user.usual_court_address %></p>
+  <p><%= @user.phone_number %></p>
+  <p><%= @user.facebook_page %></p>
+  <p><%= @user.instagram_account %></p>
+  <p><%= @user.description %></p>
+  <% @user.photos.each do |p| %>
+    <%= cl_image_tag @user.p.path, width: 600, crop: :fit, class: "photo" if @user.p %>
+  <% end %>
+
+<ul>
+  <% @user.rankings.each do |r| %>
+    <li>
+      <%= r.score %>
+      <%= r.date %>
+      <%= r.federation.name %>
+      <%= r.federation.country.name %>
+      <!-- FIX EDIT LINK BELOW! -->
+      <%# link_to 'Edit', user_ranking_path(@user, r), method: :patch, class: "btn btn-danger" %>
+    </li>
+  <% end %>
+</ul>
+
+  <% @user.results.each do |r| %>
+    <p>
+      <%= r.game_name %>
+      <%= r.game_type %>
+      <%= r.description %>
+      <%= r.achievement %>
+      <%= r.date %>
+    </p>
+  <% end %>
+
+<% if !@user.team.nil? %>
+  <%= @user.team.name %>
+  <%= @user.team.facebook_page %>
+  <%= @user.team.instagram_account %>
+  <%= @user.team.facebook_pages_likes %>
+<% end %>
+
+<% @user.videos.each do |v| %>
+  <iframe height="400" width="400" src=<%= v.url.gsub(/watch.v=/, "embed/") %> ></iframe>
+<% end %>

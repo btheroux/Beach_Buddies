@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @ranking = Ranking.new
+    @result = Result.new
   end
 
   def destroy
