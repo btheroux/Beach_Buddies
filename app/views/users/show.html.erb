@@ -1,19 +1,21 @@
 <h1>Users#show</h1>
 
-  <p><%= @user.level %></p>
-  <p><%= @user.email %></p>
-  <p><%= @user.first_name %></p>
-  <p><%= @user.last_name %></p>
-  <p><%= @user.gender %></p>
-  <p><%= @user.usual_court_address %></p>
-  <p><%= @user.phone_number %></p>
-  <p><%= @user.facebook_page %></p>
-  <p><%= @user.instagram_account %></p>
-  <p><%= @user.description %></p>
+  <p>level: <%= @user.level %></p>
+  <p>email: <%= @user.email %></p>
+  <p>first name: <%= @user.first_name %></p>
+  <p>last name: <%= @user.last_name %></p>
+  <p>gender: <%= @user.gender %></p>
+  <p>usuel court: <%= @user.usual_court_address %></p>
+  <p>phone: <%= @user.phone_number %></p>
+  <p>facebook page: <%= @user.facebook_page %></p>
+  <p>instagam: <%= @user.instagram_account %></p>
+  <p>description: <%= @user.description %></p>
+  <p>user photos:</p>
   <% @user.photos.each do |p| %>
     <%= cl_image_tag @user.p.path, width: 600, crop: :fit, class: "photo" if @user.p %>
   <% end %>
 
+  <p>user rankings:</p>
   <% @user.rankings.each do |r| %>
     <p>
       <%= r.score %>
@@ -22,7 +24,7 @@
       <%= r.federation.country.name %>
     </p>
   <% end %>
-
+  <p>user results:</p>
   <% @user.results.each do |r| %>
     <p>
       <%= r.game_name %>
@@ -32,12 +34,15 @@
       <%= r.date %>
     </p>
   <% end %>
+  <p>user team:</p>
+  <% unless @team.nil? %>
+  <%= @user.team.name %>
+  <%= @user.team.facebook_page %>
+  <%= @user.team.instagram_account %>
+  <%= @user.team.facebook_pages_likes %>
+  <% @user.videos.each do |v| %>
+  <% end %>
 
-<%= @user.team.name %>
-<%= @user.team.facebook_page %>
-<%= @user.team.instagram_account %>
-<%= @user.team.facebook_pages_likes %>
-<% @user.videos.each do |v| %>
   <iframe height="400" width="400" src=<%= v.url.gsub(/watch.v=/, "embed/") %> ></iframe>
 <% end %>
 
