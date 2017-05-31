@@ -1,2 +1,23 @@
 <h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+
+<%= form_for(@user) do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %>
+  <%= f.label :level %>
+  <%= f.text_field :level %>
+  <%= f.label :facebook_page %>
+  <%= f.text_field :facebook_page %>
+  <%= f.label :instagram_account %>
+  <%= f.text_field :instagram_account %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :gender %>
+  <%= f.text_field :gender %>
+  <%= f.label :usual_court_address %>
+  <%= f.text_field :usual_court_address %>
+  <%= f.submit %>
+<% end %>

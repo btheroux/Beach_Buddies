@@ -1,15 +1,19 @@
 class User < ApplicationRecord
+  has_attachments :photos, maximum: 20
+
   has_many :videos
   has_many :results
   has_many :rankings
+  has_many :federations, through: :rankings
+  has_many :countries, through: :federations
   belongs_to :team
 
-  validates :email, presence: true, uniqueness: true
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :level, presence: true
-  validates :gender, presence: true
-  validates :usual_court_address, presence: true
+  #validates :email, presence: true, uniqueness: true
+  #validates :first_name, presence: true
+  #validates :last_name, presence: true
+  #validates :level, presence: true
+  #validates :gender, presence: true
+  #validates :usual_court_address, presence: true
 
 
 

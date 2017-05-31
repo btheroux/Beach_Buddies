@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  has_attachments :photos, maximum: 20
   before_action :set_user, except: [:index]
 
   def index
