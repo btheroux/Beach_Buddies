@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530144204) do
+ActiveRecord::Schema.define(version: 20170531082638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,16 +32,15 @@ ActiveRecord::Schema.define(version: 20170530144204) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
-    t.integer  "federation_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["federation_id"], name: "index_countries_on_federation_id", using: :btree
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "federations", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "country_id"
   end
 
   create_table "rankings", force: :cascade do |t|
@@ -56,7 +55,7 @@ ActiveRecord::Schema.define(version: 20170530144204) do
     t.string   "game_name"
     t.string   "game_type"
     t.string   "description"
-    t.string   "results"
+    t.string   "score"
     t.integer  "date_year"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
@@ -96,6 +95,12 @@ ActiveRecord::Schema.define(version: 20170530144204) do
     t.string   "gender"
     t.string   "usual_court_address"
     t.integer  "team_id"
+    t.string   "in_outdoors"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "facebook_picture_url"
+    t.string   "token"
+    t.datetime "token_expiry"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["team_id"], name: "index_users_on_team_id", using: :btree
@@ -105,10 +110,12 @@ ActiveRecord::Schema.define(version: 20170530144204) do
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
-  add_foreign_key "countries", "federations"
+  add_foreign_key "federations", "countries"
   add_foreign_key "rankings", "federations"
   add_foreign_key "results", "users"
   add_foreign_key "users", "teams"
+  add_foreign_key "videos", "users"
 end
