@@ -1,8 +1,11 @@
-<h1><%= @users.count %> players found [in...params when search function works]:</h1>
-<% @users.each do |user| %>
-  <h3><%= user.first_name %> <%= user.last_name %></h3>
-  <p><%= user.level %></p>
-  <p><%= user.email %></p>
-  <p><%= user.gender %></p>
-  <p><%= user.usual_court_address %></p>
-<% end %>
+<div class="bb-container">
+
+  <h1><%= @users.count %> players found [in...params when search function works]:</h1>
+  <% @users.each do |user| %>
+    <h3><%= user.first_name %> <%= user.last_name %></h3>
+    <p><%= user.level %></p>
+    <p><%= user.email %></p>
+    <p><%= user.gender %></p>
+    <p><%= user.usual_court_address %></p>
+  <% end %>
+</div>
