@@ -1,0 +1,136 @@
+.product {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+/* Body design */
+.product-body {
+  flex: 1 1 auto;
+}
+.product-body h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 0;
+}
+.product-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+/* Body Partner design */
+.product-body-partner {
+  flex: 0 0 15%;
+}
+/* Body Team design */
+.product-body-team {
+  flex: 0 0 15%;
+}
+/* Product image */
+.product-image {
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 100px;
+}
+.product-image-partner {
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 30px;
+}
+.product-image-team {
+  border-radius: 7px;
+  margin-right: 20px;
+  width: 30px;
+}
+
+/* Upvote design */
+.product-upvote {
+  padding-right: 20px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+}
+.product-count {
+  margin: 2px 0 0;
+}
+.product-arrow {
+  transition: all 0.15s ease;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 9px solid black;
+  border-radius: 2px;
+  margin: auto;
+}
+
+/* Controls design */
+.product-controls {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+.product-controls a {
+  padding: 0 20px;
+  font-size: 17px;
+  color: #E6E6E6;
+}
+.product-controls a:hover {
+  color: $brand-complementary-color !important
+}
+.product-controls-hidden a {
+  color: transparent;
+  font-size: 15px;
+  transition: all 0.15s ease;
+  border-color: transparent;
+}
+
+/* Hover effects */
+.product:hover {
+  // background: #f7f7fa;
+  // cursor: pointer;
+}
+.product-upvote:hover, .product-upvote.product-upvote-upvoted {
+  color: #5898f1;
+  cursor: pointer;
+}
+// used for ranking
+.product-upvote-upvoted .product-arrow {
+  border-bottom-color: #5898f1;
+}
+// .product:hover .product-upvote { transform: scale(1.2) }
+.product:hover .product-controls-hidden a { color: #E6E6E6 }
+.product-upvote:hover .product-arrow { border-bottom: 9px solid #5898f1 }
+
+
+// custom
+.product-venus {
+  // color: #C62B9D;
+  background: rgba(198,43,157,0.02);
+}
+.product-venus:hover {
+  // color: #C62B9D;
+  background: rgba(198,43,157,0.1);
+}
+.product-mars {
+  // color: #4F29B2;
+  background: rgba(79,41,178,0.02);
+}
+.product-mars:hover {
+  // color: #4F29B2;
+  background: rgba(79,41,178,0.1);
+}
+.product-level {
+  background-color: $brand-complementary-color;
+  color: white;
+  border-radius: 7px;
+  font-weight: lighter;
+  padding: 2px 5px;
+}
