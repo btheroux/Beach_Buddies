@@ -6,9 +6,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :index, :edit, :update, :destroy] do
       resources :rankings, only: [:create, :update]
-      resources :results, only: [:create, :update, :destroy]
-      resources :teams, only: [:create, :update, :destroy]
+      resources :results, only: [:create, :update]
+      resources :teams, only: [:create, :update]
     end
+  resources :results, only: [:destroy]
+  resources :teams, only: [:destroy]
 
   get "/profile", to: 'profile#index'
 
