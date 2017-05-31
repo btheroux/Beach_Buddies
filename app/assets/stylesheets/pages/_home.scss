@@ -1,9 +1,9 @@
 .video-container {
-  height: 85vh;
+  height: 100vh;
   overflow: hidden;
   padding: 20px;
   @media(min-width: 600px) {
-    height: 95vh;
+    height: 100vh;
   }
   position: relative;
 }
