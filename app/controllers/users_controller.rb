@@ -6,8 +6,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @ranking = Ranking.new
-    @result = Result.new
+    # Testing functionality for profile
+    # @ranking = Ranking.new
+    # @result = Result.new
+    # @team = Team.new
   end
 
   def destroy
