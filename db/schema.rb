@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170531081517) do
+ActiveRecord::Schema.define(version: 20170531082638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,16 +32,15 @@ ActiveRecord::Schema.define(version: 20170531081517) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
-    t.integer  "federation_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["federation_id"], name: "index_countries_on_federation_id", using: :btree
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "federations", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "country_id"
   end
 
   create_table "rankings", force: :cascade do |t|
@@ -114,7 +113,7 @@ ActiveRecord::Schema.define(version: 20170531081517) do
     t.integer  "user_id"
   end
 
-  add_foreign_key "countries", "federations"
+  add_foreign_key "federations", "countries"
   add_foreign_key "rankings", "federations"
   add_foreign_key "results", "users"
   add_foreign_key "users", "teams"
