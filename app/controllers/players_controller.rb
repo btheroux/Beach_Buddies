@@ -6,6 +6,7 @@ class PlayersController < ApplicationController
   end
 
   def show
+
   end
 
   def destroy

@@ -1,10 +1,17 @@
-<h1>Users#index</h1>
+<div class="container bb-container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
 
-<% @users.each do |user| %>
-  <p><%= user.level %></p>
-  <p><%= user.email %></p>
-  <p><%= user.first_name %></p>
-  <p><%= user.last_name %></p>
-  <p><%= user.gender %></p>
-  <p><%= user.usual_court_address %></p>
-<% end %>
+
+      <h1><%= @users.count %> players found [in...params when search function works]:</h1>
+      <% @users.each do |user| %>
+      <h3><%= user.first_name %> <%= user.last_name %></h3>
+      <p><%= user.level %></p>
+      <p><%= user.email %></p>
+      <p><%= user.gender %></p>
+      <p><%= user.usual_court_address %></p>
+      <% end %>
+
+    </div>
+  </div>
+</div>

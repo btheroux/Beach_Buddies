@@ -1,0 +1,179 @@
+<br><br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+
+
+      <h2>Avatars</h2>
+      <%= image_tag('id.jpg', alt: "user", class: "avatar") %>
+      <%= image_tag('id.jpg', alt: "user", class: "avatar-large") %>
+      <%= image_tag('id.jpg', alt: "user", class: "avatar-brodered") %>
+      <%= image_tag('id.jpg', alt: "user", class: "avatar-square") %>
+      <br><br><br>
+      <div class="col-xs-12 text-center">
+        <h2>Buttons</h2>
+        <br><br>
+      </div>
+      <div class="col-xs-3 col-xs-offset-3">
+        <a href="#" class="beachbuddy-btn beachbuddy-btn-main">Some action</a>
+      </div>
+      <div class="col-xs-3">
+      <a href="#" class="beachbuddy-btn beachbuddy-btn-complementary">Other action</a>
+      <br><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+   <div class="col-xs-12 text-center">
+      <h2>Cards</h2>
+    </div>
+    <div class="col-xs-4">
+
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path('background.jpeg') %>);">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
+            </div>
+            <%= image_tag('id.jpg', alt: "user", class: "avatar card-user") %>
+            <a class="card-link" href="#" ></a>
+          </div>
+
+    </div>
+        <div class="col-xs-4">
+
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path('background.jpeg') %>);">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
+            </div>
+            <%= image_tag('id.jpg', alt: "user", class: "avatar card-user") %>
+            <a class="card-link" href="#" ></a>
+          </div>
+
+    </div>
+        <div class="col-xs-4">
+
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path('background.jpeg') %>);">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
+            </div>
+            <%= image_tag('id.jpg', alt: "user", class: "avatar card-user") %>
+            <a class="card-link" href="#" ></a>
+          </div>
+
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h2>List item (css -> product): player in index</h2>
+    </div>
+    <div class="col-xs-12">
+
+      <div class="product product-venus">
+
+        <div class='product-upvote'>
+          <div class=""><%= flag_icon(:dk) %></div>
+          <div class='product-count'>95</div>
+        </div>
+        <%=  image_tag("livia.jpg", class: "product-image hidden-xs") %>
+
+        <div class='product-body'>
+          <h3>
+            <!-- <i class="fa fa-venus"></i> -->
+            Livia Sebok
+            <span class="product-level">semi-pro</span>
+          </h3>
+          <p> I played a lot for many years, not quite pro now but I take this seriously. I play regularly in competitions and train 3 times a week.</p>
+        </div>
+
+        <div class='product-body-partner'>
+          <%=  image_tag("louise.jpg", class: "product-image-partner hidden-xs") %>
+          <h4>
+            regular partner <br>
+            Louise Landbo Larsen
+          </h4>
+        </div>
+
+        <div class='product-body-team'>
+          <%=  image_tag("louise.jpg", class: "product-image-team hidden-xs") %>
+          <h4>
+            Team Sebok Larsen
+          </h4>
+        </div>
+
+        <ul class="list-inline product-controls hidden-sm hidden-xs">
+          <li><a href=""><i class="fa fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa fa-chevron-circle-right"></i></a></li>
+        </ul>
+      </div>
+
+      <br>
+
+      <div class="product product-mars">
+        <div class='product-upvote'>
+          <div class=""><%= flag_icon(:fr) %></div>
+          <div class='product-count'>-</div>
+        </div>
+        <%=  image_tag("id.jpg", class: "product-image hidden-xs") %>
+        <div class='product-body'>
+          <h3>
+            <!-- <i class="fa fa-mars"></i> -->
+            Hadrien Matringe
+            <span class="product-level">beginner</span>
+          </h3>
+          <p> I never played anything else than amateur / I don't have a clue mode.But beginner's luck is to be feared!</p>
+        </div>
+        <ul class="list-inline product-controls hidden-sm hidden-xs">
+          <li><a href=""><i class="fa fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa fa-chevron-circle-right"></i></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+        <h2>Result / Ranking box</h2>
+
+    </div>
+    <div class="col-xs-12">
+      <p>Pen drawing</p>
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+        <h2>Contact info box</h2>
+
+    </div>
+    <div class="col-xs-12">
+      <p>Pen drawing</p>
+    </div>
+  </div>
+</div>
+<br><br><br>
