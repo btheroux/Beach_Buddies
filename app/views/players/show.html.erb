@@ -11,7 +11,7 @@
 <p><%= @user.instagram_account %></p>
 <p><%= @user.description %></p>
 <% @user.photos.each do |p| %>
-  <%= cl_image_tag @user.p.path, width: 600, crop: :fit, class: "photo" if @user.p %>
+  <%= cl_image_tag p.path, width: 600, crop: :fit, class: "photo" %>
 <% end %>
 
 <% @user.rankings.each do |r| %>

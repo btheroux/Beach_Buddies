@@ -6,10 +6,6 @@ class PlayersController < ApplicationController
   end
 
   def show
-    # Testing functionality for profile
-    # @ranking = Ranking.new
-    # @result = Result.new
-    # @team = Team.new
   end
 
   def destroy

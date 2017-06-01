@@ -1,5 +1,7 @@
 <h1>Profile</h1>
 
+<%= render 'players/edit' %>
+
 <h2>Create a new team:</h2>
 
 <%= simple_form_for [@user, @team] do |f| %>
@@ -44,7 +46,7 @@
 <p><%= @user.instagram_account %></p>
 <p><%= @user.description %></p>
 <% @user.photos.each do |p| %>
-  <%= cl_image_tag @user.p.path, width: 600, crop: :fit, class: "photo" if @user.p %>
+  <%= cl_image_tag p.path, width: 600, crop: :fit, class: "photo" %>
 <% end %>
 
 <h2>Rankings:</h2>
@@ -56,7 +58,6 @@
       <%= r.date %>
       <%= r.federation.name %>
       <%= r.federation.country.name %>
-      <!-- FIX EDIT LINK BELOW! -->
       <%= link_to 'Delete', ranking_path(r), method: :delete, class: "btn btn-danger" %>
     </li>
   <% end %>
