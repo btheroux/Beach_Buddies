@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get "/profile", to: 'profiles#index'
 
+  get "/resultbox", to: 'pages#resultbox'
+
   root to: 'pages#home'
   get '/components', to: 'pages#components'
 

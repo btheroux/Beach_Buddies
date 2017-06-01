@@ -5,7 +5,12 @@ class PagesController < ApplicationController
     # raise
   end
 
+
+
+  def resultbox
+  end
+  
   def components
   end
-
+  
 end
