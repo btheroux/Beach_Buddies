@@ -5,15 +5,16 @@ Rails.application.routes.draw do
 
   # resources :users, only:
 
-  resources :users, only: [:show, :index, :edit, :update, :destroy] do
-      resources :rankings, only: [:create, :update]
-      resources :results, only: [:create, :update]
-      resources :teams, only: [:create, :update]
+  resources :users, only: [:show, :index, :edit, :update, :destroy], path: :players, controller: "players" do
+      resources :rankings, only: [:create]
+      resources :results, only: [:create]
+      resources :teams, only: [:create]
     end
+  resources :rankings, only: [:destroy]
   resources :results, only: [:destroy]
   resources :teams, only: [:destroy]
 
-  get "/profile", to: 'profile#index'
+  get "/profile", to: 'profiles#index'
 
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

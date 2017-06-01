@@ -1,0 +1,47 @@
+<h1>Users#show</h1>
+
+<p><%= @user.level %></p>
+<p><%= @user.email %></p>
+<p><%= @user.first_name %></p>
+<p><%= @user.last_name %></p>
+<p><%= @user.gender %></p>
+<p><%= @user.usual_court_address %></p>
+<p><%= @user.phone_number %></p>
+<p><%= @user.facebook_page %></p>
+<p><%= @user.instagram_account %></p>
+<p><%= @user.description %></p>
+<% @user.photos.each do |p| %>
+  <%= cl_image_tag p.path, width: 600, crop: :fit, class: "photo" %>
+<% end %>
+
+<% @user.rankings.each do |r| %>
+  <p>
+    <%= r.score %>
+    <%= r.date %>
+    <%= r.federation.name %>
+    <%= r.federation.country.name %>
+  </p>
+<% end %>
+
+<% @user.results.each do |r| %>
+  <p>
+    <%= r.game_name %>
+    <%= r.game_type %>
+    <%= r.description %>
+    <%= r.achievement %>
+    <%= r.date %>
+  </p>
+<% end %>
+
+<% if !@user.team.nil? %>
+  <%= @user.team.name %>
+  <%= @user.team.facebook_page %>
+  <%= @user.team.instagram_account %>
+  <%= @user.team.facebook_pages_likes %>
+<% end %>
+
+<% @user.videos.each do |v| %>
+  <iframe height="400" width="400" src=<%= v.url.gsub(/watch.v=/, "embed/") %> ></iframe>
+<% end %>
+
+
