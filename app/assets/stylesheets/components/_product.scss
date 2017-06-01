@@ -21,13 +21,23 @@
   margin-bottom: 0;
 }
 
-/* Body Partner design */
-.product-body-partner {
-  flex: 0 0 15%;
+/* Body Partner Team design */
+.product-body-partner-team-container {
+  flex: 0 0 20%;
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+  // justify-content: center;
 }
-/* Body Team design */
+
+.product-body-partner {
+  display: flex;
+  flex-direction: row;
+}
+
 .product-body-team {
-  flex: 0 0 15%;
+  display: flex;
+  flex-direction: row;
 }
 /* Product image */
 .product-image {
@@ -38,15 +48,19 @@
 .product-image-partner {
   border-radius: 50%;
   margin-right: 20px;
-  width: 30px;
+  max-width: 50px;
+  max-height: 50px;
+  flex: 0 0 30%
 }
 .product-image-team {
   border-radius: 7px;
   margin-right: 20px;
-  width: 30px;
+  max-width: 50px;
+  max-height: 50px;
+  flex: 0 0 30%
 }
 
-/* Upvote design */
+/* Upvote design USED FOR RANKING */
 .product-upvote {
   padding-right: 20px;
   text-align: center;
@@ -79,8 +93,8 @@
 }
 .product-controls a {
   padding: 0 20px;
-  font-size: 17px;
-  color: #E6E6E6;
+  font-size: 20px;
+  color: #B2B2B2;
 }
 .product-controls a:hover {
   color: $brand-complementary-color !important
@@ -110,27 +124,45 @@
 .product-upvote:hover .product-arrow { border-bottom: 9px solid #5898f1 }
 
 
-// custom
-.product-venus {
+// GENDER____________________________
+.product-female {
   // color: #C62B9D;
-  background: rgba(198,43,157,0.02);
+  background: rgba(198,43,157,0.05);
 }
-.product-venus:hover {
+.product-female:hover {
   // color: #C62B9D;
   background: rgba(198,43,157,0.1);
 }
-.product-mars {
+.product-male {
   // color: #4F29B2;
-  background: rgba(79,41,178,0.02);
+  background: rgba(79,41,178,0.05);
 }
-.product-mars:hover {
+.product-male:hover {
   // color: #4F29B2;
   background: rgba(79,41,178,0.1);
 }
+// PRODUCT LEVELS____________________________
 .product-level {
-  background-color: $brand-complementary-color;
   color: white;
   border-radius: 7px;
   font-weight: lighter;
-  padding: 2px 5px;
+  padding: 3px 7px;
+  font-size: 18px;
+}
+.product-level-beginner {
+  background-color: $brand-color;
+  color: $brand-complementary-color;
+}
+.product-level-hobbyist {
+  background-color: $blue;
+  color: white;
+}
+.product-level-semi-pro {
+  background-color: $red;
+  color: white;
+}
+.product-level-pro {
+  background-color: black;
+  color: white;
+  padding: 3px 20px;
 }
