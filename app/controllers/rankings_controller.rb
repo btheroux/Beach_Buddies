@@ -14,16 +14,10 @@ class RankingsController < ApplicationController
     end
   end
 
-  def update
-    @user = current_user
+  def destroy
     @ranking = Ranking.find(params[:id])
-    # @ranking.update(ranking_params)
-    @ranking.score = params[:ranking][:score]
-    @ranking.date = Date.parse(params[:ranking][:date])
-    @ranking.federation = Federation.find(params[:ranking][:federation])
-    @ranking.user = @user
-    @ranking.save
-    redirect_to user_path(@user)
+    @ranking.destroy
+    redirect_to profile_path
   end
 
   private

@@ -16,11 +16,10 @@ class ResultsController < ApplicationController
     end
   end
 
-  def update
-
-  end
 
   def destroy
-
+    @result = Result.find(params[:id])
+    @result.destroy
+    redirect_to profile_path
   end
 end
