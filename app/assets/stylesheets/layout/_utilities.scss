@@ -10,6 +10,15 @@
   padding-bottom: 5em;
 }
 
+//Pages top padding to avoid navbar conflict
+.bb-container {
+  padding-top: 70px;
+}
+.bb-container-move-down {
+  position: relative;
+  top: 70px;
+}
+
 // Backgrounds
 .bg-black {
   background: #4a4a4a;

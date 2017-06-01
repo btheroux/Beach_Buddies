@@ -1,11 +1,13 @@
-class UsersController < ApplicationController
+class PlayersController < ApplicationController
   before_action :set_user, except: [:index]
 
   def index
     @users = User.all
+    # raise
   end
 
   def show
+
   end
 
   def destroy

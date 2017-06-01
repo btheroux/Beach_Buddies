@@ -1,4 +1,100 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+.video-container {
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+  @media(min-width: 600px) {
+    height: 100vh;
+  }
+  position: relative;
+}
+
+video {
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  filter: grayscale(20%);
+  // filter: hue-rotate(90deg);
+}
+
+.video-container h1 {
+  // color: rgba(246,246,246, 0.7);
+  color: $brand-color;
+  opacity: 0.7;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0 0 1rem;
+  padding: 0;
+  line-height: 1;
+  font-family: Futura, Helvetica, sans-serif;
+  font-size: 5vw;
+  text-shadow: 0 0 3px $brand-complementary-color;
+  @media (max-width: 400px) {
+    font-size: 22px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 55px;
+  }
+}
+.callout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+/* Home search form */
+.home-bb-search {
+  flex: 0 1 60px;
+  display: flex;
+  // justify-content: flex-end;
+  padding: 3px;
+  position: relative;
+  background-color: $brand-color;
+  border-radius: 7px;
+}
+.home-bb-search-btn {
+  // line-height: 40px;
+  background-color: white;
+  opacity: 0.95;
+  // border: none;
+  // background: transparent;
+  // position: absolute;
+  // right: 14px;
+  // // top: -2px;
+  // z-index: 1;
+}
+.home-bb-search-input {
+  flex: 0 1 300px;
+  transition: all 0.15s ease;
+  line-height: 40px;
+  font-weight: lighter;
+  color: #666666;
+  border: 1px solid #E6E6E6;
+  // border-radius: 5px;
+  padding: 0 10px;
+  // font-size: 14px;
+  outline: none;
+}
+.home-bb-search-input:first-child {
+  border-radius: 7px 0px 0px 7px;
+}
+.home-bb-search-input:last-child {
+  border-radius: 0 7px 7px 0;
+}
+.home-bb-search-input:focus  {
+  // background-color: rgba(238,238,238,0.5);
+  border-bottom: 2px solid $brand-color;
+  opacity: 0.95;
+}

@@ -1,0 +1,71 @@
+<div class="container bb-container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+
+
+      <h1><%= @users.count %> players found [in...params when search function works]:</h1>
+      <% @users.each do |user| %>
+      <h3><%# user.first_name %> <%# user.last_name %></h3>
+      <p><%# user.level %></p>
+      <p><%# user.email %></p>
+      <p><%# user.gender %></p>
+      <p><%# user.usual_court_address %></p>
+
+      <div class="product <%= "product-" + user.gender %>">
+
+        <div class='product-upvote'>
+          <!-- XXX not available yet XXX-->
+          <div class=""><%= flag_icon(:dk) %></div>
+          <!-- XXX not available yet XXX-->
+          <div class='product-count'>95</div>
+        </div>
+        <%=  image_tag("livia.jpg", class: "product-image hidden-xs") %>
+
+        <div class='product-body'>
+          <h3>
+            <%= user.first_name %> <%= user.last_name %>
+            <span class="product-level <%= "product-level-" + user.level %>"><%= user.level %></span>
+          </h3>
+          <!-- XXX not available yet XXX-->
+          <!-- Use <%= user.usual_court_address %> and install geocoder -->
+          <em>Copenhagen, DK</em>
+          <p> <%= user.description %></p>
+        </div>
+
+        <div class="product-body-partner-team-container hidden-xs">
+          <% if user.team %>
+              <% if partner = user.team.users.find {|u| u != user} %>
+            <div class='product-body-partner'>
+            <!-- XXX image_path partner.photo XX -->
+              <%=  image_tag("louise.jpg", class: "product-image-partner hidden-xs") %>
+                <span>
+                  <strong>Regular partner:</strong> <br> <%= partner.first_name ||= "-" %> <%= partner.last_name ||= "-" %>
+                </span>
+            </div>
+              <% end %>
+          <% end %>
+          <% unless user.team.nil? %>
+            <div class='product-body-team'>
+              <%=  image_tag("louise.jpg", class: "product-image-team hidden-xs") %>
+              <span>
+                <strong>Team:</strong> <br> <%= user.team.name ||= "Not named" %>
+              </span>
+            </div>
+          <% end %>
+        </div>
+        <ul class="list-inline product-controls hidden-sm hidden-xs">
+          <% if user.facebook_page %>
+          <li><a href="<%= user.facebook_page %>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <% end %>
+          <% if user.instagram_account %>
+          <li><a href="<%= user.instagram_account %>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <% end %>
+          <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+        </ul>
+      </div>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

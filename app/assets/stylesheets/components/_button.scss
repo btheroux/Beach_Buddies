@@ -1,0 +1,56 @@
+// .beachbuddy-btn {
+//   position: relative;
+// }
+
+.beachbuddy-btn-main {
+  color: #666666;
+  padding: 10px;
+  border-radius: 7px;
+  border: 2px solid $brand-color;
+  font-weight: lighter;
+  transition: background 0.2s ease;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  background: rgba(247,247,29,0.05);
+}
+.beachbuddy-btn-main:visited {
+  color: #666666;
+  text-decoration: none !important;
+}
+.beachbuddy-btn-main:hover {
+  color: #666666;
+  background: rgba(247,247,29,0.2);
+  border-bottom: 3px solid $brand-color;
+  text-decoration: none !important;
+}
+.beachbuddy-btn-main:active {
+  color: #666666;
+  padding: 9px 10px 11px;
+  text-decoration: none !important;
+}
+.beachbuddy-btn-complementary {
+  color: #666666;
+  padding: 10px;
+  border-radius: 7px;
+  border: 2px solid $brand-complementary-color;
+  font-weight: lighter;
+  transition: background 0.2s ease;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  background: rgba(34,6,43,0.05);
+}
+.beachbuddy-btn-complementary:visited {
+  color: #666666;
+  text-decoration: none !important;
+}
+.beachbuddy-btn-complementary:hover {
+  color: #666666;
+  background: rgba(34,6,43,0.2);
+  border-bottom: 3px solid $brand-complementary-color;
+  text-decoration: none !important;
+}
+.beachbuddy-btn-complementary:active {
+  color: #666666;
+  padding: 9px 10px 11px;
+  text-decoration: none !important;
+}
