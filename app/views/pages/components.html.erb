@@ -83,6 +83,55 @@
     </div>
     <div class="col-xs-12">
 
+
+    <!-- HADRIEN_____________________________________________ -->
+      <div class="product product-mars">
+        <div class='product-upvote'>
+          <div class=""><%= flag_icon(:fr) %></div>
+          <div class='product-count'>-</div>
+        </div>
+        <%=  image_tag("id.jpg", class: "product-image hidden-xs") %>
+        <div class='product-body'>
+          <h3>
+            <!-- <i class="fa fa-mars"></i> -->
+            Hadrien Matringe
+            <span class="product-level product-level-beginner">beginner</span>
+          </h3>
+          <p> I never played anything else than amateur / I don't have a clue mode.But beginner's luck is to be feared!</p>
+        </div>
+        <ul class="list-inline product-controls hidden-sm hidden-xs">
+          <li><a href=""><i class="fa fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+        </ul>
+      </div>
+
+      <br>
+      <!-- BRETT _____________________________________________ -->
+      <div class="product product-mars">
+        <div class='product-upvote'>
+          <div class=""><%= flag_icon(:us) %></div>
+          <div class='product-count'>187 908</div>
+        </div>
+        <%=  image_tag("brett", class: "product-image hidden-xs") %>
+        <div class='product-body'>
+          <h3>
+            <!-- <i class="fa fa-mars"></i> -->
+            Brett Theroux
+            <span class="product-level product-level-hobbyist">hobbyist</span>
+          </h3>
+          <p> Beach Volley is like litterrally the funniest thing I had ever tried ever. Like... Shit! You know, like. Woao!</p>
+        </div>
+        <ul class="list-inline product-controls hidden-sm hidden-xs">
+          <li><a href=""><i class="fa fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+        </ul>
+      </div>
+
+      <br>
+
+      <!-- LIVIA _____________________________________________ -->
       <div class="product product-venus">
 
         <div class='product-upvote'>
@@ -95,55 +144,75 @@
           <h3>
             <!-- <i class="fa fa-venus"></i> -->
             Livia Sebok
-            <span class="product-level">semi-pro</span>
+            <span class="product-level product-level-semi-pro">semi-pro</span>
           </h3>
-          <p> I played a lot for many years, not quite pro now but I take this seriously. I play regularly in competitions and train 3 times a week.</p>
+          <p> I played a lot for many years, not quite pro now but I take this seriously. I play regularly in competitions and train 3 times a week when I'm not eating pizza.</p>
         </div>
 
-        <div class='product-body-partner'>
-          <%=  image_tag("louise.jpg", class: "product-image-partner hidden-xs") %>
-          <h4>
-            regular partner <br>
-            Louise Landbo Larsen
-          </h4>
-        </div>
+        <div class="product-body-partner-team-container hidden-xs">
+          <div class='product-body-partner'>
+            <%=  image_tag("louise.jpg", class: "product-image-partner hidden-xs") %>
+              <span>
+                <strong>Regular partner:</strong> <br>Louise Landbo Larsen
+              </span>
+          </div>
 
-        <div class='product-body-team'>
-          <%=  image_tag("louise.jpg", class: "product-image-team hidden-xs") %>
-          <h4>
-            Team Sebok Larsen
-          </h4>
+          <div class='product-body-team'>
+            <%=  image_tag("louise.jpg", class: "product-image-team hidden-xs") %>
+            <span>
+              <strong>Team:</strong> <br> Sebok Larsen
+            </span>
+          </div>
         </div>
 
         <ul class="list-inline product-controls hidden-sm hidden-xs">
           <li><a href=""><i class="fa fa-facebook"></i></a></li>
           <li><a href=""><i class="fa fa-instagram"></i></a></li>
-          <li><a href=""><i class="fa fa-chevron-circle-right"></i></a></li>
+          <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
         </ul>
       </div>
 
       <br>
-
+      <!-- LARS _____________________________________________ -->
       <div class="product product-mars">
         <div class='product-upvote'>
-          <div class=""><%= flag_icon(:fr) %></div>
-          <div class='product-count'>-</div>
+          <div class=""><%= flag_icon(:dk) %></div>
+          <div class='product-count'>7</div>
         </div>
-        <%=  image_tag("id.jpg", class: "product-image hidden-xs") %>
+        <%=  image_tag("lars", class: "product-image hidden-xs") %>
         <div class='product-body'>
           <h3>
             <!-- <i class="fa fa-mars"></i> -->
-            Hadrien Matringe
-            <span class="product-level">beginner</span>
+            Lars Pedersen
+            <span class="product-level product-level-pro">pro</span>
           </h3>
-          <p> I never played anything else than amateur / I don't have a clue mode.But beginner's luck is to be feared!</p>
+          <p> After reaching the sky in Beach Volley, I was looking for a new challenge. So I created the seed file. But they changed everything again so now it doesn't work!</p>
         </div>
+
+        <div class="product-body-partner-team-container hidden-xs">
+          <div class='product-body-partner'>
+            <%=  image_tag("chuck.jpg", class: "product-image-partner") %>
+              <span>
+                <strong>Regular partner:</strong> <br>Chuck
+              </span>
+          </div>
+
+          <!-- <div class='product-body-team'>
+            <%=  image_tag("louise.jpg", class: "product-image-team") %>
+            <span>
+              <strong>Team:</strong> <br> Sebok Larsen
+            </span>
+          </div> -->
+        </div>
+
         <ul class="list-inline product-controls hidden-sm hidden-xs">
           <li><a href=""><i class="fa fa-facebook"></i></a></li>
           <li><a href=""><i class="fa fa-instagram"></i></a></li>
-          <li><a href=""><i class="fa fa-chevron-circle-right"></i></a></li>
+          <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
         </ul>
       </div>
+
+      <br>
 
     </div>
   </div>
