@@ -1,0 +1,93 @@
+<h1>Profile</h1>
+
+<%= render 'players/edit' %>
+
+<h2>Create a new team:</h2>
+
+<%= simple_form_for [@user, @team] do |f| %>
+  <%= f.input :name, label: "Name", as: :string %>
+  <%= f.input :facebook_page, label: "Facebook page", as: :string %>
+  <%= f.input :instagram_account, label: "Instagram account", as: :string %>
+  <%= f.input :facebook_pages_likes, label: "Facebook page likes", as: :string %>
+  <%= f.submit "Add a team", class: "btn btn-success"%>
+<% end %>
+
+<h2>Create a new ranking:</h2>
+
+<%= simple_form_for [@user, @ranking] do |f| %>
+  <%= f.input :score, label: "Rank", as: :string %>
+  <%= f.input :date, label: "Date", as: :string %>
+  <%= f.input :federation, collection: Federation.all, prompt: "select a federation" %>
+  <%= f.submit "Add a ranking", class: "btn btn-success"%>
+<% end %>
+
+<h2>Create a new result:</h2>
+
+<%= simple_form_for [@user, @result] do |f| %>
+  <%= f.input :game_name, label: "Game name", as: :string %>
+  <%= f.input :game_type, label: "Game Type", as: :string %>
+  <%= f.input :description, label: "Description", as: :string %>
+  <%= f.input :achievement, label: "Achievement", as: :string %>
+  <%= f.input :date, label: "Date", as: :string %>
+  <%= f.submit "Add a result", class: "btn btn-success"%>
+<% end %>
+
+
+<h2>User info:</h2>
+
+<p><%= @user.level %></p>
+<p><%= @user.email %></p>
+<p><%= @user.first_name %></p>
+<p><%= @user.last_name %></p>
+<p><%= @user.gender %></p>
+<p><%= @user.usual_court_address %></p>
+<p><%= @user.phone_number %></p>
+<p><%= @user.facebook_page %></p>
+<p><%= @user.instagram_account %></p>
+<p><%= @user.description %></p>
+<% @user.photos.each do |p| %>
+  <%= cl_image_tag p.path, width: 600, crop: :fit, class: "photo" %>
+<% end %>
+
+<h2>Rankings:</h2>
+
+<ul>
+  <% @user.rankings.each do |r| %>
+    <li>
+      <%= r.score %>
+      <%= r.date %>
+      <%= r.federation.name %>
+      <%= r.federation.country.name %>
+      <%= link_to 'Delete', ranking_path(r), method: :delete, class: "btn btn-danger" %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Results:</h2>
+
+<% @user.results.each do |r| %>
+  <p>
+    <%= r.game_name %>
+    <%= r.game_type %>
+    <%= r.description %>
+    <%= r.achievement %>
+    <%= r.date %>
+    <%= link_to 'Delete', result_path(r), method: :delete, class: "btn btn-danger" %>
+  </p>
+<% end %>
+
+<h2>Team:</h2>
+
+<% if !@user.team.nil? %>
+  <%= @user.team.name %>
+  <%= @user.team.facebook_page %>
+  <%= @user.team.instagram_account %>
+  <%= @user.team.facebook_pages_likes %>
+  <%= link_to 'Delete', team_path(@user.team), method: :delete, class: "btn btn-danger" %>
+<% end %>
+
+<h2>Videos:</h2>
+
+<% @user.videos.each do |v| %>
+  <iframe height="400" width="400" src=<%= v.url.gsub(/watch.v=/, "embed/") %> ></iframe>
+<% end %>

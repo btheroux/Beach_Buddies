@@ -1,0 +1,41 @@
+<h1>Users#edit</h1>
+
+<%= simple_form_for [@user] do |f| %>
+  <%= f.input :first_name, label: "First name", as: :string %>
+  <%= f.input :last_name, label: "Last name", as: :string %>
+  <%= f.input :phone_number, label: "Phone number", as: :string %>
+  <%= f.input :level, label: "Volley ball level", as: :string %>
+  <%= f.input :facebook_page, label: "Facebook page", as: :string %>
+  <%= f.input :instagram_account, label: "Instagram account", as: :string %>
+  <%= f.input :description, label: "Description", as: :string %>
+  <%= f.input :gender, label: "Gender", as: :string %>
+  <%= f.input :usual_court_address, label: "Usual court address", as: :string %>
+  <%= f.input :photos, label: "Photos", as: :attachinary, disabled: true %>
+  <%= f.submit "Done", class: "btn btn-success"%>
+<% end %>
+
+10
+
+<%# form_for(@user) do |f| %>
+  <%# f.label :first_name %>
+  <%# f.text_field :first_name %>
+  <%# f.label :last_name %>
+  <%# f.text_field :last_name %>
+  <%# f.label :phone_number %>
+  <%# f.text_field :phone_number %>
+  <%# f.label :level %>
+  <%# f.text_field :level %>
+  <%# f.label :facebook_page %>
+  <%# f.text_field :facebook_page %>
+  <%# f.label :instagram_account %>
+  <%# f.text_field :instagram_account %>
+  <%# f.label :description %>
+  <%# f.text_field :description %>
+  <%# f.label :gender %>
+  <%# f.text_field :gender %>
+  <%# f.label :usual_court_address %>
+  <%# f.text_field :usual_court_address %>
+  <%# f.label :photos %>
+  <%# f.input :photos, as: :attachinary, disabled: true %>
+  <%# f.submit %>
+<%# end %>
