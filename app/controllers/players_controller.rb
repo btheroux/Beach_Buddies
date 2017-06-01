@@ -3,6 +3,7 @@ class PlayersController < ApplicationController
 
   def index
     @users = User.all
+    # raise
   end
 
   def show
