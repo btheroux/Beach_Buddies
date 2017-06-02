@@ -5,5 +5,6 @@ class ProfilesController < ApplicationController
     @ranking = Ranking.new
     @result = Result.new
     @team = Team.new
+    @video = Video.new
   end
 end

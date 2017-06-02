@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
 
   def create
     @user = current_user
-    @team = Team.new()
+    @team = Team.new
     @team.name = params[:team][:name]
     @team.facebook_page = params[:team][:facebook_page]
     @team.instagram_account = params[:team][:instagram_account]
@@ -11,7 +11,7 @@ class TeamsController < ApplicationController
     if @team.save
       redirect_to @user
     else
-      render "users/show"
+      render "profiles/index"
     end
   end
 
