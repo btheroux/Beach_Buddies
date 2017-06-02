@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   has_attachments :photos, maximum: 20
 
-  has_many :videos
-  has_many :results
-  has_many :rankings
+  has_many :videos, dependent: :destroy
+  has_many :results, dependent: :destroy
+  has_many :rankings, dependent: :destroy
   has_many :federations, through: :rankings
   has_many :countries, through: :federations
   belongs_to :team

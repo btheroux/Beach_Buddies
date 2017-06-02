@@ -19,8 +19,15 @@
           <!-- XXX not available yet XXX-->
           <div class='product-count'>95</div>
         </div>
-        <%=  image_tag("livia.jpg", class: "product-image hidden-xs") %>
-
+        <!-- XXX default pictures XXX-->
+        <% unless user.photos.empty? %>
+          <%=  cl_image_tag user.photos.first.path, class: "product-image hidden-xs" %>
+        <% else %>
+          <%=  image_tag("default-#{user.gender}-#{rand(1..4)}.jpg", class: "product-image product-image-default hidden-xs ")%>
+          <%#  image_tag("", class: "product-image hidden-xs")%>
+        <% end %>
+          <!-- Unfortunately, FB login profile pictures saved in DB are only 50x50px.   -->
+          <%#  image_tag("#{user.facebook_picture_url}", class: "product-image hidden-xs") %>
         <div class='product-body'>
           <h3>
             <%= user.first_name %> <%= user.last_name %>
@@ -28,7 +35,8 @@
           </h3>
           <!-- XXX not available yet XXX-->
           <!-- Use <%= user.usual_court_address %> and install geocoder -->
-          <em>Copenhagen, DK</em>
+          <em>from Copenhagen, DK</em>. <br>
+          <%= user.in_outdoors.nil? ? " " : "Plays " + user.in_outdoors.downcase %>
           <p> <%= user.description %></p>
         </div>
 
