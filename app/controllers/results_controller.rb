@@ -12,7 +12,7 @@ class ResultsController < ApplicationController
     if @result.save
       redirect_to @user
     else
-      render :new
+      render "profiles/index"
     end
   end
 

@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
 
   def create
     @user = current_user
-    @team = Team.new()
+    @team = Team.new
     @team.name = params[:team][:name]
     @team.facebook_page = params[:team][:facebook_page]
     @team.instagram_account = params[:team][:instagram_account]

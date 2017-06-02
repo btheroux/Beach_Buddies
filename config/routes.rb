@@ -7,10 +7,12 @@ Rails.application.routes.draw do
       resources :rankings, only: [:create]
       resources :results, only: [:create]
       resources :teams, only: [:create]
+      resources :videos, only: [:create]
     end
   resources :rankings, only: [:destroy]
   resources :results, only: [:destroy]
   resources :teams, only: [:destroy]
+  resources :videos, only: [:destroy]
 
   get "/profile", to: 'profiles#index'
 
