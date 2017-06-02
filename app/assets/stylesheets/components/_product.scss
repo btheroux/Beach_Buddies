@@ -1,9 +1,22 @@
 .product {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 20px;
   border-radius: 3px;
   transition: all 0.15s ease;
+  margin: 5px 0;
+}
+
+.product-card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  z-index:2;
+  background: black;
+  opacity: 0;
 }
 
 /* Body design */
@@ -44,6 +57,7 @@
   border-radius: 50%;
   margin-right: 20px;
   width: 100px;
+  height: 100px;
 }
 .product-image-default {
   filter: sepia(90%);
@@ -98,6 +112,7 @@
   padding: 0 20px;
   font-size: 20px;
   color: #B2B2B2;
+  z-index:10;
 }
 .product-controls a:hover {
   color: $brand-complementary-color !important

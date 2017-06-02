@@ -1,51 +1,51 @@
 puts "Seed starting"
-classes = [Ranking, Federation, Country, Result, User, Team, Video]
-classes.each do |c|
-  c.destroy_all
-end
+# classes = [Ranking, Federation, Country, Result, User, Team, Video]
+# classes.each do |c|
+#   c.destroy_all
+# end
 puts "All records deleted, creating new records"
 
 
-country1 = Country.new(name:"Albania")
+country1 = Country.new(name:"Albania", country_code: "al")
 country1.save
 
-country2 = Country.new(name:"Andorra")
+country2 = Country.new(name:"Andorra", country_code: "ad")
 country2.save
 
-country3 = Country.new(name:"Armenia")
+country3 = Country.new(name:"Armenia", country_code: "am")
 country3.save
 
-country4 = Country.new(name:"Austria")
+country4 = Country.new(name:"Austria", country_code: "at")
 country4.save
 
-country5 = Country.new(name:"Azerbaijan")
+country5 = Country.new(name:"Azerbaijan", country_code: "az")
 country5.save
 
-country6 = Country.new(name:"Belarus")
+country6 = Country.new(name:"Belarus", country_code: "by")
 country6.save
 
-country7 = Country.new(name:"Belgium")
+country7 = Country.new(name:"Belgium", country_code: "be")
 country7.save
 
-country8 = Country.new(name:"Bosnia-Herzegovina")
+country8 = Country.new(name:"Bosnia-Herzegovina", country_code: "ba")
 country8.save
 
-country9 = Country.new(name:"Bulgaria")
+country9 = Country.new(name:"Bulgaria", country_code: "bg")
 country9.save
 
-country10 = Country.new(name:"Croatia")
+country10 = Country.new(name:"Croatia", country_code: "hr")
 country10.save
 
-country11 = Country.new(name:"Cyprus")
+country11 = Country.new(name:"Cyprus", country_code: "cy")
 country11.save
 
-country12 = Country.new(name:"Czech Republic")
+country12 = Country.new(name:"Czech Republic", country_code: "cz")
 country12.save
 
-country13 = Country.new(name:"Denmark")
+country13 = Country.new(name:"Denmark", country_code: "dk")
 country13.save
 
-country14 = Country.new(name:"England")
+country14 = Country.new(name:"England", country_code: "uk")
 country14.save
 
 
@@ -108,12 +108,12 @@ federation14.save
 
 user1 = User.new(email:"maria@dudu.com", first_name:"Maria", usual_court_address:"Vesterengvej 26A, 8200 Aarhus N",
   last_name:"Tyndeskov", level:"pro", gender:"female", password:"123456", phone_number: "93677687",
-  facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts", instagram_account: "",
+  facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts",
   description: "", in_outdoors: "mostly outdoor")
 
 user2 = User.new(email:"line@dudu.com", first_name:"Line", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
   last_name:"Trans", level:"pro", gender:"female", password:"123456", phone_number: "21342342",
-  facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts", instagram_account: "",
+  facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts",
   description: "", in_outdoors:"mostly outdoor")
 
 user3 = User.new(email:"lærke@dudu.com", first_name:"Lærke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
@@ -128,12 +128,12 @@ user4 = User.new(email:"cecilie@dudu.com", first_name:"Cecilie", usual_court_add
 
 user5 = User.new(email:"pernille@dudu.com", first_name:"Pernille", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Witt", level:"semi-pro", gender:"female", password:"123456", phone_number: "74324322",
-  facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts", instagram_account: "",
+  facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts",
   description: "", in_outdoors:"mostly indoor")
 
 user6 = User.new(email:"trine@dudu.com", first_name:"Trine", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Bak", level:"semi-pro", gender:"female", password:"123456", phone_number: "78798327",
-  facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts", instagram_account: "",
+  facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts",
   description: "", in_outdoors:"mostly indoor")
 
 user7 = User.new(email:"sara@dudu.com", first_name:"Sara", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
@@ -158,47 +158,47 @@ user10 = User.new(email:"patrick@dudu.com", first_name:"Patrick", usual_court_ad
 
 user11 = User.new(email:"daniel@dudu.com", first_name:"Daniel", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
   last_name:"Jonassen", level:"pro", gender:"male", password:"123456", phone_number: "42398726",
-  facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts", instagram_account: "",
+  facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts",
   description: "", in_outdoors:"mostly outdoor")
 
 user12 = User.new(email:"morten@dudu.com", first_name:"Morten", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
   last_name:"Overgaard", level:"pro", gender:"male", password:"123456", phone_number: "72479822",
-  facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts", instagram_account: "",
+  facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts",
   description: "", in_outdoors:"mostly outdoor")
 
 user13 = User.new(email:"danielt@dudu.com", first_name:"Daniel", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Thomsen", level:"pro", gender:"male", password:"123456", phone_number: "62736423",
-  facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story", instagram_account: "",
+  facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story",
   description: "", in_outdoors:"mostly outdoor")
 
 user14 = User.new(email:"kristoffer@dudu.com", first_name:"Kristoffer", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Abell", level:"pro", gender:"male", password:"123456", phone_number: "82723413",
-  facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story", instagram_account: "",
+  facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story",
   description: "", in_outdoors:"mostly outdoor")
 
 user15 = User.new(email:"livia@dudu.com", first_name:"Livia", usual_court_address: "Lyngbyvej 110, 2100 København Ø",
   last_name:"Sebök", level:"semi-pro", gender:"female", password:"123456", phone_number: "70843217",
-  facebook_page:"https://www.facebook.com/sebok.livia", instagram_account: "",
+  facebook_page:"https://www.facebook.com/sebok.livia",
   description: "", in_outdoors:"mostly outdoor")
 
 user17 = User.new(email:"chris@dudu.com", first_name:"Chris", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Gregory", level:"pro", gender:"male", password:"123456", phone_number: "+44 20 8879 0611",
-  facebook_page:"https://www.facebook.com/GregorySheaf/", instagram_account: "",
+  facebook_page:"https://www.facebook.com/GregorySheaf/",
   description: "", in_outdoors:"mostly outdoor")
 
 user18 = User.new(email:"jake@dudu.com", first_name:"Jake", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Sheaf", level:"pro", gender:"male", password:"123456", phone_number: "+44 21 9979 2353",
-  facebook_page:"https://www.facebook.com/GregorySheaf/", instagram_account: "",
+  facebook_page:"https://www.facebook.com/GregorySheaf/",
   description: "", in_outdoors:"mostly outdoor")
 
 user19 = User.new(email:"jess@dudu.com", first_name:"Jess", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Grimson", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 5888 6798",
-  facebook_page:"https://www.facebook.com/palmergrimson/", instagram_account: "",
+  facebook_page:"https://www.facebook.com/palmergrimson/",
   description: "", in_outdoors:"mostly outdoor")
 
 user20 = User.new(email:"Vicky@dudu.com", first_name:"Vicky", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Palmer", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 7679 9769",
-  facebook_page:"https://www.facebook.com/palmergrimson/", instagram_account: "",
+  facebook_page:"https://www.facebook.com/palmergrimson/",
   description: "", in_outdoors:"mostly outdoor")
 
 

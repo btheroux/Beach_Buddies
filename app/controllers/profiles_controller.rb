@@ -6,5 +6,6 @@ class ProfilesController < ApplicationController
     @result = Result.new
     @team = Team.new
     @video = Video.new
+  # raise
   end
 end

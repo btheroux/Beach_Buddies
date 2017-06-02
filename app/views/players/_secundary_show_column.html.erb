@@ -1,42 +1,43 @@
-<div class="bbbox bbbox-item">
-  <div class="">
-    <a href="#" class="beachbuddy-btn beachbuddy-btn-main">CONTACT</a>
-  </div>
-</div>
+  <div class="bbbox bbbox-item">
+    <div class="">
+      <!-- <a href="mailto:#{<%= @user.email %>}" class="beachbuddy-btn beachbuddy-btn-main">CONTACT</a> -->
+      <a href="#" class="beachbuddy-btn beachbuddy-btn-main">CONTACT</a>
 
-<div class="bbbox">
-  <div class="bbbox-title">
-    <h4> <%= pluralize_without_count @user.rankings.size, "Ranking" %> </h4>
+    </div>
   </div>
-  <div class="bbbox-content">
-    <% unless @user.rankings.empty? %>
-      <% @user.rankings.each do |ranking| %>
-        <%= flag_icon(ranking.federation.country.country_code.to_sym) %>
-        Ranking <%= ranking.score %><em>th</em> in <%= ranking.date.year %> in
-        <%= ranking.federation.name.downcase %>
-        (<%= ranking.federation.country.name %>)
-      <% end %>
-    <% end %>
-  </div>
-</div>
 
-
-<div class="bbbox">
-  <div class="bbbox-title">
-    <h4> <%= pluralize_without_count @user.results.size, "Result" %> </h4>
-  </div>
-  <div class="bbbox-content">
-    <% unless @user.results.empty? %>
-      <ul>
-        <% @user.results.each do |result| %>
-          <li>
-            <strong><%= result.date %>: <%= result.game_name %> </strong> <br>
-            type: <%= result.game_type %> <br>
-            achievement: <%= result.achievement %> <br>
-            <%= result.description %>
-          </li>
+<% unless @user.rankings.empty? %>
+  <div class="bbbox">
+    <div class="bbbox-title">
+      <h4> <%= pluralize_without_count @user.rankings.size, "Ranking" %> </h4>
+    </div>
+    <div class="bbbox-content">
+        <% @user.rankings.each do |ranking| %>
+          <%= flag_icon(ranking.federation.country.country_code.to_sym) %>
+          Ranking <%= ranking.score %><em>th</em> in <%= ranking.date.year %> in
+          <%= ranking.federation.name.downcase %>
+          (<%= ranking.federation.country.name %>)
         <% end %>
-      </ul>
-    <% end %>
+    </div>
   </div>
-</div>
+<% end %>
+
+<% unless @user.results.empty? %>
+  <div class="bbbox">
+    <div class="bbbox-title">
+      <h4> <%= pluralize_without_count @user.results.size, "Result" %> </h4>
+    </div>
+    <div class="bbbox-content">
+        <ul>
+          <% @user.results.each do |result| %>
+            <li>
+              <strong><%= result.date %>: <%= result.game_name %> </strong> <br>
+              type: <%= result.game_type %> <br>
+              achievement: <%= result.achievement %> <br>
+              <%= result.description %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+  </div>
+<% end %>
