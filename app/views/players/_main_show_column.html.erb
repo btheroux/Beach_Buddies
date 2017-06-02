@@ -27,7 +27,7 @@
 
           <div class="product-body-partner-team-container hidden-xs">
             <% unless @user.team.nil? %>
-                <% if partner = @user.team.users.find {|u| u != user} %>
+                <% if partner = @user.team.users.find {|u| u != @user} %>
               <div class='product-body-partner'>
                 <% if partner.photos.empty? %>
                 <%=  image_tag("default-#{partner.gender}-#{rand(1..4)}.jpg", class: "product-image product-image-default product-image-partner hidden-xs ")%>
