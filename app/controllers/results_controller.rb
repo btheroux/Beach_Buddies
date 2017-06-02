@@ -12,7 +12,7 @@ class ResultsController < ApplicationController
     if @result.save
       redirect_to @user
     else
-      render "users/show"
+      render :new
     end
   end
 

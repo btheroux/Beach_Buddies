@@ -1,0 +1,16 @@
+<h1>Edit profile information</h1>
+
+<%= simple_form_for [@user] do |f| %>
+  <%= f.input :first_name, label: "First name", as: :string %>
+  <%= f.input :last_name, label: "Last name", as: :string %>
+  <%= f.input :phone_number, label: "Phone number", as: :string %>
+  <%= f.input :level, collection: ["beginner", "hobbyist", "semi-pro", "pro"], prompt: "select a volley ball level" %>
+  <%= f.input :facebook_page, label: "Facebook page", as: :string %>
+  <%= f.input :instagram_account, label: "Instagram account", as: :string %>
+  <%= f.input :description, label: "Description", as: :string %>
+  <%= f.input :in_outdoors, collection: ["mostly indoors volleyball", "mostly beach volleyball"], prompt: "playing mostly beach volleyball or indoors" %>
+  <%= f.input :gender, collection: ["male", "female"], prompt: "select a gender" %>
+  <%= f.input :usual_court_address, label: "Home court address", as: :string %>
+  <%= f.input :photos, label: "Photos", as: :attachinary, disabled: true %>
+  <%= f.submit "Done", class: "btn btn-success"%>
+<% end %>

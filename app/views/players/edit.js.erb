@@ -1,0 +1,12 @@
+
+$(document).ready(function (){
+  console.log("Worked!")
+  var infoSection = $('#user-info-section')
+  var infoSectionContents = $('#user-info-section').html()
+  infoSection.html('<%= j render 'player_form' %>')
+  cancel_button = $('<a href="#" id="cancel-button" class="btn btn-danger">Cancel</a> ')
+  infoSection.append(cancel_button)
+  cancel_button.on("click", function () {
+    infoSection.html(infoSectionContents)
+  });
+});

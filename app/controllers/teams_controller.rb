@@ -11,7 +11,7 @@ class TeamsController < ApplicationController
     if @team.save
       redirect_to @user
     else
-      render "users/show"
+      render "profiles/index"
     end
   end
 

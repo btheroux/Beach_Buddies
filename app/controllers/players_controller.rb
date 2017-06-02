@@ -16,11 +16,19 @@ class PlayersController < ApplicationController
   end
 
   def edit
+    respond_to do |format|
+      format.html
+      format.js  # <-- will render `app/views/reviews/create.js.erb`
+    end
   end
 
   def update
     @user.update(user_params)
-    redirect_to user_path(@user)
+    if @user.save
+      redirect_to profile_path
+    else
+      render :edit
+    end
   end
 
   private

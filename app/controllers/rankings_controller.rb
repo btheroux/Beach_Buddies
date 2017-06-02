@@ -4,13 +4,13 @@ class RankingsController < ApplicationController
     @user = current_user
     @ranking = Ranking.new()
     @ranking.score = params[:ranking][:score]
-    @ranking.date = Date.parse(params[:ranking][:date])
+    @ranking.date =  Date.parse(params[:ranking][:date]) unless params[:ranking][:date].blank?
     @ranking.federation = Federation.find(params[:ranking][:federation])
     @ranking.user = @user
     if @ranking.save
       redirect_to @user
     else
-      render "users/show"
+      render "profiles/index"
     end
   end
 

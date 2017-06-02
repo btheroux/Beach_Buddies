@@ -1,6 +1,24 @@
 <h1>Profile</h1>
 
-<%= render 'players/edit' %>
+<div id="user-info-section">
+<h2>User info:</h2>
+
+<p><%= @user.level %></p>
+<p><%= @user.email %></p>
+<p><%= @user.first_name %></p>
+<p><%= @user.last_name %></p>
+<p><%= @user.gender %></p>
+<p><%= @user.usual_court_address %></p>
+<p><%= @user.phone_number %></p>
+<p><%= @user.facebook_page %></p>
+<p><%= @user.instagram_account %></p>
+<p><%= @user.description %></p>
+<% @user.photos.each do |p| %>
+  <%= cl_image_tag p.path, width: 600, crop: :fit, class: "photo" %>
+<% end %>
+
+<%= link_to "Edit info", edit_user_path(current_user), class: "btn btn-primary", remote: true %>
+</div>
 
 <h2>Create a new team:</h2>
 
@@ -32,22 +50,6 @@
   <%= f.submit "Add a result", class: "btn btn-success"%>
 <% end %>
 
-
-<h2>User info:</h2>
-
-<p><%= @user.level %></p>
-<p><%= @user.email %></p>
-<p><%= @user.first_name %></p>
-<p><%= @user.last_name %></p>
-<p><%= @user.gender %></p>
-<p><%= @user.usual_court_address %></p>
-<p><%= @user.phone_number %></p>
-<p><%= @user.facebook_page %></p>
-<p><%= @user.instagram_account %></p>
-<p><%= @user.description %></p>
-<% @user.photos.each do |p| %>
-  <%= cl_image_tag p.path, width: 600, crop: :fit, class: "photo" %>
-<% end %>
 
 <h2>Rankings:</h2>
 
