@@ -107,49 +107,99 @@ federation14.save
 
 
 user1 = User.new(email:"maria@dudu.com", first_name:"Maria", usual_court_address:"Vesterengvej 26A, 8200 Aarhus N",
-  last_name:"Tyndeskov", level: "pro", gender:"female", password:"123456")
+  last_name:"Tyndeskov", level:"pro", gender:"female", password:"123456", phone_number: "93677687",
+  facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts", instagram_account: "",
+  description: "", in_outdoors: "mostly outdoor")
 
 user2 = User.new(email:"line@dudu.com", first_name:"Line", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
-  last_name:"Trans", level: "pro", gender:"female", password:"123456")
+  last_name:"Trans", level:"pro", gender:"female", password:"123456", phone_number: "21342342",
+  facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
 
 user3 = User.new(email:"lærke@dudu.com", first_name:"Lærke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Mygind", level: "pro", gender:"female", password:"123456")
+  last_name:"Mygind", level: "pro", gender:"female", password:"123456", phone_number: "43124234",
+  facebook_page:"https://www.facebook.com/teammygindolsen/?fref=ts", instagram_account:"https://www.instagram.com/teammygindolsen/",
+  description: "", in_outdoors:"mostly outdoor")
 
 user4 = User.new(email:"cecilie@dudu.com", first_name:"Cecilie", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Olsen", level: "pro", gender:"female", password:"123456")
+  last_name:"Olsen", level: "pro", gender:"female", password:"123456", phone_number: "74321897",
+  facebook_page:"https://www.facebook.com/teammygindolsen/?fref=ts", instagram_account:"https://www.instagram.com/teammygindolsen/",
+  description: "", in_outdoors:"mostly outdoor")
 
 user5 = User.new(email:"pernille@dudu.com", first_name:"Pernille", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Witt", level: "pro", gender:"female", password:"123456")
+  last_name:"Witt", level:"semi-pro", gender:"female", password:"123456", phone_number: "74324322",
+  facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts", instagram_account: "",
+  description: "", in_outdoors:"mostly indoor")
 
 user6 = User.new(email:"trine@dudu.com", first_name:"Trine", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Bak", level: "pro", gender:"female", password:"123456")
+  last_name:"Bak", level:"semi-pro", gender:"female", password:"123456", phone_number: "78798327",
+  facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts", instagram_account: "",
+  description: "", in_outdoors:"mostly indoor")
 
 user7 = User.new(email:"sara@dudu.com", first_name:"Sara", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Stief", level: "pro", gender:"female", password:"123456")
+  last_name:"Stief", level:"pro", gender:"female", password:"123456", phone_number: "70843270",
+  facebook_page:"https://www.facebook.com/TeamStiefSchade/?fref=ts", instagram_account:"https://www.instagram.com/team_stiefschade/",
+  description: "", in_outdoors:"mostly outdoor")
 
 user8 = User.new(email:"frederikke@dudu.com", first_name:"Frederikke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Schade Jensen", level: "pro", gender:"female", password:"123456")
+  last_name:"Schade Jensen", level:"pro", gender:"female", password:"123456", phone_number: "70213423",
+  facebook_page:"https://www.facebook.com/TeamStiefSchade/?fref=ts", instagram_account:"https://www.instagram.com/team_stiefschade/",
+  description: "", in_outdoors:"mostly outdoor")
 
 user9 = User.new(email:"jesper@dudu.com", first_name:"Jesper", usual_court_address:"Ny Kærvej 2A, 9000 Aalborg",
-  last_name:"Skovmark", level: "pro", gender:"male", password:"123456")
+  last_name:"Skovmark", level:"semi-pro", gender:"male", password:"123456", phone_number: "76623422",
+  facebook_page:"https://www.facebook.com/jorgensenskovmark/?fref=ts", instagram_account:"www.instagram.com/jorgensenskovmark",
+  description: "", in_outdoors:"mostly indoor")
 
 user10 = User.new(email:"patrick@dudu.com", first_name:"Patrick", usual_court_address:"Ny Kærvej 2A, 9000 Aalborg",
-  last_name:"Jørgensen", level: "pro", gender:"male", password:"123456")
+  last_name:"Jørgensen", level:"semi-pro", gender:"male", password:"123456", phone_number: "69764769",
+  facebook_page:"https://www.facebook.com/jorgensenskovmark/?fref=ts", instagram_account:"www.instagram.com/jorgensenskovmark",
+  description: "", in_outdoors:"mostly indoor")
 
 user11 = User.new(email:"daniel@dudu.com", first_name:"Daniel", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
-  last_name:"Jonassen", level: "pro", gender:"male", password:"123456")
+  last_name:"Jonassen", level:"pro", gender:"male", password:"123456", phone_number: "42398726",
+  facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
 
 user12 = User.new(email:"morten@dudu.com", first_name:"Morten", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
-  last_name:"Overgaard", level: "pro", gender:"male", password:"123456")
+  last_name:"Overgaard", level:"pro", gender:"male", password:"123456", phone_number: "72479822",
+  facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
 
 user13 = User.new(email:"danielt@dudu.com", first_name:"Daniel", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Thomsen", level: "pro", gender:"male", password:"123456")
+  last_name:"Thomsen", level:"pro", gender:"male", password:"123456", phone_number: "62736423",
+  facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
 
 user14 = User.new(email:"kristoffer@dudu.com", first_name:"Kristoffer", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Abell", level: "pro", gender:"male", password:"123456")
+  last_name:"Abell", level:"pro", gender:"male", password:"123456", phone_number: "82723413",
+  facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
 
 user15 = User.new(email:"livia@dudu.com", first_name:"Livia", usual_court_address: "Lyngbyvej 110, 2100 København Ø",
-  last_name:"Sebök", level: "semi-pro", gender:"female", password:"123456")
+  last_name:"Sebök", level:"semi-pro", gender:"female", password:"123456", phone_number: "70843217",
+  facebook_page:"https://www.facebook.com/sebok.livia", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
+
+user17 = User.new(email:"chris@dudu.com", first_name:"Chris", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Gregory", level:"pro", gender:"male", password:"123456", phone_number: "+44 20 8879 0611",
+  facebook_page:"https://www.facebook.com/GregorySheaf/", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
+
+user18 = User.new(email:"jake@dudu.com", first_name:"Jake", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Sheaf", level:"pro", gender:"male", password:"123456", phone_number: "+44 21 9979 2353",
+  facebook_page:"https://www.facebook.com/GregorySheaf/", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
+
+user19 = User.new(email:"jess@dudu.com", first_name:"Jess", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Grimson", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 5888 6798",
+  facebook_page:"https://www.facebook.com/palmergrimson/", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
+
+user20 = User.new(email:"Vicky@dudu.com", first_name:"Vicky", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Palmer", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 7679 9769",
+  facebook_page:"https://www.facebook.com/palmergrimson/", instagram_account: "",
+  description: "", in_outdoors:"mostly outdoor")
 
 
 team1 = Team.new(name:"Teamtyndeskovtrans")
@@ -186,6 +236,16 @@ team7 = Team.new(name:"Thomsen-Abell")
 team7.users << user13
 team7.users << user14
 team7.save
+
+team8 = Team.new(name:"GregorySheaf")
+team8.users << user17
+team8.users << user18
+team8.save
+
+team9 = Team.new(name:"palmergrimson")
+team9.users << user19
+team9.users << user20
+team9.save
 
 
 ranking1 = Ranking.new(score:"7")
@@ -262,6 +322,26 @@ ranking15 = Ranking.new(score:"32")
 ranking15.federation = federation13
 ranking15.user = user15
 ranking15.save
+
+ranking17 = Ranking.new(score:"1")
+ranking17.federation = federation14
+ranking17.user = user17
+ranking17.save
+
+ranking18 = Ranking.new(score:"2")
+ranking18.federation = federation14
+ranking18.user = user18
+ranking18.save
+
+ranking19 = Ranking.new(score:"1")
+ranking19.federation = federation14
+ranking19.user = user19
+ranking19.save
+
+ranking20 = Ranking.new(score:"2")
+ranking20.federation = federation14
+ranking20.user = user20
+ranking20.save
 
 
 result1 = Result.new(game_name:"Copenhagen Challenger 1", game_type:"competitive",
