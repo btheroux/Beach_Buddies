@@ -1,0 +1,62 @@
+<div class="product <%= "product-" + @user.gender %>">
+          <div class='product-upvote'>
+            <!-- XXX not available yet XXX-->
+            <div class=""><%= flag_icon(:dk) %></div>
+            <!-- XXX not available yet XXX-->
+            <div class='product-count'>95</div>
+          </div>
+          <!-- XXX default pictures XXX-->
+          <% if @user.photos.empty? %>
+            <%=  image_tag("default-#{@user.gender}-#{rand(1..4)}.jpg", class: "product-image product-image-default hidden-xs ")%>
+          <% else %>
+            <%=  cl_image_tag @user.photos.first.path, class: "product-image hidden-xs" %>
+          <% end %>
+            <!-- Unfortunately, FB login profile pictures saved in DB are only 50x50px.   -->
+            <%#  image_tag("#{@user.facebook_picture_url}", class: "product-image hidden-xs") %>
+          <div class='product-body'>
+            <h3>
+              <%= @user.first_name %> <%= @user.last_name %>
+              <span class="product-level <%= "product-level-" + @user.level %>"><%= @user.level %></span>
+            </h3>
+            <!-- XXX not available yet XXX-->
+            <!-- Use <%= @user.usual_court_address %> and install geocoder -->
+            <em>from Copenhagen, DK</em>. <br>
+            <%= @user.in_outdoors.nil? ? " " : "Plays " + @user.in_outdoors.downcase %>
+            <p> <%= @user.description %></p>
+          </div>
+
+          <div class="product-body-partner-team-container hidden-xs">
+            <% unless @user.team.nil? %>
+                <% if partner = @user.team.users.find {|u| u != user} %>
+              <div class='product-body-partner'>
+                <% if partner.photos.empty? %>
+                <%=  image_tag("default-#{partner.gender}-#{rand(1..4)}.jpg", class: "product-image product-image-default product-image-partner hidden-xs ")%>
+                <% else %>
+                <%#  image_tag("louise.jpg", class: "product-image-partner hidden-xs") %>
+                <%=  cl_image_tag partner.photos.first.path, class: "product-image product-image-partner hidden-xs" %>
+                <% end %>
+                  <span>
+                    <strong>Regular partner:</strong> <br> <%= partner.first_name ||= "-" %> <%= partner.last_name ||= "-" %>
+                  </span>
+              </div>
+                <% end %>
+            <% end %>
+            <% unless @user.team.nil? %>
+              <div class='product-body-team'>
+
+                <%=  image_tag("louise.jpg", class: "product-image-team hidden-xs") %>
+                <span>
+                  <strong>Team:</strong> <br> <%= @user.team.name ||= "Not named" %>
+                </span>
+              </div>
+            <% end %>
+          </div>
+          <ul class="list-inline product-controls hidden-sm hidden-xs">
+            <% if @user.facebook_page %>
+            <li><a href="<%= @user.facebook_page %>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <% end %>
+            <% if @user.instagram_account %>
+            <li><a href="<%= @user.instagram_account %>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <% end %>
+            <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+          </ul>

@@ -20,11 +20,10 @@
           <div class='product-count'>95</div>
         </div>
         <!-- XXX default pictures XXX-->
-        <% unless user.photos.empty? %>
-          <%=  cl_image_tag user.photos.first.path, class: "product-image hidden-xs" %>
-        <% else %>
+        <% if user.photos.empty? %>
           <%=  image_tag("default-#{user.gender}-#{rand(1..4)}.jpg", class: "product-image product-image-default hidden-xs ")%>
-          <%#  image_tag("", class: "product-image hidden-xs")%>
+        <% else %>
+          <%=  cl_image_tag user.photos.first.path, class: "product-image hidden-xs" %>
         <% end %>
           <!-- Unfortunately, FB login profile pictures saved in DB are only 50x50px.   -->
           <%#  image_tag("#{user.facebook_picture_url}", class: "product-image hidden-xs") %>
@@ -44,8 +43,12 @@
           <% if user.team %>
               <% if partner = user.team.users.find {|u| u != user} %>
             <div class='product-body-partner'>
-            <!-- XXX image_path partner.photo XX -->
-              <%=  image_tag("louise.jpg", class: "product-image-partner hidden-xs") %>
+              <% if partner.photos.empty? %>
+              <%=  image_tag("default-#{partner.gender}-#{rand(1..4)}.jpg", class: "product-image product-image-default product-image-partner hidden-xs ")%>
+              <% else %>
+              <%#  image_tag("louise.jpg", class: "product-image-partner hidden-xs") %>
+              <%=  cl_image_tag partner.photos.first.path, class: "product-image product-image-partner hidden-xs" %>
+              <% end %>
                 <span>
                   <strong>Regular partner:</strong> <br> <%= partner.first_name ||= "-" %> <%= partner.last_name ||= "-" %>
                 </span>
@@ -54,6 +57,7 @@
           <% end %>
           <% unless user.team.nil? %>
             <div class='product-body-team'>
+
               <%=  image_tag("louise.jpg", class: "product-image-team hidden-xs") %>
               <span>
                 <strong>Team:</strong> <br> <%= user.team.name ||= "Not named" %>

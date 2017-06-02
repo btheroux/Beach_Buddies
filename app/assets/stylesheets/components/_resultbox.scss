@@ -1,5 +1,5 @@
 /* The card */
-.card {
+.card-lars {
   position: relative;
   height: 250px;
   width: 500px;
@@ -12,7 +12,7 @@
 }
 
 /* Image on the left side */
-.thumbnail {
+.thumbnail-lars {
   float: left;
   position: relative;
   left: -20px;
@@ -33,7 +33,7 @@
 
 /*object-fit: cover; */
 /*object-position: center; */
-.left {
+.left-lars {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -47,7 +47,7 @@
 }
 
 /* Right side of the card */
-.right {
+.right-lars {
   position: absolute;
   right: 50%;
   top: 50%;
@@ -58,7 +58,7 @@
 }
 
 /* Floating action button */
-.fab {
+.fab-lars {
   position: absolute;
   right: 230px;
   bottom: 230px;
