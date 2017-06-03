@@ -1,8 +1,8 @@
 puts "Seed starting"
-# classes = [Ranking, Federation, Country, Result, User, Team, Video]
-# classes.each do |c|
-#   c.destroy_all
-# end
+classes = [Ranking, Federation, Country, Result, User, Team, Video]
+classes.each do |c|
+  c.destroy_all
+end
 puts "All records deleted, creating new records"
 
 
@@ -271,96 +271,115 @@ team9.save
 ranking1 = Ranking.new(score:7)
 ranking1.federation = federation13
 ranking1.user = user1
+ranking1.date = Date.today-rand(1..1095)
 ranking1.save
 
 ranking2 = Ranking.new(score:5)
 ranking2.federation = federation13
 ranking2.user = user2
+ranking2.date = Date.today-rand(1..1095)
 ranking2.save
 
 ranking3 = Ranking.new(score:4)
 ranking3.federation = federation13
 ranking3.user = user3
+ranking3.date = Date.today-rand(1..1095)
 ranking3.save
 
 ranking4 = Ranking.new(score:1)
 ranking4.federation = federation13
 ranking4.user = user4
+ranking4.date = Date.today-rand(1..1095)
 ranking4.save
 
 ranking5 = Ranking.new(score:48)
 ranking5.federation = federation13
 ranking5.user = user5
+ranking5.date = Date.today-rand(1..1095)
 ranking5.save
 
 ranking6 = Ranking.new(score:60)
 ranking6.federation = federation13
 ranking6.user = user6
+ranking6.date = Date.today-rand(1..1095)
 ranking6.save
 
 ranking7 = Ranking.new(score:12)
 ranking7.federation = federation13
 ranking7.user = user7
+ranking7.date = Date.today-rand(1..1095)
 ranking7.save
 
 ranking8 = Ranking.new(score:12)
 ranking8.federation = federation13
 ranking8.user = user8
+ranking8.date = Date.today-rand(1..1095)
 ranking8.save
 
 ranking9 = Ranking.new(score:59)
 ranking9.federation = federation13
 ranking9.user = user9
+ranking9.date = Date.today-rand(1..1095)
 ranking9.save
 
 ranking10 = Ranking.new(score:31)
 ranking10.federation = federation13
 ranking10.user = user10
+ranking10.date = Date.today-rand(1..1095)
 ranking10.save
 
 ranking11 = Ranking.new(score:15)
 ranking11.federation = federation13
 ranking11.user = user11
+ranking11.date = Date.today-rand(1..1095)
 ranking11.save
 
 ranking12 = Ranking.new(score:15)
 ranking12.federation = federation13
 ranking12.user = user12
+ranking12.date = Date.today-rand(1..1095)
 ranking12.save
 
 ranking13 = Ranking.new(score:9)
 ranking13.federation = federation13
 ranking13.user = user13
+ranking13.date = Date.today-rand(1..1095)
 ranking13.save
 
 ranking14 = Ranking.new(score:1)
 ranking14.federation = federation13
 ranking14.user = user14
+ranking14.date = Date.today-rand(1..1095)
 ranking14.save
 
 ranking15 = Ranking.new(score:32)
 ranking15.federation = federation13
 ranking15.user = user15
+ranking15.date = Date.today-rand(1..1095)
 ranking15.save
 
 ranking17 = Ranking.new(score:1)
 ranking17.federation = federation14
 ranking17.user = user17
+ranking17.date = Date.today-rand(1..1095)
 ranking17.save
 
 ranking18 = Ranking.new(score:2)
 ranking18.federation = federation14
 ranking18.user = user18
+ranking18.date = Date.today-rand(1..1095)
 ranking18.save
 
 ranking19 = Ranking.new(score:1)
 ranking19.federation = federation14
 ranking19.user = user19
+ranking19.date = Date.today-rand(1..1095)
 ranking19.save
 
 ranking20 = Ranking.new(score:2)
 ranking20.federation = federation14
 ranking20.user = user20
+ranking20.date = Date.today-rand(1..1095)
 ranking20.save
 
 
@@ -373,4 +392,4 @@ result1.save
 video1 = Video.new(url:"https://www.youtube.com/watch?v=KPcCHbI03sE")
 video1.user = user1
 
-puts "Seed running"
+puts "Seed finished"
