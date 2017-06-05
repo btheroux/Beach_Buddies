@@ -1,0 +1,55 @@
+<div class="productshow <%= "productshow-" + @user.gender %>">
+  <% if @user.photos.empty? %>
+  <%=  image_tag("default-#{@user.gender}-#{rand(1..4)}.jpg", class: "productshow-image productshow-image-default ")%>
+  <% else %>
+  <%=  cl_image_tag @user.photos.first.path, class: "productshow-image" %>
+  <% end %>
+
+  <div class='productshow-body'>
+    <h3>
+      <%= @user.first_name %> <%= @user.last_name %>
+      <span class="productshow-level <%= "productshow-level-" + @user.level %>"><%= @user.level %></span>
+    </h3>
+    <em>from Copenhagen, DK</em>. <br>
+    <%= @user.in_outdoors.nil? ? " " : "Plays " + @user.in_outdoors.downcase %>
+    <p> <%= @user.description %></p>
+  <br><br>
+  </div>
+
+  <!-- <div class="productshow-body-partner-team-container"> -->
+    <% unless @user.team.nil? %>
+    <% if partner = @user.team.users.find {|u| u != @user} %>
+    <div class='productshow-body-partner'>
+      <% if partner.photos.empty? %>
+      <%=  image_tag("default-#{partner.gender}-#{rand(1..4)}.jpg", class: "productshow-image productshow-image-default productshow-image-partner ")%>
+      <% else %>
+      <%=  cl_image_tag partner.photos.first.path, class: "productshow-image productshow-image-partner" %>
+      <% end %>
+      <span>
+        <strong>Regular partner:</strong> <br> <%= partner.first_name ||= "-" %> <%= partner.last_name ||= "-" %>
+      </span>
+    </div>
+    <% end %>
+    <% end %>
+    <% unless @user.team.nil? %>
+    <div class='productshow-body-team'>
+
+      <%=  image_tag("louise.jpg", class: "productshow-image-team") %>
+      <span>
+        <strong>Team:</strong> <br> <%= @user.team.name ||= "Not named" %>
+      </span>
+    </div>
+    <% end %>
+  <!-- </div> -->
+  <div>
+    <ul class="list-inline productshow-controls hidden-sm">
+      <% unless @user.facebook_page.empty? %>
+      <li><a href="<%= @user.facebook_page %>" target="_blank"><i class="fa fa-facebook fa-3x"></i></a></li>
+      <% end %>
+      <% unless @user.instagram_account.empty? %>
+      <li><a href="<%= @user.instagram_account %>" target="_blank"><i class="fa fa-instagram fa-3x"></i></a></li>
+      <% end %>
+    </ul>
+
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<% unless @user.photos.empty? %>
+  <div class="bbbox">
+    <div class="bbbox-title">
+      <h4> <%= pluralize_without_count @user.photos.size, "Photo" %> </h4>
+    </div>
+    <div class="bbbox-content">
+
+      <!-- <div class="container"> -->
+        <div class="row">
+
+            <% @user.photos.each do |photo| %>
+              <div class="col-xs-12 col-md-3">
+
+                <%= cl_image_tag photo.path, class: "bbbox-thumbnail",  crop: :fill%>
+
+              </div>
+            <% end %>
+
+        </div>
+      <!-- </div> -->
+
+    </div>
+  </div>
+<% end %>
+
+
+
+

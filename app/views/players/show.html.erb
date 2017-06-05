@@ -1,15 +1,18 @@
 <div class="container bb-container">
+  <br>
 
-    <br>
+  <div class="row">
+    <div class="col-xs-8">
+      <%= render 'main_description' %>
+      <%= render 'rankings' %>
+      <%= render 'results' %>
+      <%= render 'photos' %>
+      <%= render 'videos' %>
+    </div>
 
-    <div class="row">
-      <div class="col-xs-8">
-          <%= render 'main_show_column' %>
-        </div>
-
-        <div class="col-xs-4">
-          <%= render 'secundary_show_column' %>
-        </div>
-      </div>
+    <div class="col-xs-4">
+      <%= render 'secundary_show_column' %>
+    </div>
+  </div>
 
 </div>
