@@ -43,10 +43,10 @@
   <!-- </div> -->
   <div>
     <ul class="list-inline productshow-controls hidden-sm">
-      <% unless @user.facebook_page.empty? %>
+      <% unless @user.facebook_page.nil? || @user.facebook_page.empty? %>
       <li><a href="<%= @user.facebook_page %>" target="_blank"><i class="fa fa-facebook fa-3x"></i></a></li>
       <% end %>
-      <% unless @user.instagram_account.empty? %>
+      <% unless @user.instagram_account.nil?|| @user.instagram_account.empty? %>
       <li><a href="<%= @user.instagram_account %>" target="_blank"><i class="fa fa-instagram fa-3x"></i></a></li>
       <% end %>
     </ul>
