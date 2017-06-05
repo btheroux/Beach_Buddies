@@ -45,133 +45,133 @@ country12.save
 country13 = Country.new(name:"Denmark", country_code: "dk")
 country13.save
 
-country14 = Country.new(name:"England", country_code: "uk")
+country14 = Country.new(name:"England", country_code: "gb")
 country14.save
 
-country15 = Country.new(name:"Estonia", country_code: "EST")
+country15 = Country.new(name:"Estonia", country_code: "ee")
 country15.save
 
-country16 = Country.new(name:"Faroe Islands", country_code: "FR")
+country16 = Country.new(name:"Faroe Islands", country_code: "fo")
 country16.save
 
-country17 = Country.new(name:"Finland", country_code: "FIN")
+country17 = Country.new(name:"Finland", country_code: "fi")
 country17.save
 
-country18 = Country.new(name:"Former Y.R. Of Macedonia", country_code: "MK")
+country18 = Country.new(name:"Former Y.R. Of Macedonia", country_code: "mk")
 country18.save
 
-country19 = Country.new(name:"France", country_code: "F")
+country19 = Country.new(name:"France", country_code: "fr")
 country19.save
 
-country20 = Country.new(name:"Georgia", country_code: "GE")
+country20 = Country.new(name:"Georgia", country_code: "ge")
 country20.save
 
-country21 = Country.new(name:"Germany", country_code: "D")
+country21 = Country.new(name:"Germany", country_code: "de")
 country21.save
 
-country22 = Country.new(name:"Gibraltar", country_code: "GBZ")
+country22 = Country.new(name:"Gibraltar", country_code: "gi")
 country22.save
 
-country23 = Country.new(name:"Greece", country_code: "GR")
+country23 = Country.new(name:"Greece", country_code: "gr")
 country23.save
 
-country24 = Country.new(name:"Greenland", country_code: "GRL")
+country24 = Country.new(name:"Greenland", country_code: "gl")
 country24.save
 
-country25 = Country.new(name:"Hungary", country_code: "H")
+country25 = Country.new(name:"Hungary", country_code: "hu")
 country25.save
 
-country26 = Country.new(name:"Iceland", country_code: "IS")
+country26 = Country.new(name:"Iceland", country_code: "is")
 country26.save
 
-country27 = Country.new(name:"Ireland", country_code: "IRL")
+country27 = Country.new(name:"Ireland", country_code: "ie")
 country27.save
 
-country28 = Country.new(name:"Israel", country_code: "IL")
+country28 = Country.new(name:"Israel", country_code: "il")
 country28.save
 
-country29 = Country.new(name:"Italy", country_code: "I")
+country29 = Country.new(name:"Italy", country_code: "it")
 country29.save
 
-country30 = Country.new(name:"Kosovo", country_code: "")
+country30 = Country.new(name:"Kosovo", country_code: "kr")
 country30.save
 
-country31 = Country.new(name:"Latvia", country_code: "LV")
+country31 = Country.new(name:"Latvia", country_code: "lv")
 country31.save
 
-country32 = Country.new(name:"Liechtenstein", country_code: "FL")
+country32 = Country.new(name:"Liechtenstein", country_code: "li")
 country32.save
 
-country33 = Country.new(name:"Lithuania", country_code: "LT" )
+country33 = Country.new(name:"Lithuania", country_code: "lt" )
 country33.save
 
-country34 = Country.new(name:"Luxembourg", country_code: "L")
+country34 = Country.new(name:"Luxembourg", country_code: "lu")
 country34.save
 
-country35 = Country.new(name:"Malta", country_code: "M")
+country35 = Country.new(name:"Malta", country_code: "mt")
 country35.save
 
-country36 = Country.new(name:"Moldova", country_code: "MDA")
+country36 = Country.new(name:"Moldova", country_code: "md")
 country36.save
 
-country37 = Country.new(name:"Monaco", country_code: "MC")
+country37 = Country.new(name:"Monaco", country_code: "mc")
 country37.save
 
-country38 = Country.new(name:"Montenegro", country_code: "ME")
+country38 = Country.new(name:"Montenegro", country_code: "me")
 country38.save
 
-country39 = Country.new(name:"The Netherlands", country_code: "NL")
+country39 = Country.new(name:"The Netherlands", country_code: "nl")
 country39.save
 
-country40 = Country.new(name:"Northern Ireland", country_code: "G")
+country40 = Country.new(name:"Northern Ireland", country_code: "gb")
 country40.save
 
-country41 = Country.new(name:"Norway", country_code: "N")
+country41 = Country.new(name:"Norway", country_code: "no")
 country41.save
 
-country42 = Country.new(name:"Poland", country_code: "PL")
+country42 = Country.new(name:"Poland", country_code: "pl")
 country42.save
 
-country43 = Country.new(name:"Portugal", country_code: "P")
+country43 = Country.new(name:"Portugal", country_code: "pt")
 country43.save
 
-country44 = Country.new(name:"Romania", country_code: "RO")
+country44 = Country.new(name:"Romania", country_code: "ro")
 country44.save
 
-country45 = Country.new(name:"Russia", country_code: "RUS")
+country45 = Country.new(name:"Russia", country_code: "ru")
 country45.save
 
-country46 = Country.new(name:"San Marino", country_code: "RSM")
+country46 = Country.new(name:"San Marino", country_code: "sm")
 country46.save
 
-country47 = Country.new(name:"Scotland", country_code: "GB")
+country47 = Country.new(name:"Scotland", country_code: "gb")
 country47.save
 
-country48 = Country.new(name:"Serbia", country_code: "SRB")
+country48 = Country.new(name:"Serbia", country_code: "rs")
 country48.save
 
-country49 = Country.new(name:"Slovakia", country_code: "SK")
+country49 = Country.new(name:"Slovakia", country_code: "sk")
 country49.save
 
-country50 = Country.new(name:"Slovenia", country_code: "SLO")
+country50 = Country.new(name:"Slovenia", country_code: "si")
 country50.save
 
-country51 = Country.new(name:"Spain", country_code: "E")
+country51 = Country.new(name:"Spain", country_code: "es")
 country51.save
 
-country52 = Country.new(name:"Sweden", country_code: "S")
+country52 = Country.new(name:"Sweden", country_code: "se")
 country52.save
 
-country53 = Country.new(name:"Switzerland", country_code: "CH")
+country53 = Country.new(name:"Switzerland", country_code: "ch")
 country53.save
 
-country54 = Country.new(name:"Turkey", country_code: "TR")
+country54 = Country.new(name:"Turkey", country_code: "tr")
 country54.save
 
-country55 = Country.new(name:"Ukraine", country_code: "UA")
+country55 = Country.new(name:"Ukraine", country_code: "ua")
 country55.save
 
-country56 = Country.new(name:"Wales", country_code: "GB")
+country56 = Country.new(name:"Wales", country_code: "gb")
 country56.save
 
 
@@ -495,10 +495,6 @@ user20 = User.new(email:"Vicky@dudu.com", first_name:"Vicky", usual_court_addres
   description: "Chuck Norris' dog is trained to pick up his own poop because Chuck Norris will not take shit from anyone.", in_outdoors:"mostly outdoor")
 
 
-url = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624187/bike1_nnif62.png"
-bike1.photo_url = url
-
-
 team1 = Team.new(name:"Teamtyndeskovtrans")
 team1.users << user1
 team1.users << user2
@@ -758,7 +754,7 @@ result24.save
 result25 = Result.new(game_name:"RandersBC Smarteyes Challenger", game_type:"competitive",
   description: "fun games", achievement:"5rd place at 1 div. level", date:"14.05.2017")
 result25.user = user15
-result25.sav
+result25.save
 
 video1 = Video.new(url:"https://www.youtube.com/watch?v=KPcCHbI03sE")
 video1.user = user1
