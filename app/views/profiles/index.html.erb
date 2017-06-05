@@ -35,9 +35,16 @@
 <% end %>
 
 
-<h2>Create a new team:</h2>
+<h2 id="team-creation">Create a new team:</h2>
 
-<%= render 'team_form' %>
+
+
+<% if @user.team.nil? %>
+  <%= link_to "Create a team", '#', class: "btn btn-primary", id: "create-team" %>
+<% end %>
+<div id="team-create-form" hidden>
+  <%= render 'teams/team_form', user: @user, team: @team %>
+</div>
 
 <h2>Rankings:</h2>
 
@@ -55,12 +62,7 @@
 
 <h2>Create a new ranking:</h2>
 
-<%= simple_form_for [@user, @ranking] do |f| %>
-  <%= f.input :score, label: "Rank", as: :string %>
-  <%= f.input :date, label: "Date", as: :string %>
-  <%= f.input :federation, collection: Federation.all, prompt: "select a federation" %>
-  <%= f.submit "Add a ranking", class: "btn btn-success"%>
-<% end %>
+
 
 <h2>Results:</h2>
 
@@ -77,14 +79,7 @@
 
 <h2>Create a new result:</h2>
 
-<%= simple_form_for [@user, @result] do |f| %>
-  <%= f.input :game_name, label: "Game name", as: :string %>
-  <%= f.input :game_type, label: "Game Type", as: :string %>
-  <%= f.input :description, label: "Description", as: :string %>
-  <%= f.input :achievement, label: "Achievement", as: :string %>
-  <%= f.input :date, label: "Date", as: :string %>
-  <%= f.submit "Add a result", class: "btn btn-success"%>
-<% end %>
+
 
 
 
@@ -96,9 +91,6 @@
 
 <h2>Create a new video:</h2>
 
-<%= simple_form_for [@user, @video] do |f| %>
-  <%= f.input :url, label: "Youtube url", as: :string %>
-  <%= f.submit "Add a video", class: "btn btn-success"%>
-<% end %>
+
 
 </div>
