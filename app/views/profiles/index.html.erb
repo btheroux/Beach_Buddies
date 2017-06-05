@@ -27,6 +27,7 @@
 
 <% if !@user.team.nil? %>
   <%= @user.team.name %>
+  <%= @user.team.users.find {|u| u != @user} %>
   <%= @user.team.facebook_page %>
   <%= @user.team.instagram_account %>
   <%= @user.team.facebook_pages_likes %>
@@ -38,6 +39,7 @@
 
 <%= simple_form_for [@user, @team] do |f| %>
   <%= f.input :name, label: "Name", as: :string %>
+  <%= f.input :users, collection: @potential_members, prompt: "select a teammate" %>
   <%= f.input :facebook_page, label: "Facebook page", as: :string %>
   <%= f.input :instagram_account, label: "Instagram account", as: :string %>
   <%= f.input :facebook_pages_likes, label: "Facebook page likes", as: :string %>

@@ -9,9 +9,9 @@
           <div class='product-upvote'>
             <!-- XXX not available yet XXX-->
 
-            <%= flag_icon(user.rankings.first.federation.country.country_code.to_sym) unless user.rankings.empty? %>
+            <%# flag_icon(user.rankings.first.federation.country.country_code.to_sym) unless user.rankings.empty? %>
             <!-- XXX not available yet XXX-->
-            <div class='product-count'><%= user.rankings.first.score unless user.rankings.empty? %></div>
+            <div class='product-count'><%# user.rankings.first.score unless user.rankings.empty? %></div>
           </div>
           <!-- XXX default pictures XXX-->
           <% if user.photos.empty? %>
