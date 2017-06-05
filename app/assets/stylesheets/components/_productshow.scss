@@ -1,0 +1,189 @@
+.productshow {
+  position: relative;
+  display: flex;
+  // align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+  margin: 5px 0;
+}
+
+.productshow-card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+}
+
+/* Body design */
+.productshow-body {
+  flex: 1 1 80%;
+}
+.productshow-body h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 0;
+}
+.productshow-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+/* Body Partner Team design */
+.productshow-body-partner-team-container {
+  flex: 0 0 20%;
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+  // justify-content: center;
+}
+
+.productshow-body-partner {
+  display: flex;
+  flex-direction: row;
+}
+
+.productshow-body-team {
+  display: flex;
+  flex-direction: row;
+}
+/* Productshow image */
+.productshow-image {
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  // flex: 1 1 20%;
+}
+.productshow-image-default {
+  filter: sepia(90%);
+}
+.productshow-image-partner {
+  border-radius: 50%;
+  margin-right: 20px;
+  max-width: 50px;
+  max-height: 50px;
+  flex: 0 0 30%
+}
+.productshow-image-team {
+  border-radius: 7px;
+  margin-right: 20px;
+  max-width: 50px;
+  max-height: 50px;
+  flex: 0 0 30%
+}
+
+/* Upvote design USED FOR RANKING */
+.productshow-upvote {
+  padding-right: 20px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+}
+.productshow-count {
+  margin: 2px 0 0;
+}
+.productshow-arrow {
+  transition: all 0.15s ease;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 9px solid black;
+  border-radius: 2px;
+  margin: auto;
+}
+
+/* Controls design */
+.productshow-controls {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+.productshow-controls a {
+  padding: 0 20px;
+  font-size: 20px;
+  color: #B2B2B2;
+  z-index:10;
+}
+.productshow-controls a:hover {
+  color: $brand-complementary-color !important
+}
+.productshow-controls-hidden a {
+  color: transparent;
+  font-size: 15px;
+  transition: all 0.15s ease;
+  border-color: transparent;
+}
+
+/* Hover effects */
+.productshow:hover {
+  // background: #f7f7fa;
+  // cursor: pointer;
+}
+.productshow-upvote:hover, .productshow-upvote.productshow-upvote-upvoted {
+  color: #5898f1;
+  cursor: pointer;
+}
+// used for ranking
+.productshow-upvote-upvoted .productshow-arrow {
+  border-bottom-color: #5898f1;
+}
+// .productshow:hover .productshow-upvote { transform: scale(1.2) }
+.productshow:hover .productshow-controls-hidden a { color: #E6E6E6 }
+.productshow-upvote:hover .productshow-arrow { border-bottom: 9px solid #5898f1 }
+
+
+// GENDER____________________________
+.productshow-female {
+  // color: #C62B9D;
+  background: rgba(198,43,157,0.05);
+}
+.productshow-female:hover {
+  // color: #C62B9D;
+  background: rgba(198,43,157,0.1);
+}
+.productshow-male {
+  // color: #4F29B2;
+  background: rgba(79,41,178,0.05);
+}
+.productshow-male:hover {
+  // color: #4F29B2;
+  background: rgba(79,41,178,0.1);
+}
+// PRODUCTshow LEVELS____________________________
+.productshow-level {
+  color: white;
+  border-radius: 7px;
+  font-weight: lighter;
+  padding: 3px 7px;
+  font-size: 18px;
+}
+.productshow-level-beginner {
+  background-color: $brand-color;
+  color: $brand-complementary-color;
+}
+.productshow-level-hobbyist {
+  background-color: $blue;
+  color: white;
+}
+.productshow-level-semi-pro {
+  background-color: $red;
+  color: white;
+}
+.productshow-level-pro {
+  background-color: black;
+  color: white;
+  padding: 3px 20px;
+}

@@ -1,0 +1,19 @@
+<% unless @user.results.empty? %>
+  <div class="bbbox">
+    <div class="bbbox-title">
+      <h4> <%= pluralize_without_count @user.results.size, "Result" %> </h4>
+    </div>
+    <div class="bbbox-content">
+        <ul>
+          <% @user.results.each do |result| %>
+            <li>
+              <strong><%= result.date %>: <%= result.game_name %> </strong> <br>
+              type: <%= result.game_type %> <br>
+              achievement: <%= result.achievement %> <br>
+              <%= result.description %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+  </div>
+<% end %>

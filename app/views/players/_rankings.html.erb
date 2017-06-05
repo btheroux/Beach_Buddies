@@ -1,0 +1,15 @@
+<% unless @user.rankings.empty? %>
+  <div class="bbbox">
+    <div class="bbbox-title">
+      <h4> <%= pluralize_without_count @user.rankings.size, "Ranking" %> </h4>
+    </div>
+    <div class="bbbox-content">
+        <% @user.rankings.each do |ranking| %>
+          <%= flag_icon(ranking.federation.country.country_code.to_sym) %>
+          Ranking <%= ranking.score %><em>th</em> in <%= ranking.date.year %> in
+          <%= ranking.federation.name.downcase %>
+          (<%= ranking.federation.country.name %>)
+        <% end %>
+    </div>
+  </div>
+<% end %>
