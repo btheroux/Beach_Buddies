@@ -20,7 +20,7 @@
     <%= cl_image_tag p.path, width: 600, crop: :fit, class: "photo" %>
   <% end %>
 
-  <%= link_to "Edit info", edit_user_path(current_user), class: "btn btn-primary", remote: true %>
+<%= link_to "Edit info", edit_user_path(current_user), class: "btn btn-primary", remote: true %>
 </div>
 
 <h2>Team:</h2>
@@ -37,14 +37,7 @@
 
 <h2>Create a new team:</h2>
 
-<%= simple_form_for [@user, @team] do |f| %>
-  <%= f.input :name, label: "Name", as: :string %>
-  <%= f.input :users, label: "Teammate", collection: @potential_members, prompt: "select a teammate" %>
-  <%= f.input :facebook_page, label: "Facebook page", as: :string %>
-  <%= f.input :instagram_account, label: "Instagram account", as: :string %>
-  <%= f.input :facebook_pages_likes, label: "Facebook page likes", as: :string %>
-  <%= f.submit "Add a team", class: "btn btn-success"%>
-<% end %>
+<%= render 'team_form' %>
 
 <h2>Rankings:</h2>
 
