@@ -175,79 +175,79 @@ country56 = Country.new(name:"Wales", country_code: "gb")
 country56.save
 
 
-federation1 = Federation.new(name:"FEDERATA SHQIPTARE E VOLEJBOLLIT", url:"fshv.org.al")
+federation1 = Federation.new(name:"FEDERATA SHQIPTARE E VOLEJBOLLIT", url:"http://www.fshv.org.al")
 country1.federations << federation1
 federation1.save
 
-federation2 = Federation.new(name:"FEDERACIÓ ANDORRANA DE VOLEIBOL", url:"www.fav.ad")
+federation2 = Federation.new(name:"FEDERACIÓ ANDORRANA DE VOLEIBOL", url:"http://www.fav.ad")
 country2.federations << federation2
 federation2.save
 
-federation3 = Federation.new(name:"VOLLEYBALL FEDERATION OF ARMENIA", url:"www.armvolley.am")
+federation3 = Federation.new(name:"VOLLEYBALL FEDERATION OF ARMENIA", url:"http://www.armvolley.am")
 country3.federations << federation3
 federation3.save
 
-federation4 = Federation.new(name:"ÖSTERREICHISCHER VOLLEYBALL VERBANL", url:"www.volleynet.at")
+federation4 = Federation.new(name:"ÖSTERREICHISCHER VOLLEYBALL VERBANL", url:"http://www.volleynet.at")
 country4.federations << federation4
 federation4.save
 
-federation5 = Federation.new(name:"AZƏRBAYCAN VOLEYBOL FEDERASIYASI", url:"www.avf.az")
+federation5 = Federation.new(name:"AZƏRBAYCAN VOLEYBOL FEDERASIYASI", url:"http://www.avf.az")
 country5.federations << federation5
 federation5.save
 
-federation6 = Federation.new(name:"BELARUS VOLLEYBALL FEDERATION", url:"www.bvf.by")
+federation6 = Federation.new(name:"BELARUS VOLLEYBALL FEDERATION", url:"http://www.bvf.by")
 country6.federations << federation6
 federation6.save
 
-federation7 = Federation.new(name:"FÉDÉRATION ROYALE BELGE DE VOLLEY-BALL", url:"www.topvolleybelgium.be")
+federation7 = Federation.new(name:"FÉDÉRATION ROYALE BELGE DE VOLLEY-BALL", url:"http://www.topvolleybelgium.be")
 country7.federations << federation7
 federation7.save
 
-federation8 = Federation.new(name:"ODBOJKAŠKI SAVEZ BOSNE I HERCEGOVINE", url:"www.osbih.ba")
+federation8 = Federation.new(name:"ODBOJKAŠKI SAVEZ BOSNE I HERCEGOVINE", url:"http://www.osbih.ba")
 country8.federations << federation8
 federation8.save
 
-federation9 = Federation.new(name:"BULGARIAN VOLLEYBALL FEDERATION", url:"www.volleyball.bg")
+federation9 = Federation.new(name:"BULGARIAN VOLLEYBALL FEDERATION", url:"http://www.volleyball.bg")
 country9.federations << federation9
 federation9.save
 
-federation10 = Federation.new(name:"HRVATSKI ODBOJKAŠKI SAVEZ", url:"www.hou.hr")
+federation10 = Federation.new(name:"HRVATSKI ODBOJKAŠKI SAVEZ", url:"http://www.hou.hr")
 country10.federations << federation10
 federation10.save
 
-federation11 = Federation.new(name:"CYPRUS VOLLEYBALL ASSOCIATION", url:"www.volleyball.org.cy")
+federation11 = Federation.new(name:"CYPRUS VOLLEYBALL ASSOCIATION", url:"http://www.volleyball.org.cy")
 country11.federations << federation11
 federation11.save
 
-federation12 = Federation.new(name:"ČESKÝ VOLEJBALOVÝ SVAZ", url:"www.cvf.cz")
+federation12 = Federation.new(name:"ČESKÝ VOLEJBALOVÝ SVAZ", url:"http://www.cvf.cz")
 country12.federations << federation12
 federation12.save
 
-federation13 = Federation.new(name:"VOLLEYBALL DANMARK", url:"www.volleyball.dk")
+federation13 = Federation.new(name:"VOLLEYBALL DANMARK", url:"http://www.volleyball.dk")
 country13.federations << federation13
 federation13.save
 
-federation14 = Federation.new(name:"VOLLEYBALL ENGLAND", url:"www.volleyballengland.org")
+federation14 = Federation.new(name:"VOLLEYBALL ENGLAND", url:"http://www.volleyballengland.org")
 country14.federations << federation14
 federation14.save
 
-federation15 = Federation.new(name:"EESTI VÕRKPALLI LIIT", url: "www.volley.ee")
+federation15 = Federation.new(name:"EESTI VÕRKPALLI LIIT", url: "http://www.volley.ee")
 country15.federations << federation15
 federation15.save
 
-federation16 = Federation.new(name:"FLOGBÓLTSSAMBAND FØROYA", url: "www.fbf.fo")
+federation16 = Federation.new(name:"FLOGBÓLTSSAMBAND FØROYA", url: "http://www.fbf.fo")
 country16.federations << federation16
 federation16.save
 
-federation17 = Federation.new(name:"SUOMEN LENTOPALLOLIITTO RY", url: "www.lentopalloliitto.fi")
+federation17 = Federation.new(name:"SUOMEN LENTOPALLOLIITTO RY", url: "http://www.lentopalloliitto.fi")
 country17.federations << federation17
 federation17.save
 
-federation18 = Federation.new(name:"VOLLEYBALL FEDERATION OF THE F.Y.R. OF MACEDONIA", url: "www.vfmkd.mk")
+federation18 = Federation.new(name:"VOLLEYBALL FEDERATION OF THE F.Y.R. OF MACEDONIA", url: "http://www.vfmkd.mk")
 country18.federations << federation18
 federation18.save
 
-federation19 = Federation.new(name:"FÉDÉRATION FRANCAISE DE VOLLEY-BALL", url: "www.ffvb.org")
+federation19 = Federation.new(name:"FÉDÉRATION FRANCAISE DE VOLLEY-BALL", url: "http://www.ffvb.org")
 country19.federations << federation19
 federation19.save
 
@@ -255,7 +255,7 @@ federation20 = Federation.new(name:"GEORGIAN VOLLEYBALL FEDERATION", url: "")
 country20.federations << federation20
 federation20.save
 
-federation21 = Federation.new(name:"DEUTSCHER VOLLEYBALL-VERBAND", url: "www.volleyball-verband.de")
+federation21 = Federation.new(name:"DEUTSCHER VOLLEYBALL-VERBAND", url: "http://www.volleyball-verband.de")
 country21.federations << federation21
 federation21.save
 
@@ -263,43 +263,43 @@ federation22 = Federation.new(name:"GIBRALTAR VOLLEYBALL ASSOCIATION", url: "")
 country22.federations << federation22
 federation22.save
 
-federation23 = Federation.new(name:"HELLENIC VOLLEYBALL FEDERATION", url: "www.volleyball.gr")
+federation23 = Federation.new(name:"HELLENIC VOLLEYBALL FEDERATION", url: "http://www.volleyball.gr")
 country23.federations << federation23
 federation23.save
 
-federation24 = Federation.new(name:"GRØNLANDS VOLLEYBALL FORBUND", url: "www.volleyball.gl")
+federation24 = Federation.new(name:"GRØNLANDS VOLLEYBALL FORBUND", url: "http://www.volleyball.gl")
 country24.federations << federation24
 federation24.save
 
-federation25 = Federation.new(name:"MAGYAR RÖPLABDA SZÖVETSÉG", url: "www.hunvolley.hu")
+federation25 = Federation.new(name:"MAGYAR RÖPLABDA SZÖVETSÉG", url: "http://www.hunvolley.hu")
 country25.federations << federation25
 federation25.save
 
-federation26 = Federation.new(name:"BLAKSAMBAND ÍSLANDS" , url: "www.bli.is")
+federation26 = Federation.new(name:"BLAKSAMBAND ÍSLANDS" , url: "http://www.bli.is")
 country26.federations << federation26
 federation26.save
 
-federation27 = Federation.new(name:"VOLLEYBALL ASSOCIATION OF IRELAND", url: "www.volleyballireland.com")
+federation27 = Federation.new(name:"VOLLEYBALL ASSOCIATION OF IRELAND", url: "http://www.volleyballireland.com")
 country27.federations << federation27
 federation27.save
 
-federation28 = Federation.new(name:"ISRAEL VOLLEYBALL ASSOCIATION", url: "www.iva.org.il")
+federation28 = Federation.new(name:"ISRAEL VOLLEYBALL ASSOCIATION", url: "http://www.iva.org.il")
 country28.federations << federation28
 federation28.save
 
-federation29 = Federation.new(name:"FEDERAZIONE ITALIANA PALLAVOLO", url: "www.federvolley.it")
+federation29 = Federation.new(name:"FEDERAZIONE ITALIANA PALLAVOLO", url: "http://www.federvolley.it")
 country29.federations << federation29
 federation29.save
 
-federation30 = Federation.new(name:"FEDERATA E VOLEJBOLLIT E KOSOVËS", url: "www.fvk-ks.org")
+federation30 = Federation.new(name:"FEDERATA E VOLEJBOLLIT E KOSOVËS", url: "http://www.fvk-ks.org")
 country30.federations << federation30
 federation30.save
 
-federation31 = Federation.new(name:"LATVIJAS VOLEJBOLA FEDERACIJA", url: "www.volejbols.lv")
+federation31 = Federation.new(name:"LATVIJAS VOLEJBOLA FEDERACIJA", url: "http://www.volejbols.lv")
 country31.federations << federation31
 federation31.save
 
-federation32 = Federation.new(name:"LIECHTENSTEINER VOLLEYBALL-VERBAND", url: "www.lvbv.li")
+federation32 = Federation.new(name:"LIECHTENSTEINER VOLLEYBALL-VERBAND", url: "http://www.lvbv.li")
 country32.federations << federation32
 federation32.save
 
@@ -307,95 +307,95 @@ federation33 = Federation.new(name:"LIETUVOS TINKLINIO FEDERACIJA", url: "http:/
 country33.federations << federation33
 federation33.save
 
-federation34 = Federation.new(name:"FÉDÉRATION LUXEMBOURGEOISE DE VOLLEYBALL", url: "www.flvb.lu")
+federation34 = Federation.new(name:"FÉDÉRATION LUXEMBOURGEOISE DE VOLLEYBALL", url: "http://www.flvb.lu")
 country34.federations << federation34
 federation34.save
 
-federation35 = Federation.new(name:"MALTA VOLLEYBALL ASSOCIATION", url: "www.maltavolleyball.org")
+federation35 = Federation.new(name:"MALTA VOLLEYBALL ASSOCIATION", url: "http://www.maltavolleyball.org")
 country35.federations << federation35
 federation35.save
 
-federation36 = Federation.new(name:"FEDERAȚIA DE VOLEI DIN REPUBLICA MOLDOVA", url: "moldvoley@mail.ru")
+federation36 = Federation.new(name:"FEDERAȚIA DE VOLEI DIN REPUBLICA MOLDOVA", url: "")
 country36.federations << federation36
 federation36.save
 
-federation37 = Federation.new(name:"FÉDÉRATION MONÉGASQUE DE VOLLEY BALL", url: "www.federation-volleyball.mc")
+federation37 = Federation.new(name:"FÉDÉRATION MONÉGASQUE DE VOLLEY BALL", url: "http://www.federation-volleyball.mc")
 country37.federations << federation37
 federation37.save
 
-federation38 = Federation.new(name:"ODBOJKAŠKI SAVEZ CRNE GORE", url: "www.oscg.me")
+federation38 = Federation.new(name:"ODBOJKAŠKI SAVEZ CRNE GORE", url: "http://www.oscg.me")
 country38.federations << federation38
 federation38.save
 
-federation39 = Federation.new(name:"NEDERLANDSE VOLLEYBAL BOND", url: "www.volleybal.nl")
+federation39 = Federation.new(name:"NEDERLANDSE VOLLEYBAL BOND", url: "http://www.volleybal.nl")
 country39.federations << federation39
 federation39.save
 
-federation40 = Federation.new(name:"NORTHERN IRELAND VOLLEYBALL ASSOCIATION", url: "www.nivolleyball.com")
+federation40 = Federation.new(name:"NORTHERN IRELAND VOLLEYBALL ASSOCIATION", url: "http://www.nivolleyball.com")
 country40.federations << federation40
 federation40.save
 
-federation41 = Federation.new(name:"NORGES VOLLEYBALLFORBUND", url: "www.volleyball.no")
+federation41 = Federation.new(name:"NORGES VOLLEYBALLFORBUND", url: "http://www.volleyball.no")
 country41.federations << federation41
 federation41.save
 
-federation42 = Federation.new(name:"POLSKI ZWIĄZEK PIŁKI SIATKOWEJ", url: "www.pzps.pl")
+federation42 = Federation.new(name:"POLSKI ZWIĄZEK PIŁKI SIATKOWEJ", url: "http://www.pzps.pl")
 country42.federations << federation42
 federation42.save
 
-federation43 = Federation.new(name:"FEDERAÇÃO PORTUGUESA DE VOLEIBOL", url: "www.fpvoleibol.pt")
+federation43 = Federation.new(name:"FEDERAÇÃO PORTUGUESA DE VOLEIBOL", url: "http://www.fpvoleibol.pt")
 country43.federations << federation43
 federation43.save
 
-federation44 = Federation.new(name:"FEDERATIA ROMANA DE VOLEI", url: "www.frvolei.ro")
+federation44 = Federation.new(name:"FEDERATIA ROMANA DE VOLEI", url: "http://www.frvolei.ro")
 country44.federations << federation44
 federation44.save
 
-federation45 = Federation.new(name:"VOLLEYBALL FEDERATION OF RUSSIA" , url: "www.volley.ru")
+federation45 = Federation.new(name:"VOLLEYBALL FEDERATION OF RUSSIA" , url: "http://www.volley.ru")
 country45.federations << federation45
 federation45.save
 
-federation46 = Federation.new(name:"FEDERAZIONE SAMMARINESE PALLAVOLO", url: "www.fspav.sm")
+federation46 = Federation.new(name:"FEDERAZIONE SAMMARINESE PALLAVOLO", url: "http://www.fspav.sm")
 country46.federations << federation46
 federation46.save
 
-federation47 = Federation.new(name:"SCOTTISH VOLLEYBALL ASSOCIATION", url: "www.scottishvolleyball.org")
+federation47 = Federation.new(name:"SCOTTISH VOLLEYBALL ASSOCIATION", url: "http://www.scottishvolleyball.org")
 country47.federations << federation47
 federation47.save
 
-federation48 = Federation.new(name:"ODBOJKAŠKI SAVEZ SRBIJE", url: "www.ossrb.org")
+federation48 = Federation.new(name:"ODBOJKAŠKI SAVEZ SRBIJE", url: "http://www.ossrb.org")
 country48.federations << federation48
 federation48.save
 
-federation49 = Federation.new(name:"SLOVENSKÁ VOLEJBALOVÁ FEDERÁCIA", url: "www.svf.sk")
+federation49 = Federation.new(name:"SLOVENSKÁ VOLEJBALOVÁ FEDERÁCIA", url: "http://www.svf.sk")
 country49.federations << federation49
 federation49.save
 
-federation50 = Federation.new(name:"ODBOJKARSKA ZVEZA SLOVENIJE", url: "www.odbojka.si")
+federation50 = Federation.new(name:"ODBOJKARSKA ZVEZA SLOVENIJE", url: "http://www.odbojka.si")
 country50.federations << federation50
 federation50.save
 
-federation51 = Federation.new(name:"REAL FEDERACIÓN ESPAÑOLA DE VOLEIBOL", url: "www.rfevb.com")
+federation51 = Federation.new(name:"REAL FEDERACIÓN ESPAÑOLA DE VOLEIBOL", url: "http://www.rfevb.com")
 country51.federations << federation51
 federation51.save
 
-federation52 = Federation.new(name:"SVENSKA VOLLEYBOLLFÖRBUNDET", url: "www.volleyboll.se")
+federation52 = Federation.new(name:"SVENSKA VOLLEYBOLLFÖRBUNDET", url: "http://www.volleyboll.se")
 country52.federations << federation52
 federation52.save
 
-federation53 = Federation.new(name:"SWISS VOLLEY", url: "www.volleyball.ch")
+federation53 = Federation.new(name:"SWISS VOLLEY", url: "http://www.volleyball.ch")
 country53.federations << federation53
 federation53.save
 
-federation54 = Federation.new(name:"TÜRKIYE VOLEYBOL FEDERASYONU", url: "www.tvf.org.tr")
+federation54 = Federation.new(name:"TÜRKIYE VOLEYBOL FEDERASYONU", url: "http://www.tvf.org.tr")
 country54.federations << federation54
 federation54.save
 
-federation55 = Federation.new(name:"UKRAINIAN VOLLEYBALL FEDERATION", url: "www.fvu.in.ua")
+federation55 = Federation.new(name:"UKRAINIAN VOLLEYBALL FEDERATION", url: "http://www.fvu.in.ua")
 country55.federations << federation55
 federation55.save
 
-federation56 = Federation.new(name:"VOLLEYBALL WALES", url: "www.volleyballwales.org")
+federation56 = Federation.new(name:"VOLLEYBALL WALES", url: "http://www.volleyballwales.org")
 country56.federations << federation56
 federation56.save
 

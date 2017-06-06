@@ -5,10 +5,11 @@
     </div>
     <div class="bbbox-content">
         <% @user.rankings.each do |ranking| %>
-          <%= flag_icon(ranking.federation.country.country_code.to_sym) %>
-          Ranking <%= ranking.score %><em>th</em> in <%= ranking.date.year %> in
-          <%= ranking.federation.name.downcase %>
-          (<%= ranking.federation.country.name %>)
+            <%= flag_icon(ranking.federation.country.country_code.to_sym) %>
+            Ranking <%= ranking.score %><em>th</em> in <%= ranking.date %> in
+          <a href="<%= ranking.federation.url %>" target="_blank"><%= ranking.federation.name.downcase %></a>
+            (<%= ranking.federation.country.name %>)
+
         <% end %>
     </div>
   </div>
