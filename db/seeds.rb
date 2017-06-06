@@ -759,4 +759,59 @@ result25.save
 video1 = Video.new(url:"https://www.youtube.com/watch?v=KPcCHbI03sE")
 video1.user = user1
 
+url1 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664068/maria_us9nnu.jpg"
+user1.photo_urls = [url1]
+
+url2 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664068/LineT_usv7k0.jpg"
+user2.photo_urls = [url2]
+
+url3 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664085/Laerke_sw8irx.jpg"
+user3.photo_urls = [url3]
+
+url4 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664065/Cecilie_wxteas.jpg"
+user4.photo_urls = [url4]
+
+url5 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664087/Pernille_zlmtxj.jpg"
+user5.photo_urls = [url5]
+
+url6 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664070/trine_xmvuin.jpg"
+user6.photo_urls = [url6]
+
+url7 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664095/sara_kkamf5.jpg"
+user7.photo_urls = [url7]
+
+url8 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664069/frederikke_dyr6uy.jpg"
+user8.photo_urls = [url8]
+
+url9 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664054/jesper_x562nf.jpg"
+user9.photo_urls = [url9]
+
+url10 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664099/Patrick_lj9bmz.jpg"
+user10.photo_urls = [url10]
+
+url11 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664069/danielJonassen_aofjek.jpg"
+user11.photo_urls = [url11]
+
+url12 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664069/morten_p9tajj.jpg"
+user12.photo_urls = [url12]
+
+url13 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664095/thomsen_cextln.jpg"
+user13.photo_urls = [url13]
+
+url14 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664066/abell_fmcerb.jpg"
+user14.photo_urls = [url14]
+
+url17 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664068/jake_jmpxsb.jpg"
+user17.photo_urls = [url17]
+
+url18 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664054/chrisgregory_dyzpns.jpg"
+user18.photo_urls = [url18]
+
+url19 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664068/JessGrimson_op9hb2.jpg"
+user19.photo_urls = [url19]
+
+url20 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664087/victoriaPalmer_x1g8b2.jpg"
+user20.photo_urls = [url20]
+
+
 puts "Seed finished"
