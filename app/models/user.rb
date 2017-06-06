@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_attachments :photos, maximum: 20
   before_create :default_level
+  geocoded_by :usual_court_address
+  after_validation :geocode, if: :usual_court_address_changed?
 
   has_many :videos, dependent: :destroy
   has_many :results, dependent: :destroy
