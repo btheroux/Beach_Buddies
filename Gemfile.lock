@@ -97,12 +97,9 @@ GEM
       sass (~> 3.2)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
-
-    geocoder (1.4.4)
-
     gendered (0.0.8)
       http (>= 0.6.2)
-
+    geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     gmaps4rails (2.1.2)
@@ -271,12 +268,9 @@ DEPENDENCIES
   figaro
   flag-icons-rails
   font-awesome-sass
-
+  gendered
   geocoder
   gmaps4rails
-
-  gendered
-
   jbuilder (~> 2.0)
   jquery-fileupload-rails
   jquery-rails
