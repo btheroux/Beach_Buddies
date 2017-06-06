@@ -52,15 +52,15 @@
             </div>
             <% end %>
             <% end %>
-            <%# unless user.team.nil? %>
-  <!--             <div class='product-body-team'>
+            <% unless user.team.nil? %>
+              <div class='product-body-team'>
 
-                <%#  image_tag("louise.jpg", class: "product-image-team hidden-xs") %>
+                <%=  image_tag("louise.jpg", class: "product-image-team hidden-xs") %>
                 <span>
-                  <strong>Team:</strong> <br> <%# user.team.name ||= "Not named" %>
+                  <strong>Team:</strong> <br> <%= user.team.name ||= "Not named" %>
                 </span>
-              </div> -->
-              <%# end %>
+              </div>
+            <% end %>
             </div>
             <ul class="list-inline product-controls hidden-sm hidden-xs">
               <% if user.facebook_page %>
