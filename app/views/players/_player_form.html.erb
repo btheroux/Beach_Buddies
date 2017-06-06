@@ -11,6 +11,6 @@
   <%= f.input :in_outdoors, collection: ["mostly indoors volleyball", "mostly beach volleyball"], prompt: "playing mostly beach volleyball or indoors" %>
   <%= f.input :gender, collection: ["male", "female"], prompt: "select a gender" %>
   <%= f.input :usual_court_address, label: "Home court address", as: :string %>
-  <%= f.input :photos, label: "Photos", as: :attachinary, disabled: true %>
+  <%= f.input :photos, label: "Photos", as: :attachinary %>
   <%= f.submit "Done", class: "btn btn-success"%>
 <% end %>

@@ -1,0 +1,9 @@
+<%= simple_form_for [@user, @team] do |f| %>
+  <%= f.input :name, label: "Name", as: :string %>
+  <%= f.input :users, label: "Teammate", collection: @potential_members, prompt: "select a teammate" %>
+  <%= f.input :facebook_page, label: "Facebook page", as: :string %>
+  <%= f.input :instagram_account, label: "Instagram account", as: :string %>
+  <%= f.input :facebook_pages_likes, label: "Facebook page likes", as: :string %>
+  <%= f.submit "Add a team", class: "btn btn-success"%>
+<% end %>
+

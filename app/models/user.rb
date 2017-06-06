@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_attachments :photos, maximum: 20
+  before_create :default_level
 
   has_many :videos, dependent: :destroy
   has_many :results, dependent: :destroy
@@ -8,14 +9,14 @@ class User < ApplicationRecord
   has_many :countries, through: :federations
   belongs_to :team
 
-  validates :gender, presence:{ message: "please add your gender"}, on: :update
-  validates :level, presence:{ message: "please add your level"}, on: :update
-  validates :usual_court_address, presence:{ message: "please add your home court address"}, on: :update
+  # validates :gender, presence:{ message: "please add your gender"}, on: :update
+  # validates :level, presence:{ message: "please add your level"}, on: :update
+  # validates :usual_court_address, presence:{ message: "please add your home court address"}, on: :update
 
 
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   #validates :email, presence: true, uniqueness: true
-  #validates :first_name, presence: true
-  #validates :last_name, presence: true
   #validates :level, presence: true
   #validates :gender, presence: true
   #validates :usual_court_address, presence: true
@@ -48,5 +49,11 @@ class User < ApplicationRecord
     end
 
     return user
+  end
+
+  private
+
+  def default_level
+    self.level = "beginner"
   end
 end

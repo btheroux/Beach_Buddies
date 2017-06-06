@@ -18,6 +18,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     scope    = Devise::Mapping.find_scope!(resource_or_scope)
     resource = args.last || resource_or_scope
     sign_in(scope, resource, options)
-    redirect_to edit_user_path(resource)
+    redirect_to profile_path
   end
 end
