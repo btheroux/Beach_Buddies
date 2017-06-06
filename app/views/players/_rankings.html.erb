@@ -6,7 +6,7 @@
     <div class="bbbox-content">
         <% @user.rankings.each do |ranking| %>
             <%= flag_icon(ranking.federation.country.country_code.to_sym) %>
-            Ranking <%= ranking.score %><em>th</em> in <%= ranking.date %> in
+            Ranking <strong><%= ranking.score %></strong><em>th</em> as of <strong><%= ranking.date %></strong> in
           <a href="<%= ranking.federation.url %>" target="_blank"><%= ranking.federation.name.downcase %></a>
             (<%= ranking.federation.country.name %>)
 
