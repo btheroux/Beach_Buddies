@@ -1,8 +1,12 @@
 class User < ApplicationRecord
   has_attachments :photos, maximum: 20
   before_create :default_level
+
   geocoded_by :usual_court_address
   after_validation :geocode, if: :usual_court_address_changed?
+
+  before_create :genderize
+
 
   has_many :videos, dependent: :destroy
   has_many :results, dependent: :destroy
@@ -58,5 +62,12 @@ class User < ApplicationRecord
 
   def default_level
     self.level.nil? ? "beginner" : self.level
+  end
+
+  def genderize
+    if self.gender.nil?
+      gender_name = Gendered::Name.new(self.first_name)
+      self.gender = gender_name.guess!.to_s
+    end
   end
 end

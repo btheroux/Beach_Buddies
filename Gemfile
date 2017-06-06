@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.3'
 
+
 gem "geocoder"
 gem "gmaps4rails"
 
@@ -8,6 +9,9 @@ source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
 
+
+
+gem 'gendered'
 
 gem 'flag-icons-rails'
 gem 'rails', '5.0.3'
