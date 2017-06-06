@@ -62,7 +62,10 @@
 
 <h2>Create a new ranking:</h2>
 
-
+<%= link_to "Create a ranking", '#', class: "btn btn-primary", id: "create-ranking" %>
+<div id="ranking-create-form" hidden>
+  <%= render 'rankings/ranking_form', user: @user, ranking: @ranking %>
+</div>
 
 <h2>Results:</h2>
 
@@ -79,9 +82,10 @@
 
 <h2>Create a new result:</h2>
 
-
-
-
+<%= link_to "Create a result", '#', class: "btn btn-primary", id: "create-result" %>
+<div id="result-create-form" hidden>
+  <%= render 'results/result_form', user: @user, ranking: @result %>
+</div>
 
 <h2>Videos:</h2>
 
@@ -91,6 +95,9 @@
 
 <h2>Create a new video:</h2>
 
-
+<%= link_to "Add a video", '#', class: "btn btn-primary", id: "create-video" %>
+<div id="video-create-form" hidden>
+  <%= render 'videos/video_form', user: @user, video: @video %>
+</div>
 
 </div>
