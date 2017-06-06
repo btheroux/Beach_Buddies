@@ -35,11 +35,14 @@ $(document).ready(function (){
   var createVideoForm = $('#video-create-form')
   var videoCancelButton = $('<a href="#" id="video-cancel-button" class="btn btn-danger">Cancel</a> ')
   createVideoButton.on("click", function () {
-    console.log("It worked!")
+    // console.log("It worked!")
+    createVideoButton.hide();
     createVideoForm.show();
     createVideoForm.append(videoCancelButton)
-    videoCancelButton.on("click", function () {
+    videoCancelButton.on("click", function (event) {
       createVideoForm.hide();
+      createVideoButton.show();
+      event.preventDefault();
     });
   });
 });
