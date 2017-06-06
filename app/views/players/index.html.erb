@@ -14,13 +14,16 @@
             <div class='product-count'><%# user.rankings.first.score unless user.rankings.empty? %></div>
           </div>
           <!-- XXX default pictures XXX-->
-          <% if user.photos.empty? %>
-          <%=  image_tag("default-#{user.gender}-#{rand(1..4)}.jpg", class: "product-image product-image-default hidden-xs ")%>
+          <% if user.photos.first %>
+            <%=  cl_image_tag user.photos.first.path, class: "product-image hidden-xs" %>
           <% else %>
-          <%=  cl_image_tag user.photos.first.path, class: "product-image hidden-xs" %>
+            <% if user.facebook_picture_url %>
+                <%=  image_tag("#{user.facebook_picture_url}", class: "product-image hidden-xs") %>
+              <% else %>
+                <%=  image_tag("default-#{user.gender}-#{rand(1..4)}.jpg", class: "product-image product-image-default hidden-xs ")%>
+            <% end %>
           <% end %>
           <!-- Unfortunately, FB login profile pictures saved in DB are only 50x50px.   -->
-          <%#  image_tag("#{user.facebook_picture_url}", class: "product-image hidden-xs") %>
           <div class='product-body'>
             <h3>
               <%= user.first_name %> <%= user.last_name %>

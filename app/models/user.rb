@@ -18,7 +18,8 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   #validates :email, presence: true, uniqueness: true
   #validates :level, presence: true
-  #validates :gender, presence: true
+  # validates :level, default: "beginner"
+  # validates :gender, presence: true
   #validates :usual_court_address, presence: true
 
 
@@ -54,6 +55,6 @@ class User < ApplicationRecord
   private
 
   def default_level
-    self.level = "beginner"
+    self.level.nil? ? "beginner" : self.level
   end
 end
