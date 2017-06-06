@@ -55,3 +55,35 @@
   padding: 9px 10px 11px;
   text-decoration: none !important;
 }
+.beachbuddy-btn-danger {
+  color: #666666;
+  padding: 10px;
+  border-radius: 7px;
+  border: 2px solid $brand-color;
+  font-weight: lighter;
+  transition: background 0.2s ease;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  background: rgba(247,247,29,0.05);
+  z-index: 10;
+}
+.beachbuddy-btn-danger:visited {
+  color: #666666;
+  text-decoration: none !important;
+}
+.beachbuddy-btn-danger:hover {
+  color: #666666;
+  background: rgba(247,247,29,0.2);
+  border-bottom: 3px solid $brand-color;
+  text-decoration: none !important;
+}
+.beachbuddy-btn-danger:active {
+  color: #666666;
+  padding: 9px 10px 11px;
+  text-decoration: none !important;
+}
+
+// Behaviour
+.beachbuddy-btn-align-right {
+  text-align: right;
+}

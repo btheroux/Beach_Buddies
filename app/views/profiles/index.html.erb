@@ -46,58 +46,85 @@
   <%= render 'teams/team_form', user: @user, team: @team %>
 </div>
 
-<h2>Rankings:</h2>
+<div class="bbbox">
+  <div class="bbbox-content">
+    <h2>Rankings:</h2>
 
-<ul>
-  <% @user.rankings.each do |r| %>
-    <li>
-      <%= r.score %>
-      <%= r.date %>
-      <%= r.federation.name %>
-      <%= r.federation.country.name %>
-      <%= link_to 'Delete', ranking_path(r), method: :delete, class: "btn btn-danger" %>
-    </li>
-  <% end %>
-</ul>
+    <ul>
+      <% @user.rankings.each do |r| %>
+        <li>
+          <%= r.score %>
+          <%= r.date %>
+          <%= r.federation.name %>
+          <%= r.federation.country.name %>
+          <%= link_to 'Delete', ranking_path(r), method: :delete, class: "btn btn-danger" %>
+        </li>
+      <% end %>
+    </ul>
 
-<h2>Create a new ranking:</h2>
+    <h2>Create a new ranking:</h2>
 
-<%= link_to "Create a ranking", '#', class: "btn btn-primary", id: "create-ranking" %>
-<div id="ranking-create-form" hidden>
-  <%= render 'rankings/ranking_form', user: @user, ranking: @ranking %>
+    <%= link_to "Create a ranking", '#', class: "btn btn-primary", id: "create-ranking" %>
+    <div id="ranking-create-form" hidden>
+      <%= render 'rankings/ranking_form', user: @user, ranking: @ranking %>
+    </div>
+  </div>
 </div>
 
-<h2>Results:</h2>
+<div class="bbbox">
+  <div class="bbbox-content">
+    <div class="bbbox-title" id="bb-result-box">
+      <h4>Results</h4>
+    </div>
+    <h4>Current result(s):</h4>
+    <% @user.results.each do |result| %>
 
-<% @user.results.each do |r| %>
-  <p>
-    <%= r.game_name %>
-    <%= r.game_type %>
-    <%= r.description %>
-    <%= r.achievement %>
-    <%= r.date %>
-    <%= link_to 'Delete', result_path(r), method: :delete, class: "btn btn-danger" %>
-  </p>
-<% end %>
+        <strong><%= result.date %>: <%= result.game_name %> </strong>
+        type: <%= result.game_type %> - achievement: <%= result.achievement %>
+        <%= result.description %> -
+        <%= link_to '', result_path(result), method: :delete, class: "fa fa-trash brand-complementary-color" %>
+        <br><br>
 
-<h2>Create a new result:</h2>
+    <% end %>
 
-<%= link_to "Create a result", '#', class: "btn btn-primary", id: "create-result" %>
-<div id="result-create-form" hidden>
-  <%= render 'results/result_form', user: @user, ranking: @result %>
+    <%= link_to "Add a result", '#bb-result-box', class: "beachbuddy-btn-complementary", id: "create-result" %>
+
+    <br><br>
+
+    <div id="result-create-form" hidden>
+      <%= render 'results/result_form', user: @user, ranking: @result %>
+    </div>
+  </div>
 </div>
 
-<h2>Videos:</h2>
+<div class="bbbox">
+  <div class="bbbox-content">
+    <div class="bbbox-title" id="bb-video-box">
+      <h4>Videos</h4>
+    </div>
+    <h4>Current video(s):</h4>
+    <div class="row">
+      <% @user.videos.each do |video| %>
+        <div class="col-xs-12 col-md-6">
+          <iframe height="180" width="320" class="bbbox-video" src=<%= video.url.gsub(/watch.v=/, "embed/") %> frameborder="0" allowfullscreen></iframe>
+        </div>
+      <% end %>
+    </div>
 
-<% @user.videos.each do |v| %>
-  <iframe height="400" width="400" src=<%= v.url.gsub(/watch.v=/, "embed/") %> ></iframe>
-<% end %>
+    <div id="create-video">
+    <h4>Create a new video:</h4>
 
-<h2>Create a new video:</h2>
+    <br>
 
-<%= link_to "Add a video", '#', class: "btn btn-primary", id: "create-video" %>
-<div id="video-create-form" hidden>
-  <%= render 'videos/video_form', user: @user, video: @video %>
+    <%= link_to "Add a video", '#bb-video-box', class: "beachbuddy-btn-complementary"  %>
+    <br><br>
+    </div>
+
+    <!-- <div id="video-create-form" hidden>
+      <%# render 'videos/video_form', user: @user, video: @video %>
+    </div> -->
+
+  </div>
 </div>
 
 </div>
