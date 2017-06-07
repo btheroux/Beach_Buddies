@@ -1,4 +1,17 @@
-<% unless @user.rankings.empty? %>
+<% if @user.rankings.empty? && @user == current_user %>
+  <div class="bbbox">
+    <div class="bbbox-title">
+      <h4>Rankings</h4>
+    </div>
+    <div class="bbbox-content">
+      <h4 class="text-center bb-alert-orange">
+        <%=  "Add a first ranking now!" %>
+      </h4>
+    </div>
+  </div>
+
+<% elsif @user.rankings.present? %>
+
   <div class="bbbox">
     <div class="bbbox-title">
       <h4> <%= pluralize_without_count @user.rankings.size, "Ranking" %> </h4>
@@ -13,4 +26,6 @@
         <% end %>
     </div>
   </div>
+
+<% else %>
 <% end %>

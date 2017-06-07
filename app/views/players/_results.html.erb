@@ -1,4 +1,15 @@
-<% unless @user.results.empty? %>
+<% if @user.results.empty? && @user == current_user %>
+  <div class="bbbox">
+    <div class="bbbox-title">
+      <h4>Results</h4>
+    </div>
+    <div class="bbbox-content">
+      <h4 class="text-center bb-alert-orange">
+        <%=  "Add a first result now!" %>
+      </h4>
+    </div>
+  </div>
+<% elsif @user.results.present? %>
   <div class="bbbox">
     <div class="bbbox-title">
       <h4> <%= pluralize_without_count @user.results.size, "Result" %> </h4>
@@ -16,4 +27,5 @@
         </ul>
     </div>
   </div>
+<% else %>
 <% end %>

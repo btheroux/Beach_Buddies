@@ -1,17 +1,23 @@
 <!--   <div class="bbbox bbbox-item"> -->
       <br><br>
     <div class="text-center">
-      <!-- <a href="mailto:#{<%= @user.email %>}" class="beachbuddy-btn beachbuddy-btn-main">CONTACT</a> -->
+
       <% if @user == current_user %>
         <%= link_to "Edit profile", profile_path, class: "beachbuddy-btn-complementary"  %>
       <% else %>
         <a href="#" class="beachbuddy-btn beachbuddy-btn-complementary">SHOW CONTACT DETAILS</a>
       <% end %>
     </div>
-    <br><br>
+    <br>
   <!-- </div> -->
 
   <div class="text-center">
+      <p class="bb-alert-orange">
+        <% if @user == current_user && @user.city == "Atlantis" %>
+          Please update your usual volley ball court address!
+        <br><br>
+        <% end %>
+      </p>
     <h4>Usual Court</h4>
   </div>
   <div class="bbbox">

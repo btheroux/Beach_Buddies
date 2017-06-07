@@ -1,4 +1,15 @@
-<% unless @user.videos.empty? %>
+<% if @user.videos.empty? && @user == current_user %>
+  <div class="bbbox">
+    <div class="bbbox-title">
+      <h4>Videos</h4>
+    </div>
+    <div class="bbbox-content">
+      <h4 class="text-center bb-alert-orange">
+        <%=  "Add a first video now!" %>
+      </h4>
+    </div>
+  </div>
+<% elsif @user.videos.present? %>
   <div class="bbbox">
     <div class="bbbox-title">
       <h4> <%= pluralize_without_count @user.videos.size, "Video" %></h4>
@@ -13,4 +24,6 @@
         </div>
     </div>
   </div>
+
+<% else %>
 <% end %>
