@@ -74,13 +74,18 @@ class User < ApplicationRecord
   end
 
   def clearbit_address
-    result = Clearbit::Enrichment.find(email: self.email, stream: true)
-    if result.person.location.nil?
-      self.usual_court_address.nil? ? self.usual_court_address = "Atlantis" : self.usual_court_address
-    else
-      self.usual_court_address.nil? ? self.usual_court_address = result.person.location : self.usual_court_address
+    if self.usual_court_address.nil?
+      result = Clearbit::Enrichment.find(email: self.email, stream: true)
+      if result.person.nil?
+        atlantis
+      elsif result.person.location.nil?
+        atlantis
+      else
+        self.usual_court_address.nil? ? self.usual_court_address = result.person.location : self.usual_court_address
+      end
     end
   end
+
 
   def fetch_location
 
@@ -93,5 +98,10 @@ class User < ApplicationRecord
 
   end
 
+
+
+  def atlantis
+    self.usual_court_address.nil? ? self.usual_court_address = "Atlantis" : self.usual_court_address
+  end
 
 end
