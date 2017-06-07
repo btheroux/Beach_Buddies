@@ -9,6 +9,7 @@ source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
 
+gem "algoliasearch-rails"
 
 gem 'clearbit'
 gem 'gendered'

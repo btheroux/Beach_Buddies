@@ -3,7 +3,11 @@ class PlayersController < ApplicationController
   before_action :set_user, except: [:index]
 
   def index
-    @users = User.all
+    if location = Location.find_by name: params[:locality]
+      @users = User.search("*", { "aroundLatLang" => "#{location.latittude}, #{location.longitude}", "aroundRadius": 50_000 })
+    else
+      @users = User.all
+    end
     # raise
   end
 
