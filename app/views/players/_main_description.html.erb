@@ -10,7 +10,10 @@
       <%= @user.first_name %> <%= @user.last_name %>
       <span class="productshow-level <%= "productshow-level-" + @user.level %>"><%= @user.level %></span>
     </h3>
-    <em>from Copenhagen, DK</em>. <br>
+    <% unless @user.city.blank? || @user.country.blank? %>
+    <em>from <%= @user.city %>, <%= @user.country %></em>. <br>
+    <% end %>
+    <!-- <em>from Copenhagen, DK</em>. <br> -->
     <%= @user.in_outdoors.nil? ? " " : "Plays " + @user.in_outdoors.downcase %>
     <p> <%= @user.description %></p>
   <br><br>
@@ -50,7 +53,11 @@
       <%#  image_tag("louise.jpg", class: "productshow-image-team") %>
 
         <span><strong>Team:</strong> <br>
-        <a href="<%= @user.team.facebook_page ||= "" %>" target="_blank"><%= @user.team.name ||= "anonymous" %></a>
+        <% if @user.team.facebook_page %>
+        <a href="<%= @user.team.facebook_page %>" target="_blank"><%= @user.team.name ||= "anonymous" %></a>
+        <% else %>
+        <%= @user.team.name ||= "anonymous" %>
+        <% end %>
         </span>
 
 

@@ -2,11 +2,12 @@
   has_attachments :photos, maximum: 20
   before_create :default_level
   before_create :genderize
-  before_create :clearbit_address
+  # before_create :clearbit_address
+  before_create :fetch_location
+  before_update :fetch_location, if: :usual_court_address_changed?
 
-
-  geocoded_by :usual_court_address
-  after_validation :geocode, if: :usual_court_address_changed?
+  # geocoded_by :usual_court_address
+  # after_validation :geocode, if: :usual_court_address_changed?
 
   include AlgoliaSearch
 
@@ -86,20 +87,16 @@
     end
   end
 
-  def clearbit_address
-    if self.usual_court_address.nil?
-      result = Clearbit::Enrichment.find(email: self.email, stream: true)
-      if result.person.nil?
-        atlantis
-      elsif result.person.location.nil?
-        atlantis
-      else
-        self.usual_court_address.nil? ? self.usual_court_address = result.person.location : self.usual_court_address
-      end
-    end
+  def fetch_location
+
+    location = UserLocator.new self.usual_court_address, self.email
+    self.usual_court_address = location.usual_court_address
+    self.latitude = location.latitude
+    self.longitude = location.longitude
+    self.country = location.country
+    self.city = location.city
+
   end
 
-  def atlantis
-    self.usual_court_address.nil? ? self.usual_court_address = "Atlantis" : self.usual_court_address
-  end
+
 end
