@@ -6,3 +6,4 @@ namespace :search do
   end
 
 end
+

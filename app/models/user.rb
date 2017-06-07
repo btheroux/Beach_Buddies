@@ -20,6 +20,8 @@
     # `unordered` to avoid taking the position of a match into account in that attribute.
     searchableAttributes ['usual_court_address']
 
+    customRanking ['desc(geo)']
+
     # the `customRanking` setting defines the ranking criteria use to compare two matching
     # records in case their text-relevance is equal. It should reflect your record popularity.
   end
