@@ -20,7 +20,7 @@
   padding: 50px 10px 10px 10px;
   text-align: left;
   z-index: -1;
-
+  background-color: white;
   }
 .bbbox-item {
   display:flex;
@@ -47,4 +47,9 @@
   position: relative;
   height: 100%;
   width: 100%;
+}
+.bbbox-missing {
+  background-color: &gray;
+  height: 10px;
+  width: 50px;
 }

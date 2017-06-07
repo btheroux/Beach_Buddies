@@ -1,130 +1,24 @@
 
 <div class="container bb-container">
+  <div class="row">
 
-<h1>Profile</h1>
+  <%= render 'profile_main', user: @user, team: @team %>
 
-<div id="user-info-section">
-  <h2>User info:</h2>
-
-  <p><%= @user.level %></p>
-  <p><%= @user.email %></p>
-  <p><%= @user.first_name %></p>
-  <p><%= @user.last_name %></p>
-  <p><%= @user.gender %></p>
-  <p><%= @user.usual_court_address %></p>
-  <p><%= @user.phone_number %></p>
-  <p><%= @user.facebook_page %></p>
-  <p><%= @user.instagram_account %></p>
-  <p><%= @user.description %></p>
-  <% @user.photos.each do |p| %>
-    <%= cl_image_tag p.path, width: 600, crop: :fit, class: "photo" %>
-  <% end %>
-
-<%= link_to "Edit info", edit_user_path(current_user), class: "btn btn-primary", remote: true %>
-</div>
-
-<h2>Team:</h2>
-
-<% if !@user.team.nil? %>
-  <%= @user.team.name %>
-  <%= @user.team.users.find {|u| u != @user} %>
-  <%= @user.team.facebook_page %>
-  <%= @user.team.instagram_account %>
-  <%= @user.team.facebook_pages_likes %>
-  <%= link_to 'Delete', team_path(@user.team), method: :delete, class: "btn btn-danger" %>
-<% end %>
-
-
-<h2 id="team-creation">Create a new team:</h2>
-
-
-
-<% if @user.team.nil? %>
-  <%= link_to "Create a team", '#', class: "btn btn-primary", id: "create-team" %>
-<% end %>
-<div id="team-create-form" hidden>
-  <%= render 'teams/team_form', user: @user, team: @team %>
-</div>
-
-<div class="bbbox">
-  <div class="bbbox-content">
-    <h2>Rankings:</h2>
-
-    <ul>
-      <% @user.rankings.each do |r| %>
-        <li>
-          <%= r.score %>
-          <%= r.date %>
-          <%= r.federation.name %>
-          <%= r.federation.country.name %>
-          <%= link_to 'Delete', ranking_path(r), method: :delete, class: "btn btn-danger" %>
-        </li>
-      <% end %>
-    </ul>
-
-    <h2>Create a new ranking:</h2>
-
-    <%= link_to "Create a ranking", '#', class: "btn btn-primary", id: "create-ranking" %>
-    <div id="ranking-create-form" hidden>
-      <%= render 'rankings/ranking_form', user: @user, ranking: @ranking %>
-    </div>
+  <div class="col-xs-12 col-md-6">
+    <%= render 'profile_team', user: @user, team: @team %>
   </div>
-</div>
 
-<div class="bbbox">
-  <div class="bbbox-content">
-    <div class="bbbox-title" id="bb-result-box">
-      <h4>Results</h4>
-    </div>
-    <h4>Current result(s):</h4>
-    <% @user.results.each do |result| %>
-
-        <strong><%= result.date %>: <%= result.game_name %> </strong>
-        type: <%= result.game_type %> - achievement: <%= result.achievement %>
-        <%= result.description %> -
-        <%= link_to '', result_path(result), method: :delete, class: "fa fa-trash brand-complementary-color" %>
-        <br><br>
-
-    <% end %>
-
-    <%= link_to "Add a result", '#bb-result-box', class: "beachbuddy-btn-complementary", id: "create-result" %>
-
-    <br><br>
-
-    <div id="result-create-form" hidden>
-      <%= render 'results/result_form', user: @user, ranking: @result %>
-    </div>
+  <div class="col-xs-12 col-md-6">
+    <%= render 'profile_results', user: @user, team: @team %>
   </div>
-</div>
 
-<div class="bbbox">
-  <div class="bbbox-content">
-    <div class="bbbox-title" id="bb-video-box">
-      <h4>Videos</h4>
-    </div>
-    <h4>Current video(s):</h4>
-    <div class="row">
-      <% @user.videos.each do |video| %>
-        <div class="col-xs-12 col-md-6">
-          <iframe height="180" width="320" class="bbbox-video" src=<%= video.url.gsub(/watch.v=/, "embed/") %> frameborder="0" allowfullscreen></iframe>
-        </div>
-      <% end %>
-    </div>
+  <div class="col-xs-12 col-md-6">
+    <%= render 'profile_rankings', user: @user, team: @team %>
+  </div>
 
-    <div id="create-video">
-    <h4>Create a new video:</h4>
-
-    <br>
-
-    <%= link_to "Add a video", '#bb-video-box', class: "beachbuddy-btn-complementary"  %>
-    <br><br>
-    </div>
-
-    <!-- <div id="video-create-form" hidden>
-      <%# render 'videos/video_form', user: @user, video: @video %>
-    </div> -->
+  <div class="col-xs-12 col-md-6">
+    <%= render 'profile_videos', user: @user, team: @team %>
+  </div>
 
   </div>
-</div>
-
 </div>

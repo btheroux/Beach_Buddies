@@ -34,10 +34,26 @@
     <% unless @user.team.nil? %>
     <div class='productshow-body-team'>
 
-      <%=  image_tag("louise.jpg", class: "productshow-image-team") %>
-      <span>
-        <strong>Team:</strong> <br> <%= @user.team.name ||= "Not named" %>
-      </span>
+            <%# unless user.team.nil? %>
+              <!-- <div class='product-body-team'>
+                <%#  image_tag("default-#{user.gender}-#{rand(1..4)}.jpg", class: "product-image-team hidden-xs")%>
+                <%# unless user.team.facebook_page %>
+                  <a href="<%# user.team.facebook_page %>" target="_blank"><i class="fa fa-facebook"></i></a>
+                <%# end %>
+                <span>
+                  <strong>Team:</strong> <%# user.team.name ||= "Not named" %>
+                </span>
+              </div> -->
+            <%# end %>
+
+
+      <%#  image_tag("louise.jpg", class: "productshow-image-team") %>
+
+        <span><strong>Team:</strong> <br>
+        <a href="<%= @user.team.facebook_page ||= "" %>" target="_blank"><%= @user.team.name ||= "anonymous" %></a>
+        </span>
+
+
     </div>
     <% end %>
   <!-- </div> -->

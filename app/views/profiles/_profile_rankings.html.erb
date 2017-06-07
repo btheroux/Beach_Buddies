@@ -1,0 +1,23 @@
+<div class="bbbox">
+    <div class="bbbox-content">
+      <div class="bbbox-title" id="">
+        <h4>Rankings</h4>
+      </div>
+      <h4 class="text-center bb-alert-orange">
+        <%=  "Add a first ranking now!" if @user.rankings.empty? %>
+      </h4>
+        <% @user.rankings.each do |ranking| %>
+          <%= link_to '', ranking_path(ranking), method: :delete, class: "fa fa-trash fa-1x bb-alert-red" %> -
+            <%= ranking.score %>
+            <%= ranking.date %>
+            <%= ranking.federation.name %>
+            <%= ranking.federation.country.name %>
+            <%# link_to 'Delete', ranking_path(ranking), method: :delete, class: "btn btn-danger" %>
+        <% end %>
+
+      <%# link_to "Create a ranking", '#', class: "btn btn-primary", id: "create-ranking" %>
+      <div id="ranking-create-form">
+        <%= render 'rankings/ranking_form', user: @user, ranking: @ranking %>
+      </div>
+    </div>
+  </div>

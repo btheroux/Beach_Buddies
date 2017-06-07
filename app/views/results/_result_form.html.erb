@@ -1,8 +1,8 @@
 <%= simple_form_for [@user, @result] do |f| %>
-  <%= f.input :game_name, label: "Game name", as: :string %>
-  <%= f.input :game_type, label: "Game Type", as: :string %>
-  <%= f.input :description, label: "Description", as: :string %>
-  <%= f.input :achievement, label: "Achievement", as: :string %>
+  <%= f.input :game_name, label: "Game name", as: :string, placeholder: "Ex: competition name..." %>
+  <%= f.input :game_type, label: "Game Type", as: :string, placeholder: "Ex: friendly, competitive..."  %>
+  <%= f.input :description, label: "Description", as: :string, placeholder: ""  %>
+  <%= f.input :achievement, label: "Achievement", as: :string, placeholder: "Ex: 1st place "  %>
   <%= f.input :date, label: "Date", as: :string %>
-  <%= f.submit "Add a result", class: "btn btn-success"%>
+  <%= f.submit "Add a result", class: "beachbuddy-btn-complementary"%>
 <% end %>

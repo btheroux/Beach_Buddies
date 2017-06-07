@@ -1,16 +1,40 @@
-<h1>Edit profile information</h1>
-
 <%= simple_form_for [@user] do |f| %>
-  <%= f.input :first_name, label: "First name", as: :string %>
-  <%= f.input :last_name, label: "Last name", as: :string %>
-  <%= f.input :phone_number, label: "Phone number", as: :string %>
-  <%= f.input :level, collection: ["beginner", "hobbyist", "semi-pro", "pro"], prompt: "select a volley ball level" %>
-  <%= f.input :facebook_page, label: "Facebook page", as: :string %>
-  <%= f.input :instagram_account, label: "Instagram account", as: :string %>
-  <%= f.input :description, label: "Description - Beach buddies telling about themselves are 30% more likely to be contacted for a match up!", as: :string %>
-  <%= f.input :in_outdoors, label: "Do you play mostly indoors or outdoors?", collection: ["indoors", "outdoors"], prompt: "Select" %>
-  <%= f.input :gender, collection: ["male", "female"], prompt: "select" %>
-  <%= f.input :usual_court_address, label: "Usual court address", as: :string %>
-  <%= f.input :photos, label: "Photos - Your beach buddies want to see you in action :)", as: :attachinary %>
-  <%= f.submit "Update", class: "btn btn-success"%>
+  <div class="col-xs-12 col-md-3">
+    <%= f.input :first_name, label: "First Name", as: :string %>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <%= f.input :last_name, label: "Last Name", as: :string %>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <%= f.input :usual_court_address, label: "Usual Court Address", as: :string %>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <%= f.input :gender, collection: ["male", "female"], prompt: "select" %>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <%= f.input :level, collection: ["beginner", "hobbyist", "semi-pro", "pro"], prompt: "select a volley ball level" %>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <%= f.input :in_outdoors, label: "Do you play mostly...", collection: ["indoors", "outdoors"], prompt: "Select" %>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <%= f.input :facebook_page, label: "Facebook Page URL", as: :string %>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <%= f.input :instagram_account, label: "Instagram Account URL", as: :string %>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <%= f.input :phone_number, label: "Phone Number (visible to logged in users only)", as: :string %>
+  </div>
+  <div class="row">
+  <div class="col-xs-12">
+    <%= f.input :description, label: "Description - Beach buddies telling about themselves are 30% more likely to be contacted for a match up!", as: :text %>
+  </div>
+  <div class="col-xs-12">
+    <%= f.input :photos, label: "Photos - Your beach buddies want to see you in action :)", as: :attachinary %>
+  </div>
+  </div>
+
+    <%= f.submit "Update", class: "beachbuddy-btn-complementary"%>
+
 <% end %>
