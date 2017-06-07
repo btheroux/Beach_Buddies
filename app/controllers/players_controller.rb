@@ -15,6 +15,7 @@ class PlayersController < ApplicationController
       marker.lng user.longitude
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
     end
+    # raise
   end
 
   def destroy
@@ -32,7 +33,7 @@ class PlayersController < ApplicationController
   def update
     @user.update(user_params)
     if @user.save
-      redirect_to profile_path
+      redirect_to user_path
     else
       render :edit
     end

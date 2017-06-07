@@ -1,6 +1,7 @@
 <%= simple_form_for [@user, @ranking] do |f| %>
-  <%= f.input :score, label: "Rank", as: :string %>
+  <%= f.input :score, label: "Rank", as: :string, placeholder: "Ex: 54" %>
+  <p class="bb-alert-blue">Your rank should just be a number (not <strong><em>1st</em></strong>, but <strong><em>1</em></strong>)</p>
   <%= f.input :date, label: "Date", as: :string %>
   <%= f.input :federation, collection: Federation.all, prompt: "select a federation" %>
-  <%= f.submit "Add a ranking", class: "btn btn-success"%>
+  <%= f.submit "Add a ranking", class: "beachbuddy-btn-complementary"%>
 <% end %>

@@ -1,0 +1,25 @@
+<div class="bbbox">
+    <div class="bbbox-content">
+      <div class="bbbox-title" id="bb-result-box">
+        <h4>Results</h4>
+      </div>
+      <h4 class="text-center bb-alert-orange">
+        <%=  "Add a first result now!" if @user.results.empty? %>
+      </h4>
+      <% @user.results.each do |result| %>
+          <%= link_to '', result_path(result), method: :delete, class: "fa fa-trash fa-1x bb-alert-red" %> -
+          <strong><%= result.date %>: <%= result.game_name %> </strong>
+          type: <%= result.game_type %> - achievement: <%= result.achievement %>
+          <%= result.description %>
+
+          <br><br>
+
+      <% end %>
+
+      <%# link_to "Add a result", '#bb-result-box', class: "beachbuddy-btn-complementary", id: "create-result" %>
+
+      <div id="result-create-form">
+        <%= render 'results/result_form', user: @user, ranking: @result %>
+      </div>
+    </div>
+  </div>

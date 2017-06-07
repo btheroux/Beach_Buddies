@@ -52,15 +52,17 @@
             </div>
             <% end %>
             <% end %>
-            <% unless user.team.nil? %>
-              <div class='product-body-team'>
-
-                <%=  image_tag("louise.jpg", class: "product-image-team hidden-xs") %>
+            <%# unless user.team.nil? %>
+              <!-- <div class='product-body-team'>
+                <%#  image_tag("default-#{user.gender}-#{rand(1..4)}.jpg", class: "product-image-team hidden-xs")%>
+                <%# unless user.team.facebook_page %>
+                  <a href="<%# user.team.facebook_page %>" target="_blank"><i class="fa fa-facebook"></i></a>
+                <%# end %>
                 <span>
-                  <strong>Team:</strong> <br> <%= user.team.name ||= "Not named" %>
+                  <strong>Team:</strong> <%# user.team.name ||= "Not named" %>
                 </span>
-              </div>
-            <% end %>
+              </div> -->
+            <%# end %>
             </div>
             <ul class="list-inline product-controls hidden-sm hidden-xs">
               <% if user.facebook_page %>

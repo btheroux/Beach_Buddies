@@ -1,0 +1,28 @@
+<div class="bbbox">
+    <div class="bbbox-content">
+      <div class="bbbox-title" id="bb-video-box">
+        <h4>Videos</h4>
+      </div>
+      <h4 class="text-center bb-alert-orange">
+        <%=  "Add a video now!" if @user.videos.empty? %>
+      </h4>
+
+      <div class="row">
+        <% @user.videos.each do |video| %>
+          <div class="col-xs-12 col-md-6">
+            <div class="text-center">
+            <%= link_to '', video_path(video), method: :delete, class: "fa fa-trash fa-1x bb-alert-red" %>
+            </div>
+            <iframe height="180" width="320" class="bbbox-video" src=<%= video.url.gsub(/watch.v=/, "embed/") %> frameborder="0" allowfullscreen></iframe>
+          </div>
+        <% end %>
+      </div>
+
+       <%# link_to "Add a video", '#bb-video-box', class: "beachbuddy-btn-complementary"  %>
+
+      <div id="video-create-form">
+        <%= render 'videos/video_form', user: @user, video: @video %>
+      </div>
+
+    </div>
+  </div>

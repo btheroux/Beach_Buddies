@@ -1,11 +1,19 @@
-  <div class="bbbox bbbox-item">
-    <div class="">
+<!--   <div class="bbbox bbbox-item"> -->
+      <br><br>
+    <div class="text-center">
       <!-- <a href="mailto:#{<%= @user.email %>}" class="beachbuddy-btn beachbuddy-btn-main">CONTACT</a> -->
-      <a href="#" class="beachbuddy-btn beachbuddy-btn-main">SHOW CONTACT DETAILS</a>
-
+      <% if @user == current_user %>
+        <%= link_to "Edit profile", profile_path, class: "beachbuddy-btn-complementary"  %>
+      <% else %>
+        <a href="#" class="beachbuddy-btn beachbuddy-btn-complementary">SHOW CONTACT DETAILS</a>
+      <% end %>
     </div>
-  </div>
+    <br><br>
+  <!-- </div> -->
 
+  <div class="text-center">
+    <h4>Usual Court Address</h4>
+  </div>
   <div class="bbbox">
     <!-- ex until we implement geocoder -->
     <%# image_tag "map_ex", class: "bbbox-map" %>

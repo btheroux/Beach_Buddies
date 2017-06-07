@@ -1,4 +1,4 @@
 <%= simple_form_for [@user, @video] do |f| %>
-  <%= f.input :url, label: "Youtube url", as: :string %>
-  <%= f.submit "Add a video", class: "btn btn-success"%>
+  <%= f.input :url, label: "Paste the Youtube Video url (https://...)", as: :string, placeholder: "https://www.youtube.com/..." %>
+  <%= f.submit "Add a video", class: "beachbuddy-btn-complementary"%>
 <% end %>

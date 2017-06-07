@@ -1,0 +1,32 @@
+<div class="bbbox">
+    <div class="bbbox-content">
+      <div class="bbbox-title" id="">
+        <h4>Team</h4>
+      </div>
+      <h4 class="text-center bb-alert-orange">
+        <%=  "Add a team now!" if @user.team.nil? %>
+      </h4>
+
+      <% if !@user.team.nil? %>
+        <%= link_to '', team_path(@user.team), method: :delete, class: "fa fa-trash fa-1x bb-alert-red" %> -
+        <%= @user.team.name %>
+        <%= @user.team.users.find {|u| u != @user} %>
+        <%= @user.team.facebook_page %>
+        <%= @user.team.instagram_account %>
+        <%= @user.team.facebook_pages_likes %>
+        <%# link_to 'Delete', team_path(@user.team), method: :delete, class: "btn btn-danger" %>
+      <% end %>
+
+
+      <h2 id="team-creation"></h2>
+
+
+        <%# link_to "Create a team", '#', class: "btn btn-primary", id: "create-team" %>
+
+      <% if @user.team.nil? %>
+        <div id="team-create-form">
+          <%= render 'teams/team_form', user: @user, team: @team %>
+        </div>
+      <% end %>
+    </div>
+  </div>

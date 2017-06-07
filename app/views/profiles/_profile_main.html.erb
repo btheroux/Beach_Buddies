@@ -1,0 +1,39 @@
+<div class="bbbox">
+    <div class="bbbox-content">
+      <div class="bbbox-title" id="">
+        <h4>Profile</h4>
+      </div>
+
+      <div id="user-info-section">
+      <!--   <div class="col-xs-12 col-md-6">First name: <%# @user.first_name ||= "missing" %></div>
+        <div class="col-xs-12 col-md-6">Last name: <%# @user.last_name ||= "____________" %></div>
+        <div class="col-xs-12 col-md-6">Usual court address: <%# @user.usual_court_address ||= "____________" %></div>
+        <div class="col-xs-12 col-md-6">Gender: <%# @user.gender ||= "____________" %></div>
+        <div class="col-xs-12 col-md-6">Level: <%# @user.level ||= "____________" %></div>
+        <div class="col-xs-12 col-md-6">Usually playing: <%# @user.in_outdoors ? @user.in_outdoors : "____________" %></div>
+        <div class="col-xs-12 col-md-6">Description: <%# @user.description.nil? ? @user.description : "____________" %></div>
+        <div class="col-xs-12 col-md-6">Facebook: <%# @user.facebook_page.nil? ? @user.facebook_page : "____________" %></div>
+        <div class="col-xs-12 col-md-6">Instagram: <%# @user.instagram_account.nil? ? @user.instagram_account : "____________" %></div>
+        <div class="col-xs-12 col-md-6">Phone number: <%# @user.phone_number.nil? ? @user.phone_number : "____________" %></div>
+        <div class="col-xs-12 col-md-6">Email: <%# @user.email %></div>
+        <div class="col-xs-12 col-md-6">
+        <br><br>
+        <%# link_to "Edit profile or Add Photos", edit_user_path(current_user), class: "beachbuddy-btn-complementary", remote: true %>
+        <br><br>
+        </div> -->
+        <%# @user.photos.each do |p| %>
+          <%# cl_image_tag p.path, width: 600, crop: :fit, class: "photo" %>
+        <%# end %>
+
+        <!-- <div class="row">
+          <%# @user.photos.each do |photo| %>
+            <div class="col-xs-12 col-md-3">
+              <%# cl_image_tag photo.path, class: "bbbox-thumbnail",  crop: :fill%>
+            </div>
+          <%# end %>
+        </div> -->
+        <%= render 'players/player_form', user: @user, team: @team %>
+
+      </div>
+    </div>
+  </div>
