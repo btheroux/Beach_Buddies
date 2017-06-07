@@ -65,6 +65,8 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
+    clearbit (0.2.7)
+      nestful (~> 1.1.0)
     cloudinary (1.1.7)
       aws_cf_signer
       rest-client
@@ -142,6 +144,7 @@ GEM
     multi_json (1.12.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
+    nestful (1.1.1)
     netrc (0.11.0)
     nio4r (2.1.0)
     nokogiri (1.7.2)
@@ -262,6 +265,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
+  clearbit
   cloudinary (= 1.1.7)
   coffee-rails
   devise
