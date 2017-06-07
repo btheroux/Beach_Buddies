@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_attachments :photos, maximum: 20
   before_create :default_level
   before_create :genderize
-  before_create :ip_to_address
+  before_create :clearbit_address
 
 
   geocoded_by :usual_court_address
@@ -62,7 +62,7 @@ class User < ApplicationRecord
   private
 
   def default_level
-    self.level.nil? ? "beginner" : self.level
+    self.level.nil? ? self.level = "beginner" : self.level
   end
 
   def genderize
@@ -72,7 +72,12 @@ class User < ApplicationRecord
     end
   end
 
-  def ip_to_address
-    self.usual_court_address.nil? ? request.location.city : self.usual_court_address
+  def clearbit_address
+    result = Clearbit::Enrichment.find(email: self.email, stream: true)
+    if result.person.location.nil?
+      self.usual_court_address.nil? ? self.usual_court_address = "Atlantis" : self.usual_court_address
+    else
+      self.usual_court_address.nil? ? self.usual_court_address = result.person.location : self.usual_court_address
+    end
   end
 end

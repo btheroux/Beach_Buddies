@@ -10,7 +10,7 @@ source 'https://rails-assets.org' do
 end
 
 
-
+gem 'clearbit'
 gem 'gendered'
 
 gem 'flag-icons-rails'
