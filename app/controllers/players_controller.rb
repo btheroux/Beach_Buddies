@@ -5,6 +5,7 @@ class PlayersController < ApplicationController
   def index
     @users = User.all
     # raise
+    user_city_and_country
   end
 
   def show
@@ -15,6 +16,7 @@ class PlayersController < ApplicationController
       marker.lng user.longitude
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
     end
+    user_city_and_country
     # raise
   end
 
@@ -47,5 +49,18 @@ class PlayersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :phone_number, :level, :facebook_page, :instagram_account, :description, :gender, :usual_court_address, photos: [])
+  end
+
+  def user_city_and_country
+    @user_reverse_geocoded_address = Geocoder.search(Geocoder.address("#{@user.latitude},#{@user.longitude}"))
+    @user_city_hash = @user_reverse_geocoded_address.first.data["address_components"].select do |hash|
+      hash["types"].include?("locality") && hash["types"].include?("political")
+    end
+    @user_city = @user_city_hash[0]["long_name"]
+
+    @user_country_hash = @user_reverse_geocoded_address.first.data["address_components"].select do |hash|
+      hash["types"].include?("country") && hash["types"].include?("political")
+    end
+    @user_country = @user_country_hash[0]["short_name"]
   end
 end

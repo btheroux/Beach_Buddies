@@ -33,6 +33,9 @@
             </h3>
             <!-- XXX not available yet XXX-->
             <!-- Use <%= user.usual_court_address %> and install geocoder -->
+            <%# unless @user_city.nil? || @user_country.nil? %>
+            <!-- <em>from <%# @user_city %>, <%# @user_country %></em>. <br> -->
+            <%# end %>
             <em>from Copenhagen, DK</em>. <br>
             <%= user.in_outdoors.nil? ? " " : "Plays " + user.in_outdoors.downcase %>
             <p> <%= user.description %></p>

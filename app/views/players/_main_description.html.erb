@@ -10,7 +10,10 @@
       <%= @user.first_name %> <%= @user.last_name %>
       <span class="productshow-level <%= "productshow-level-" + @user.level %>"><%= @user.level %></span>
     </h3>
-    <em>from Copenhagen, DK</em>. <br>
+    <% unless @user_city.nil? || @user_country.nil? %>
+    <em>from <%= @user_city %>, <%= @user_country %></em>. <br>
+    <% end %>
+    <!-- <em>from Copenhagen, DK</em>. <br> -->
     <%= @user.in_outdoors.nil? ? " " : "Plays " + @user.in_outdoors.downcase %>
     <p> <%= @user.description %></p>
   <br><br>
