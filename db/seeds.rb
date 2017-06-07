@@ -403,96 +403,100 @@ federation56.save
 user1 = User.new(email:"maria@dudu.com", first_name:"Maria", usual_court_address:"Vesterengvej 26A, 8200 Aarhus N",
   last_name:"Tyndeskov", level:"pro", gender:"female", password:"123456", phone_number: "93677687",
   facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts",
-  description: "Chuck Norris doesn't worry about high gas prices. His vehicles run on fear.", in_outdoors: "mostly outdoor")
+  description: "Team Tyndeskov/Trans, Med det bedste fra Fyn og Jylland danner vi Danmarks nye beachvolley-hold. Vi håber at I vil tage godt imod os og følge os :)", in_outdoors: "mostly outdoor")
 
 user2 = User.new(email:"line@dudu.com", first_name:"Line", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
   last_name:"Trans", level:"pro", gender:"female", password:"123456", phone_number: "21342342",
-  facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts", description: "Death once had a near-Chuck-Norris experience.", in_outdoors:"mostly outdoor")
+  facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts", description: "Team Tyndeskov/Trans, Med det bedste fra Fyn og Jylland danner vi Danmarks nye beachvolley-hold. Vi håber at I vil tage godt imod os og følge os :)", in_outdoors:"mostly outdoor")
 
 user3 = User.new(email:"lærke@dudu.com", first_name:"Lærke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Mygind", level: "pro", gender:"female", password:"123456", phone_number: "43124234",
   facebook_page:"https://www.facebook.com/teammygindolsen/?fref=ts", instagram_account:"https://www.instagram.com/teammygindolsen/",
-  description: "There once was a street called Chuck Norris, but the name was changed for public safety because nobody crosses Chuck Norris and lives.", in_outdoors:"mostly outdoor")
+  description: "Vi er Lærke Mygind Grønfeldt og Cecilie Køllner Olsen, og vi er et nyt dansk beachvolley-hold. Velkommen til vores store boldformede verden :)", in_outdoors:"mostly outdoor")
 
 user4 = User.new(email:"cecilie@dudu.com", first_name:"Cecilie", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Olsen", level: "pro", gender:"female", password:"123456", phone_number: "74321897",
   facebook_page:"https://www.facebook.com/teammygindolsen/?fref=ts", instagram_account:"https://www.instagram.com/teammygindolsen/",
-  description: "Chuck Norris beat Halo 1, 2, and 3 on Legendary with a broken Guitar Hero controller.", in_outdoors:"mostly outdoor")
+  description: "Vi er Lærke Mygind Grønfeldt og Cecilie Køllner Olsen, og vi er et nyt dansk beachvolley-hold. Velkommen til vores store boldformede verden :)", in_outdoors:"mostly outdoor")
 
 user5 = User.new(email:"pernille@dudu.com", first_name:"Pernille", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Witt", level:"semi-pro", gender:"female", password:"123456", phone_number: "74324322",
   facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts",
-  description: "Once a cobra bit Chuck Norris' leg. After five days of excruciating pain, the cobra died.", in_outdoors:"mostly indoor")
+  description: "Vi er Pernille Witt og Trine Bak, og vi er tossede med beachvolley. Vi gir' den gas i vores første sæson sammen, og her kan du følge os hele vejen!", in_outdoors:"mostly indoor")
 
 user6 = User.new(email:"trine@dudu.com", first_name:"Trine", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Bak", level:"semi-pro", gender:"female", password:"123456", phone_number: "78798327",
   facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts",
-  description: "Chuck Norris doesn't cheat death. He wins fair and square.", in_outdoors:"mostly indoor")
+  description: "Vi er Pernille Witt og Trine Bak, og vi er tossede med beachvolley. Vi gir' den gas i vores første sæson sammen, og her kan du følge os hele vejen!", in_outdoors:"mostly indoor")
 
 user7 = User.new(email:"sara@dudu.com", first_name:"Sara", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Stief", level:"pro", gender:"female", password:"123456", phone_number: "70843270",
   facebook_page:"https://www.facebook.com/TeamStiefSchade/?fref=ts", instagram_account:"https://www.instagram.com/team_stiefschade/",
-  description: "When the Boogeyman goes to sleep every night he checks his closet for Chuck Norris.", in_outdoors:"mostly outdoor")
+  description: "Vi er Sara Stief og Frederikke Schade Jensen. Vi er det danske U22 landshold i beachvolley. Her kan I følge vores udvikling.
+Håber vi ses i sandet!", in_outdoors:"mostly outdoor")
 
 user8 = User.new(email:"frederikke@dudu.com", first_name:"Frederikke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Schade Jensen", level:"pro", gender:"female", password:"123456", phone_number: "70213423",
   facebook_page:"https://www.facebook.com/TeamStiefSchade/?fref=ts", instagram_account:"https://www.instagram.com/team_stiefschade/",
-  description: "Chuck Norris will never have a heart attack... even a heart isnt foolish enough to attack Chuck Norris.", in_outdoors:"mostly outdoor")
+  description: "Vi er Sara Stief og Frederikke Schade Jensen. Vi er det danske U22 landshold i beachvolley. Her kan I følge vores udvikling.
+Håber vi ses i sandet!", in_outdoors:"mostly outdoor")
 
 user9 = User.new(email:"jesper@dudu.com", first_name:"Jesper", usual_court_address:"Ny Kærvej 2A, 9000 Aalborg",
   last_name:"Skovmark", level:"semi-pro", gender:"male", password:"123456", phone_number: "76623422",
   facebook_page:"https://www.facebook.com/jorgensenskovmark/?fref=ts", instagram_account:"www.instagram.com/jorgensenskovmark",
-  description: "Chuck Norris is the reason Waldo is hiding.", in_outdoors:"mostly indoor")
+  description: "Vi har erobret Nordjylland i de senere år, nu venter resten af Danish Beachvolley Tour.", in_outdoors:"mostly indoor")
 
 user10 = User.new(email:"patrick@dudu.com", first_name:"Patrick", usual_court_address:"Ny Kærvej 2A, 9000 Aalborg",
   last_name:"Jørgensen", level:"semi-pro", gender:"male", password:"123456", phone_number: "69764769",
   facebook_page:"https://www.facebook.com/jorgensenskovmark/?fref=ts", instagram_account:"www.instagram.com/jorgensenskovmark",
-  description: "Chuck Norris once fought superman. The loser had to wear his underwear over his pants.", in_outdoors:"mostly indoor")
+  description: "Vi har erobret Nordjylland i de senere år, nu venter resten af Danish Beachvolley Tour.", in_outdoors:"mostly indoor")
 
 user11 = User.new(email:"daniel@dudu.com", first_name:"Daniel", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
   last_name:"Jonassen", level:"pro", gender:"male", password:"123456", phone_number: "42398726",
   facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts",
-  description: "Chuck Norris's computer has no backspace button, Chuck Norris doesn't make mistakes.", in_outdoors:"mostly outdoor")
+  description: "Vi er et af de danske herrehold, der kommer fra Odense. I kan både se os på de danske strande samt rundt i Europa.", in_outdoors:"mostly outdoor")
 
 user12 = User.new(email:"morten@dudu.com", first_name:"Morten", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
   last_name:"Overgaard", level:"pro", gender:"male", password:"123456", phone_number: "72479822",
   facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts",
-  description: "Chuck Norris makes onions cry.", in_outdoors:"mostly outdoor")
+  description: "Vi er et af de danske herrehold, der kommer fra Odense. I kan både se os på de danske strande samt rundt i Europa. ", in_outdoors:"mostly outdoor")
 
 user13 = User.new(email:"danielt@dudu.com", first_name:"Daniel", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Thomsen", level:"pro", gender:"male", password:"123456", phone_number: "62736423",
   facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story",
-  description: "M.C. Hammer learned the hard way that Chuck Norris can touch this.", in_outdoors:"mostly outdoor")
+  description: "Thomsen-Abell", in_outdoors:"mostly outdoor")
 
 user14 = User.new(email:"kristoffer@dudu.com", first_name:"Kristoffer", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Abell", level:"pro", gender:"male", password:"123456", phone_number: "82723413",
   facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story",
-  description: "Bill Gates lives in constant fear that Chuck Norris' PC will crash.", in_outdoors:"mostly outdoor")
+  description: "Thomsen-Abell", in_outdoors:"mostly outdoor")
 
 user15 = User.new(email:"livia@dudu.com", first_name:"Livia", usual_court_address: "Lyngbyvej 110, 2100 København Ø",
   last_name:"Sebök", level:"semi-pro", gender:"female", password:"123456", phone_number: "70843217",
   facebook_page:"https://www.facebook.com/sebok.livia",
-  description: "Chuck Norris sleeps with a pillow under his gun.", in_outdoors:"mostly outdoor")
+  description: "I have starting playing volleyball 12 years ago. I won medals at the National Children and Junior Volleyball Championship in Hungary then I continued playing at the 1. division in the Danish Championship. I started out beach volleyball 4 years ago and I have been competing at the Danish Beachvolley Tour.  Since August I have stopped playing indoors volleyball and training at the sand at 2-3 times a week.  Currently I am ranked as the 34. player at the official Danish ranglist. I am interested in playing challenging international games! Feel free to contact me!", in_outdoors:"mostly outdoor")
 
 user17 = User.new(email:"chris@dudu.com", first_name:"Chris", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Gregory", level:"pro", gender:"male", password:"123456", phone_number: "+44 20 8879 0611",
   facebook_page:"https://www.facebook.com/GregorySheaf/",
-  description: "Chuck Norris tells Simon what to do.", in_outdoors:"mostly outdoor")
+  description: "Team GBR Gregory/Sheaf are a young and ambitious British Beach Volleyball Team. We are on our Olympic qualification journey!", in_outdoors:"mostly outdoor")
 
 user18 = User.new(email:"jake@dudu.com", first_name:"Jake", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Sheaf", level:"pro", gender:"male", password:"123456", phone_number: "+44 21 9979 2353",
   facebook_page:"https://www.facebook.com/GregorySheaf/",
-  description: "Chuck Norris knows Victoria's secret.", in_outdoors:"mostly outdoor")
+  description: "Team GBR Gregory/Sheaf are a young and ambitious British Beach Volleyball Team. We are on our Olympic qualification journey!", in_outdoors:"mostly outdoor")
 
 user19 = User.new(email:"jess@dudu.com", first_name:"Jess", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Grimson", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 5888 6798",
   facebook_page:"https://www.facebook.com/palmergrimson/",
-  description: "Chuck Norris's Blood Type is AK-47.", in_outdoors:"mostly outdoor")
+  description: "Team Palmer/Grimson, British No 1. Follow us on our journey to qualify for the Commonwealth Games 2018!
+", in_outdoors:"mostly outdoor")
 
 user20 = User.new(email:"Vicky@dudu.com", first_name:"Vicky", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Palmer", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 7679 9769",
   facebook_page:"https://www.facebook.com/palmergrimson/",
-  description: "Chuck Norris' dog is trained to pick up his own poop because Chuck Norris will not take shit from anyone.", in_outdoors:"mostly outdoor")
+  description: "Team Palmer/Grimson, British No 1. Follow us on our journey to qualify for the Commonwealth Games 2018!
+", in_outdoors:"mostly outdoor")
 
 
 team1 = Team.new(name:"Teamtyndeskovtrans")
@@ -656,108 +660,157 @@ ranking20.date = Date.today-rand(1..1095)
 ranking20.save
 
 
-result1 = Result.new(game_name:"Copenhagen Challenger 1", game_type:"competitive",
-  description: "kick ass and took names", achievement:"1rd place at elite level", date:"27.05.2017")
+result1 = Result.new(game_name:"Ishøj Challenger", game_type:"competitive",
+  description: "3. plads til Ishøj Challenger.. Masser af stærk vind, sol og tætte kampe", achievement:"1st. place at elite level", date:"03.06.2017")
 result1.user = user1
 result1.save
 
 result2 = Result.new(game_name:"Ishøj Challenger", game_type:"competitive",
-  description: "hard games", achievement:"3rd place at elite level", date:"27.05.2017")
+  description: "Vi taber semi 2-1 til Cecilie/Lærke og bliver dermed nr. 3. Vi er rigtige ærgerlige over at vores niveau falder i perioder i semifinalen, men vi tager masser af erfaring med videre (derfor smiler vi også lidt🙂)", achievement:"3rd. place at elite level", date:"03.06.2017")
 result2.user = user2
 result2.save
 
 result3 = Result.new(game_name:"Ishøj Challenger", game_type:"competitive",
-  description: "kick ass and took names", achievement:"1rd place at elite level", date:"03.06.2017")
+  description: "Kære Ishøj. Du kan være en strid ***, men vi elsker dig, fordi du lærer os vind-spillet på den hårde måde. Vi startede med kamp kl. 09 i morges, og efter nederlag i dagens 2. kamp mod Helle/Simone, måtte vi kæmpe os den lange vej tilbage til finalen. Kl. 21:45 vandt vi således sidste bold i finalen mod selvsamme Helle/Simone. Meget glade, men meget trætte piger siger tak for i dag. Nu skal sårene på arme og fødder plejes.", achievement:"1st. place at elite level", date:"03.06.2017")
 result3.user = user3
 result3.save
 
 result4 = Result.new(game_name:"Ishøj Challenger", game_type:"competitive",
-  description: "kick ass and took names", achievement:"1rd place at elite level", date:"03.06.2017")
+  description: "It wasn't pretty! It was indeed a challenge to play this weekend's stormy tournament at Ishøj. But some great teamwork and wise words from our coach Karin made us go all the way!", achievement:"1st. place at elite level", date:"03.06.2017")
 result4.user = user4
 result4.save
 
 result5 = Result.new(game_name:"Copenhagen Challenger 1", game_type:"competitive",
-  description: "kick ass and took names", achievement:"11rd place at 1. div. level", date:"27.05.2017")
+  description: "Copenhagen Challenger bød på en masse gode kampe, sol og højt humør ☀☀☀ Det blev til en 5. plads i 1. division. Som kun det tredje stævne sammen, er vi godt tilfredse. Vi kan mærke, at vi for hver kamp, vi spiller, udvikler os både mentalt, taktisk og teknisk. Så vi knokler videre i sandet til træning og er klar til at gi' den gas på Ishøj strand i næste weekend 💪", achievement:"5th. place at 1. div. level", date:"27.05.2017")
 result5.user = user5
 result5.save
 
 result6 = Result.new(game_name:"Copenhagen Challenger 1", game_type:"competitive",
-  description: "kick ass and took names", achievement:"1rd place at 1 div. level", date:"27.05.2017")
+  description: "Copenhagen Challenger bød på en masse gode kampe, sol og højt humør ☀☀☀ Det blev til en 5. plads i 1. division. Som kun det tredje stævne sammen, er vi godt tilfredse. Vi kan mærke, at vi for hver kamp, vi spiller, udvikler os både mentalt, taktisk og teknisk. Så vi knokler videre i sandet til træning og er klar til at gi' den gas på Ishøj strand i næste weekend 💪", achievement:"5th. place at 1 div. level", date:"27.05.2017")
 result6.user = user6
 result6.save
 
 result7 = Result.new(game_name:"Aarhus Challenger 1", game_type:"competitive",
-  description: "fun games", achievement:"5rd place at elite level", date:"27.05.2017")
+  description: "Endnu en 5. Plads 😅 Dagen startede ud med en uventet sejr over Tyndeskov/Krøyer! 💪🏽 Efter en al for lang pause i solen, fik vi aldrig rigtig fundet vores gode spil frem igen, og vi taber desværre de næste to kampe 2-0...
+Næste uge gælder det Ishøj Challenger, hvor vi håber på at kunne holde niveauet oppe i alle vores kampe 😎☀️✌🏽", achievement:"5th. place at elite level", date:"27.05.2017")
 result7.user = user7
 result7.save
 
 result8 = Result.new(game_name:"Aarhus Challenger 1", game_type:"competitive",
-  description: "fun games", achievement:"5rd place at elite level", date:"27.05.2017")
+  description: "Endnu en 5. Plads 😅 Dagen startede ud med en uventet sejr over Tyndeskov/Krøyer! 💪🏽 Efter en al for lang pause i solen, fik vi aldrig rigtig fundet vores gode spil frem igen, og vi taber desværre de næste to kampe 2-0...
+Næste uge gælder det Ishøj Challenger, hvor vi håber på at kunne holde niveauet oppe i alle vores kampe 😎☀️✌🏽", achievement:"5th. place at elite level", date:"27.05.2017")
 result8.user = user8
 result8.save
 
 result9 = Result.new(game_name:"Ikast Open 2", game_type:"competitive",
-  description: "great weather", achievement:"7rd place at 1 div. level", date:"27.05.2017")
+  description: "Så kom vi i gang igen! Vi er i semifinalen efter 3 kampe spillet.
+Første kamp var en rigtig god opstartskamp, der var ingen tvivl om udfaldet undervejs, men tvivlsomt spil på begge sider af banen. Vi vinder derfor 2-0", achievement:"7th. place at 1 div. level", date:"27.05.2017")
 result9.user = user9
 result9.save
 
 result10 = Result.new(game_name:"Ikast Open 2", game_type:"competitive",
-  description: "nice tan", achievement:"7rd place at 1 div. level", date:"27.05.2017")
+  description: "Semifinalen var en tæt fornøjelse... Vi starter sløvt ud, men kommer godt igen og det bliver meget tæt ved stillingen 18-20, og vi stepper op og hiver den hjem 23-21.
+Vi er inde i en god stime og fortsætter i andet sæt, dog går der nervøsitet i den og slutningen på første sæt gengiver sig med modsat favør", achievement:"7th. place at 1 div. level", date:"27.05.2017")
 result10.user = user10
 result10.save
 
-result11 = Result.new(game_name:"DM-finaler, Amager Strand", game_type:"competitive",
-  description: "so close", achievement:"2rd place at elite level", date:"14.08.2016")
+result11 = Result.new(game_name:"NORTHERN EUROPEISK CHAMPIONSHIP", game_type:"competitive",
+  description: "Efter nederlaget i semi, er vi rigtig glade for at vi rejser os og spiller en meget stabil kamp hvor vi vinder 2-0.
+Alt i alt er vi rigtig stolte af vores præstation, fordi vi formår at spille på et højt niveau under hele turneringen", achievement:"3nd place at elite level", date:"14.08.2016")
 result11.user = user11
 result11.save
 
-result12 = Result.new(game_name:"DM-finaler, Amager Strand", game_type:"competitive",
-  description: "so close", achievement:"2rd place at elite level", date:"14.08.2016")
+result12 = Result.new(game_name:"NORTHERN EUROPEISK CHAMPIONSHIP", game_type:"competitive",
+  description: "ØV.. Vi taber en tæt semifinale i 3 sæt mod englænderne. Nu er kampen lagt bag os og vi gør os klar til bronzekampen, som bliver spillet kl 13.00 mod Abell/Thomsen. Hep!", achievement:"3nd place at elite level", date:"14.08.2016")
 result12.user = user12
 result12.save
 
 result13 = Result.new(game_name:"RandersBC Smarteyes Challenger", game_type:"competitive",
-  description: "kick ass and took names", achievement:"1rd place at elite level", date:"27.05.2017")
+  description: "Sejr i Randers! Tak for et godt stævne til Randers Beach Club. Det fejrer vi med en tur på Bull 🍔💪", achievement:"1st. place at elite level", date:"27.05.2017")
 result13.user = user13
 result13.save
 
 result14 = Result.new(game_name:"RandersBC Smarteyes Challenger", game_type:"competitive",
-  description: "kick ass and took names", achievement:"1rd place at elite level", date:"27.05.2017")
+  description: "Sejr i Randers! Tak for et godt stævne til Randers Beach Club. Det fejrer vi med en tur på Bull 🍔💪", achievement:"1st. place at elite level", date:"27.05.2017")
 result14.user = user14
 result14.save
 
-result15 = Result.new(game_name:"Copenhagen Challenger 1", game_type:"competitive",
-  description: "fun games", achievement:"9rd place at 1 div. level", date:"27.05.2017")
+result15 = Result.new(game_name:"Ishøj Challenger", game_type:"competitive",
+  description: " It wasn't pretty! It was a real challenge to play this weekend's stormy tournament at Ishøj, but with my cool partner Tine Meyhoff we managed to end up at 5th place at the 1. division.", achievement:"5th. place at 1 div. level", date:"03.06.2017")
 result15.user = user15
 result15.save
 
+result17 = Result.new(game_name:"NORTHERN EUROPEISK CHAMPIONSHIP", game_type:"competitive",
+  description: "FINAL time!!!! After winning our semi this morning we play Norway at 2pm (Danish time). You can stream the final live ", achievement:"1st. place at elite level", date:"14.08.2016")
+result17.user = user17
+result17.save
+
+result18 = Result.new(game_name:"NORTHERN EUROPEISK CHAMPIONSHIP", game_type:"competitive",
+  description: "FINAL time!!!! After winning our semi this morning we play Norway at 2pm (Danish time). You can stream the final live ", achievement:"1st. place at elite level", date:"14.08.2016")
+result18.user = user18
+result18.save
+
+result19 = Result.new(game_name:"Wold Beach Vollyball Tour, NSW, Australia", game_type:"competitive",
+  description: "As we come to our last night in Australia we are left feeling extremely frustrated and disappointed with our performance yesterday and the opportunity missed. Even after a solid week of training the occasion got the better of us. Despite this, we took the chance we had today to build from yesterday and scrimmaged against Sweden and Canada. Flash floods and extreme winds didn't stop us from making the most of our final day. We come home tomorrow and will have a day to recover and then back to it! Gym, work, train, repeat!", achievement:"4th. place at elite level", date:"14.08.2016")
+result19.user = user19
+result19.save
+
+result20 = Result.new(game_name:"Wold Beach Vollyball Tour, NSW, Australia", game_type:"competitive",
+  description: "As we come to our last night in Australia we are left feeling extremely frustrated and disappointed with our performance yesterday and the opportunity missed. Even after a solid week of training the occasion got the better of us. Despite this, we took the chance we had today to build from yesterday and scrimmaged against Sweden and Canada. Flash floods and extreme winds didn't stop us from making the most of our final day. We come home tomorrow and will have a day to recover and then back to it! Gym, work, train, repeat!", achievement:"4th. place at elite level", date:"14.08.2016")
+result20.user = user20
+result20.save
+
 result21 = Result.new(game_name:"Ishøj Challenger", game_type:"competitive",
-  description: "fun games", achievement:"9rd place at 1 div. level", date:"20.05.2017")
+  description: "Ishøj, wind factor but got 3th. place :) ", achievement:"3th. place at 1 div. level", date:"20.05.2017")
 result21.user = user5
 result21.save
 
 result22 = Result.new(game_name:"Ishøj Challenger", game_type:"competitive",
-  description: "fun games", achievement:"9rd place at 1 div. level", date:"20.05.2017")
+  description: "trods meget vind lykkes det os at få en 3. plads", achievement:"3th. place at 1 div. level", date:"20.05.2017")
 result22.user = user6
 result22.save
 
-result23 = Result.new(game_name:"Aarhus Challenger 1", game_type:"competitive",
-  description: "fun games", achievement:"7rd place at elite level", date:"14.05.2017")
-result23.user = user15
+result23 = Result.new(game_name:"RandersBC Smarteyes Challenger", game_type:"competitive",
+  description: "En fjerdeplads er absolut godkendt, og højere end vores seed!! Det var Tanges første elitestævne nogensinde og han havde en fabelagtig debut!!", achievement:"4th. place at elite level", date:"14.05.2017")
+result23.user = user10
 result23.save
 
-result24 = Result.new(game_name:"RandersBC Smarteyes Challenger", game_type:"competitive",
-  description: "fun games", achievement:"4rd place at elite level", date:"14.05.2017")
-result24.user = user10
+result24 = Result.new(game_name:"Copenhagen Challenger 1", game_type:"competitive",
+  description: "A new partnership with Christina S. Jensen! Great weather, super games! Unfortunately we lost the semi-finals with a few points in the 3. set, but we are happy for our 3. place at the 1. division! [:slightly_smiling_face:]", achievement:"3th. place at 1 div. level", date:"27.05.2017")
+result24.user = user15
 result24.save
 
-result25 = Result.new(game_name:"RandersBC Smarteyes Challenger", game_type:"competitive",
-  description: "fun games", achievement:"5rd place at 1 div. level", date:"14.05.2017")
+result25 = Result.new(game_name:"Aarhus Challenger 1", game_type:"competitive",
+  description: "A good debut in the Elite! After many exciting games we ended up at the 7th place at the Elite this weekend in Aarhus, which is great as we were seeded as we were seeded 8;)", achievement:"7th. place at elite level", date:"21.05.2017")
 result25.user = user15
 result25.save
 
+result26 = Result.new(game_name:"RandersBC Smarteyes Challenger", game_type:"competitive",
+  description: "A great start of the season! Winning 1. division with Christina Brandt at Randers!", achievement:"1st. place at 1 div. level", date:"14.05.2017")
+result26.user = user15
+result26.save
+
+
 video1 = Video.new(url:"https://www.youtube.com/watch?v=KPcCHbI03sE")
 video1.user = user1
+
+video7 = Video.new(url:"https://www.youtube.com/watch?v=UZ_4wDR4Vno")
+video7.user = user7
+
+video8 = Video.new(url:"https://www.youtube.com/watch?v=UZ_4wDR4Vno")
+video8.user = user8
+
+video17 = Video.new(url:"https://www.youtube.com/watch?v=cyz45m0OgcI")
+video17.user = user17
+
+video18 = Video.new(url:"https://www.youtube.com/watch?v=cyz45m0OgcI")
+video18.user = user18
+
+video19 = Video.new(url:"https://www.youtube.com/watch?v=uGGGaaxa5Wc&t=111s")
+video19.user = user19
+
+video20 = Video.new(url:"https://www.youtube.com/watch?v=uGGGaaxa5Wc&t=111s")
+video20.user = user20
 
 url1 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664068/maria_us9nnu.jpg"
 user1.photo_urls = [url1]
