@@ -59,7 +59,7 @@
             <em>from <%= user.city %>, <%= user.country %></em>. <br>
             <!-- <em>from Copenhagen, DK</em>. <br> -->
             <%= user.in_outdoors.nil? ? " " : "Plays " + user.in_outdoors.downcase %>
-            <p> <%= user.description %></p>
+            <p> <%= user.description.length > 148 ? "#{user.description[0..148]}..." : user.description %></p>
           </div>
 
           <div class="product-body-partner-team-container hidden-xs">
