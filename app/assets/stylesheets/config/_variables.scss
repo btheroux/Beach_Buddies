@@ -34,7 +34,8 @@ $brand-color: #F7F71D;
 $brand-complementary-color: #22062B;
 
 $red: #9A031E;
-$blue: #5BC0EB;
+// $blue: #4465DD;
+$blue: $brand-complementary-color;
 $yellow: $brand-color;
 $orange: #FE7F2D;
 $green: #9BC53D;
