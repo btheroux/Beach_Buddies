@@ -1,0 +1,18 @@
+<div class="bbbox">
+  <div class="bbbox-contact-details-box-content">
+    <div class="col-xs-12">
+      <br>
+      <%= @user.email %>
+      <br><br>
+      <a href="mailto:<%= @user.email %>?Subject=Let's Beach Volley together!" target="_top _blank" class="beachbuddy-btn-complementary">Send an email</a>
+      <br>
+      <% if @user.phone_number.present? %>
+        <br><%= @user.phone_number %><br><br>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+

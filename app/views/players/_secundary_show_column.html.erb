@@ -3,9 +3,19 @@
     <div class="text-center">
 
       <% if @user == current_user %>
+
+
+        <!-- user logged in on his/her own show page -->
         <%= link_to "Edit profile", profile_path, class: "beachbuddy-btn-complementary"  %>
+      <% elsif current_user.nil? %>
+        <!-- user not logged in -->
+        <%= link_to "SHOW CONTACT DETAILS", new_user_session_path, class:"beachbuddy-btn-complementary" %>
       <% else %>
-        <a href="#" class="beachbuddy-btn beachbuddy-btn-complementary">SHOW CONTACT DETAILS</a>
+        <!-- user logged in on someone else's show page -->
+        <%= link_to "Show contact details", '#', class: "beachbuddy-btn-complementary", id: "show-contact-details-box" %>
+        <div id="contact_details-box" hidden>
+          <%= render 'players/contact_details', user: @user %>
+        </div>
       <% end %>
     </div>
     <br>
