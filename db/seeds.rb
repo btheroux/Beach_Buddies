@@ -525,31 +525,31 @@ federation56 = Federation.new(name:"VOLLEYBALL WALES", url: "http://www.volleyba
 country56.federations << federation56
 federation56.save
 
-federation62 = Federation.new(name:Barbados Volleyball Association, url: http://www.volleybarbados.com/)
+federation62 = Federation.new(name:"Barbados Volleyball Association", url: "www.volleybarbados.com")
 country62.federations << federation62
 federation62.save
 
-federation63 = Federation.new(name:Bermuda Volleyball, url: http://www.bva.bm/)
+federation63 = Federation.new(name:"Bermuda Volleyball", url: "www.bva.bm")
 country63.federations << federation63
 federation63.save
 
-federation67 = Federation.new(name:Volleyball Canada , url: http://www.volleyball.ca/)
+federation67 = Federation.new(name:"Volleyball Canada" , url: "www.volleyball.ca")
 country67.federations << federation67
 federation67.save
 
-federation68 = Federation.new(name:The Cayman Islands Volleyball Federation , url: http://www.civf.ky/)
+federation68 = Federation.new(name:"The Cayman Islands Volleyball Federation" , url: "www.civf.ky")
 country68.federations << federation68
 federation68.save
 
-federation72 = Federation.new(name:Federación Dominicana de Voleibol, url: http://www.fedovoli.org/  )
+federation72 = Federation.new(name:"Federación Dominicana de Voleibol", url: "www.fedovoli.org" )
 country72.federations << federation72
 federation72.save
 
-federation82 = Federation.new(name:US Virgin Islands Volleyball Federation, url: http://usvivolleyball.org/)
+federation82 = Federation.new(name:"US Virgin Islands Volleyball Federation", url: "usvivolleyball.org")
 country82.federations << federation82
 federation82.save
 
-federation97 = Federation.new(name:USA Volleyball , url: http://www.teamusa.org/USA-Volleyball)
+federation97 = Federation.new(name:"USA Volleyball" , url: "www.teamusa.org/USA-Volleyball")
 country97.federations << federation97
 federation97.save
 
