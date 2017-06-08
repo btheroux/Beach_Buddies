@@ -19,7 +19,7 @@
     # You need to list them by order of importance. `description` is tagged as
     # `unordered` to avoid taking the position of a match into account in that attribute.
     searchableAttributes ['usual_court_address']
-
+    attributesForFaceting ['gender', 'level']
     customRanking ['desc(geo)']
 
     # the `customRanking` setting defines the ranking criteria use to compare two matching

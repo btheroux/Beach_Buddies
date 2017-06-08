@@ -4,11 +4,34 @@ class PlayersController < ApplicationController
 
   def index
 
-    if params[:location]
-      geo = Geocoder.search params[:location]
+    if @location = params[:location]
+      geo = Geocoder.search @location
       lat = geo.first.data["geometry"]["location"]["lat"]
       long = geo.first.data["geometry"]["location"]["lng"]
-      @users = User.search("*", { "aroundLatLng" => "#{lat}, #{long}", "aroundRadius": 1_000_000 })
+
+      gender = params[:gender].to_a
+      level = params[:level].to_a # need to deal with multiple selections
+      @facets = { gender: gender, level: level }
+
+      filters = @facets.map do |facet, values|
+        if values.any?
+          val = values.map { |value| "#{facet}:#{value}" }.join(' OR ')
+          "(#{val})"
+        end
+      end.compact.join(' AND ')
+
+
+      @users = User.search("*", {
+        "aroundLatLng" => "#{lat}, #{long}",
+        "aroundRadius": 1_000_000,
+        filters: filters
+      })
+
+      @available_facets = {
+        gender: ["male", "female"],
+        level: ["beginner", "hobbyist", "semi-pro", "pro"]
+      }
+
     else
       @users = User.all
     end
