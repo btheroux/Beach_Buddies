@@ -18,4 +18,4 @@ window.bindGoogleMapsAutocomplete = function() {
   }
 }
 
-$(document).ready(bindGoogleMapsAutocomplete());
+$(document).ready(bindGoogleMapsAutocomplete);
