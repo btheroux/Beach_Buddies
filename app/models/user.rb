@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+  class User < ApplicationRecord
   has_attachments :photos, maximum: 20
   before_create :default_level
   before_create :genderize
@@ -9,6 +9,22 @@ class User < ApplicationRecord
   # geocoded_by :usual_court_address
   # after_validation :geocode, if: :usual_court_address_changed?
 
+  include AlgoliaSearch
+
+  algoliasearch do
+    geoloc :latitude, :longitude
+    # list of attribute used to build an Algolia record
+    # the `searchableAttributes` (formerly known as attributesToIndex) setting defines the attributes
+    # you want to search in: here `title`, `subtitle` & `description`.
+    # You need to list them by order of importance. `description` is tagged as
+    # `unordered` to avoid taking the position of a match into account in that attribute.
+    searchableAttributes ['usual_court_address']
+
+    customRanking ['desc(geo)']
+
+    # the `customRanking` setting defines the ranking criteria use to compare two matching
+    # records in case their text-relevance is equal. It should reflect your record popularity.
+  end
 
   has_many :videos, dependent: :destroy
   has_many :results, dependent: :destroy

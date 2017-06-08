@@ -3,7 +3,15 @@ class PlayersController < ApplicationController
   before_action :set_user, except: [:index]
 
   def index
-    @users = User.all
+
+    if params[:location]
+      geo = Geocoder.search params[:location]
+      lat = geo.first.data["geometry"]["location"]["lat"]
+      long = geo.first.data["geometry"]["location"]["lng"]
+      @users = User.search("*", { "aroundLatLng" => "#{lat}, #{long}", "aroundRadius": 1_000_000 })
+    else
+      @users = User.all
+    end
     # raise
   end
 
