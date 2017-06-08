@@ -26,11 +26,15 @@
       <% if partner.photos.empty? %>
       <%=  image_tag("default-#{partner.gender}-#{rand(1..4)}.jpg", class: "productshow-image productshow-image-default productshow-image-partner ")%>
       <% else %>
-      <%=  cl_image_tag partner.photos.first.path, class: "productshow-image productshow-image-partner" %>
+        <%= link_to user_path(partner), target: "_blank" do %>
+          <%=  cl_image_tag partner.photos.first.path, class: "productshow-image productshow-image-partner" %>
+        <% end %>
+        <%= link_to user_path(partner), target: "_blank" do %>
+          <span>
+            <strong>Regular partner:</strong> <br> <%= partner.first_name ||= "-" %> <%= partner.last_name ||= "-" %>
+          </span>
+        <% end %>
       <% end %>
-      <span>
-        <strong>Regular partner:</strong> <br> <%= partner.first_name ||= "-" %> <%= partner.last_name ||= "-" %>
-      </span>
     </div>
     <% end %>
     <% end %>

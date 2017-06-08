@@ -4,11 +4,11 @@ body{
 }
 
 .video-container {
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   padding: 20px;
   @media(min-width: 600px) {
-    height: 100vh;
+    height: 90vh;
   }
   position: relative;
 }
@@ -41,7 +41,7 @@ video {
     font-size: 22px;
   }
   @media (min-width: 1200px) {
-    font-size: 55px;
+    font-size: 45px;
   }
 }
 .callout {
