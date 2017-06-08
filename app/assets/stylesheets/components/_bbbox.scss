@@ -55,7 +55,8 @@
 }
 .bbbox-contact-details-box-content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   font-style: bolder;
   color: $brand-complementary-color;
 }

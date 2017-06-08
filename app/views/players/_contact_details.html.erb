@@ -1,18 +1,12 @@
-<div class="bbbox">
-  <div class="bbbox-contact-details-box-content">
-    <div class="col-xs-12">
-      <br>
-      <%= @user.email %>
-      <br><br>
-      <a href="mailto:<%= @user.email %>?Subject=Let's Beach Volley together!" target="_top _blank" class="beachbuddy-btn-complementary">Send an email</a>
-      <br>
+  <!-- <div class="bbbox"> -->
+    <div class="bbbox-contact-details-box-content text-center">
       <% if @user.phone_number.present? %>
-        <br><%= @user.phone_number %><br><br>
+        <div><%= @user.phone_number %></div>
+      <br>
       <% end %>
+      <div><%= @user.email %></div>
+      <br>
+      <div><a href="mailto:<%= @user.email %>?Subject=Let's Beach Volley together!" target="_top _blank" class="beachbuddy-btn-complementary">Send an email</a></div>
+      <br>
     </div>
-  </div>
-</div>
-
-
-
-
+  <!-- </div> -->
