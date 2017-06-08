@@ -2,6 +2,29 @@
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
 
+ <!--    form url=players method=get
+      hidden location=@location
+      input gender=@gender
+      input level=@level
+      submit -->
+
+      <form action="/players" class="home-bb-search" id="players-search-form" data-remote="true" data-type="json">
+        <% @available_facets.each do |key, values| %>
+          <label for="gender"><%= key %>:</label>
+          <% values.each do |val| %>
+            <input type="checkbox" name="<%= key %>[]" value="<%= val %>" <%= 'checked' if @facets[key].include?(val) %>> <%= t val %>
+            <br>
+          <% end %>
+        <% end %>
+
+        <input name="location" type="text" class="home-bb-search-input" id="players-search" value=<%= @location %>>
+        <!-- set value for hidden field - location -->
+      </form>
+
+      <% if @users.empty? %>
+        <h3 class="text-center"><%= "There are #{@users.count} players in #{params[:location]} lease try another search 😃" %></h3>
+      <% end %>
+
 
       <% @users.each do |user| %>
         <div class="product <%= "product-" + user.gender %>">

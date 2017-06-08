@@ -7,12 +7,14 @@ class ResultsController < ApplicationController
     @result.game_type = params[:result][:game_type]
     @result.description = params[:result][:description]
     @result.achievement = params[:result][:achievement]
-    @result.date = Date.parse(params[:result][:date])
+    @result.date = params[:result][:date]
     @result.user = @user
     if @result.save
       redirect_to @user
     else
-      render "profiles/index"
+      flash[:alert] = @result.errors.full_messages.join(". ")
+      redirect_to profile_path
+      # render "profiles/index"
     end
   end
 

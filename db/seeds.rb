@@ -790,15 +790,14 @@ result26 = Result.new(game_name:"RandersBC Smarteyes Challenger", game_type:"com
 result26.user = user15
 result26.save
 
-
-video1 = Video.new(url:"https://www.youtube.com/watch?v=KPcCHbI03sE")
-video1.user = user1
-
 video7 = Video.new(url:"https://www.youtube.com/watch?v=UZ_4wDR4Vno")
 video7.user = user7
 
 video8 = Video.new(url:"https://www.youtube.com/watch?v=UZ_4wDR4Vno")
 video8.user = user8
+
+video15 = Video.new(url:"https://www.youtube.com/watch?v=50Epo3cfJA0&feature=youtu.be")
+video15.user = user15
 
 video17 = Video.new(url:"https://www.youtube.com/watch?v=cyz45m0OgcI")
 video17.user = user17
@@ -806,11 +805,12 @@ video17.user = user17
 video18 = Video.new(url:"https://www.youtube.com/watch?v=cyz45m0OgcI")
 video18.user = user18
 
-video19 = Video.new(url:"https://www.youtube.com/watch?v=uGGGaaxa5Wc&t=111s")
+video19 = Video.new(url:"https://www.youtube.com/watch?v=5pLrVWS-eDo")
 video19.user = user19
 
-video20 = Video.new(url:"https://www.youtube.com/watch?v=uGGGaaxa5Wc&t=111s")
+video20 = Video.new(url:"https://www.youtube.com/watch?v=5pLrVWS-eDo")
 video20.user = user20
+
 
 url1 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664068/maria_us9nnu.jpg"
 user1.photo_urls = [url1]
@@ -853,6 +853,9 @@ user13.photo_urls = [url13]
 
 url14 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664066/abell_fmcerb.jpg"
 user14.photo_urls = [url14]
+
+url15 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496827657/Livia_sydnws.jpg"
+user15.photo_urls = [url15]
 
 url17 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664068/jake_jmpxsb.jpg"
 user17.photo_urls = [url17]
