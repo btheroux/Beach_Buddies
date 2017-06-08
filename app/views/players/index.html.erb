@@ -8,7 +8,7 @@
       input level=@level
       submit -->
 
-      <form action="/players" class="home-bb-search">
+      <form action="/players" class="home-bb-search" id="players-search-form" data-remote="true" data-type="json">
         <% @available_facets.each do |key, values| %>
           <label for="gender"><%= key %>:</label>
           <% values.each do |val| %>
@@ -17,14 +17,13 @@
           <% end %>
         <% end %>
 
-        <input name="location" type="hidden" class="home-bb-search-input" value=<%= @location %>>
+        <input name="location" type="text" class="home-bb-search-input" id="players-search" value=<%= @location %>>
         <!-- set value for hidden field - location -->
-        <button type="submit" class="home-bb-search-input home-bb-search-btn">
-          <i class="fa fa-search"></i>
-        </button>
       </form>
 
-
+      <% if @users.empty? %>
+        <h3 class="text-center"><%= "There are #{@users.count} players in #{params[:location]} lease try another search 😃" %></h3>
+      <% end %>
 
 
       <% @users.each do |user| %>
