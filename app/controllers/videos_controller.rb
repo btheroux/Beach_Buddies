@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
 
-    def create
+  def create
     @user = current_user
     @video = Video.new()
     @video.url = params[:video][:url]
@@ -8,7 +8,9 @@ class VideosController < ApplicationController
     if @video.save
       redirect_to @user
     else
-      render "profiles/index"
+      flash[:alert] = "You must add a Video url"
+      redirect_to profile_path
+      # render "profiles/index"
     end
   end
 

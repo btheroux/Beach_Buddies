@@ -12,7 +12,9 @@ class TeamsController < ApplicationController
     if @team.save
       redirect_to @user
     else
-      render "profiles/index"
+      flash[:alert] = "You must write a Team Name"
+      redirect_to profile_path
+      # render "profiles/index"
     end
   end
 

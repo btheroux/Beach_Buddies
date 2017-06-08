@@ -5,12 +5,14 @@ class RankingsController < ApplicationController
     @ranking = Ranking.new()
     @ranking.score = params[:ranking][:score]
     @ranking.date =  Date.parse(params[:ranking][:date]) unless params[:ranking][:date].blank?
-    @ranking.federation = Federation.find(params[:ranking][:federation])
+    @ranking.federation_id = params[:ranking][:federation]
     @ranking.user = @user
     if @ranking.save
       redirect_to @user
     else
-      render "profiles/index"
+      flash[:alert] = @ranking.errors.full_messages.join(". ")
+      redirect_to profile_path
+      # render "profiles/index"
     end
   end
 
