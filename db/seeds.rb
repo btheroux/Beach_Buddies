@@ -174,6 +174,132 @@ country55.save
 country56 = Country.new(name:"Wales", country_code: "gb")
 country56.save
 
+country57 = Country.new(name:"Anguillia ", country_code:" AGU")
+country57.save
+
+country58 = Country.new(name:"Netherlands Antilles ", country_code:" AHO ")
+country58.save
+
+country59 = Country.new(name:"Antigua and Barbuda ", country_code:" ANT  ")
+country59.save
+
+country60 = Country.new(name:"Aruba ", country_code:" ARU   ")
+country60.save
+
+country61 = Country.new(name:"Bahamas ", country_code:" BAH  ")
+country61.save
+
+country62 = Country.new(name:"Barbados ", country_code:" BAR  ")
+country62.save
+
+country63 = Country.new(name:"Bermuda ", country_code:" BER ")
+country63.save
+
+country64 = Country.new(name:"Bonaire ", country_code:" BON ")
+country64.save
+
+country65 = Country.new(name:"Belize ", country_code:" BIZ   ")
+country65.save
+
+country66 = Country.new(name:"Curazao ", country_code:" CUR ")
+country66.save
+
+country67 = Country.new(name:"Canada ", country_code:" CAN  ")
+country67.save
+
+country68 = Country.new(name:"Cayman Islands ", country_code:" CAY ")
+country68.save
+
+country69 = Country.new(name:"Costa Rica ", country_code:" CRC ")
+country69.save
+
+country70 = Country.new(name:"Cuba ", country_code:" CUB  ")
+country70.save
+
+country71 = Country.new(name:"Dominica ", country_code:" DMA ")
+country71.save
+
+country72 = Country.new(name:"Dominican Republic ", country_code:" DOM ")
+country72.save
+
+country73 = Country.new(name:"Dutch St. Maarten ", country_code:" SXM ")
+country73.save
+
+country74 = Country.new(name:"El Salvador ", country_code:" ESA ")
+country74.save
+
+country75 = Country.new(name:"St. Eustatius ", country_code:" EUX ")
+country75.save
+
+country76 = Country.new(name:"French St. Martin ", country_code:" FSM ")
+country76.save
+
+country77 = Country.new(name:"Guadeloupe ", country_code:" GDP ")
+country77.save
+
+country78 = Country.new(name:"Grenada ", country_code:" GRN ")
+country78.save
+
+country79 = Country.new(name:"Guatemala", country_code:" GUA ")
+country79.save
+
+country80 = Country.new(name:"Haiti ", country_code:" HAI ")
+country80.save
+
+country81 = Country.new(name:"Honduras ", country_code:" HON ")
+country81.save
+
+country82 = Country.new(name:"Virgin Islands ", country_code:" ISV ")
+country82.save
+
+country83 = Country.new(name:"British Virgin Islands ", country_code:" BVI ")
+country83.save
+
+country84 = Country.new(name:"Jamaica ", country_code:" JAM ")
+country84.save
+
+country85 = Country.new(name:"Saint Lucia ", country_code:" LCA ")
+country85.save
+
+country86 = Country.new(name:"Mexico ", country_code:" MEX ")
+country86.save
+
+country87 = Country.new(name:"Martinique ", country_code:" MQE ")
+country87.save
+
+country88 = Country.new(name:"Montserrat ", country_code:" MTS ")
+country88.save
+
+country89 = Country.new(name:"Nicaragua ", country_code:" NCA ")
+country89.save
+
+country90 = Country.new(name:"Panama ", country_code:" PAN ")
+country90.save
+
+country91 = Country.new(name:"Puerto Rico ", country_code:" PUR ")
+country91.save
+
+country92 = Country.new(name:"Saint Kitts and Nevis ", country_code:" SKN ")
+country92.save
+
+country93 = Country.new(name:"Surinam ", country_code:" SUR ")
+country93.save
+
+country94 = Country.new(name:"Saba ", country_code:" SAB ")
+country94.save
+
+country95 = Country.new(name:"Trinidad and Tobago ", country_code:" TRI ")
+country95.save
+
+country96 = Country.new(name:"Turks & Caicos Islands ", country_code:" TCI ")
+country96.save
+
+country97 = Country.new(name:"United States of America ", country_code:" USA ")
+country97.save
+
+country98 = Country.new(name:"Saint Vincent & the Grenadines ", country_code: "VIN ")
+country98.save
+
 
 federation1 = Federation.new(name:"FEDERATA SHQIPTARE E VOLEJBOLLIT", url:"http://www.fshv.org.al")
 country1.federations << federation1
@@ -398,6 +524,34 @@ federation55.save
 federation56 = Federation.new(name:"VOLLEYBALL WALES", url: "http://www.volleyballwales.org")
 country56.federations << federation56
 federation56.save
+
+federation62 = Federation.new(name:Barbados Volleyball Association, url: http://www.volleybarbados.com/)
+country62.federations << federation62
+federation62.save
+
+federation63 = Federation.new(name:Bermuda Volleyball, url: http://www.bva.bm/)
+country63.federations << federation63
+federation63.save
+
+federation67 = Federation.new(name:Volleyball Canada , url: http://www.volleyball.ca/)
+country67.federations << federation67
+federation67.save
+
+federation68 = Federation.new(name:The Cayman Islands Volleyball Federation , url: http://www.civf.ky/)
+country68.federations << federation68
+federation68.save
+
+federation72 = Federation.new(name:Federación Dominicana de Voleibol, url: http://www.fedovoli.org/  )
+country72.federations << federation72
+federation72.save
+
+federation82 = Federation.new(name:US Virgin Islands Volleyball Federation, url: http://usvivolleyball.org/)
+country82.federations << federation82
+federation82.save
+
+federation97 = Federation.new(name:USA Volleyball , url: http://www.teamusa.org/USA-Volleyball)
+country97.federations << federation97
+federation97.save
 
 
 user1 = User.new(email:"maria@dudu.com", first_name:"Maria", usual_court_address:"Vesterengvej 26A, 8200 Aarhus N",
