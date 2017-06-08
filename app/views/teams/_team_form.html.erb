@@ -1,5 +1,5 @@
-<%= simple_form_for [@user, @team] do |f| %>
-  <%= f.input :name, label: "Team Name", as: :string %>
+<%= simple_form_for [@user, @team], html:{novalidate: false} do |f| %>
+  <%= f.input :name, label: "Team Name", as: :string, required: true %>
   <%= f.input :users, label: "Teammate", collection: @potential_members, prompt: "Find your teammate" %>
   <p class="bb-alert-blue">Can't find your teammate? Invite him/her to sign up! You can still create a team without your teammate right now.</p>
   <%= f.input :facebook_page, label: "Team Facebook Page URL", as: :string %>
