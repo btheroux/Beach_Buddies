@@ -19,7 +19,11 @@
     </form>
     <br>
     <div>
-    <a class="btn btn-primary btn-lucky">I'm felling lucky</a>
+    <!-- user logged in, find random player of same level and gender  -->
+    <%= link_to "I'm feeling lucky", user_path(@recommended_user), class: "btn btn-primary btn-lucky" %>
+    <!-- user not logged in, find random player -->
+
+
   </div>
   </div>
 </div>
