@@ -673,7 +673,7 @@ user23 = User.create(email:"Nicole@dudu.com", first_name:"Nicole", usual_court_a
   in_outdoors:"mostly outdoor")
 
 user24 = User.create(email:"oren@dudu.com", first_name:"Oren", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
-  last_name:"Arbel", level:"Hobbyist", gender:"male", password:"123456", phone_number: "+44 21 7679 9768",
+  last_name:"Arbel", level:"hobbyist", gender:"male", password:"123456", phone_number: "+44 21 7679 9768",
   description: " Love to spend my time in the sand. I am going on a holiday soon to Spain, would be nice to meet some players there.",
   in_outdoors:"mostly outdoor")
 
@@ -991,6 +991,26 @@ result26 = Result.new(game_name:"RandersBC Smarteyes Challenger", game_type:"com
   description: "A great start of the season! Winning 1. division with Christina Brandt at Randers!", achievement:"1st. place at 1 div. level", date:"14.05.2017")
 result26.user = user15
 result26.save
+
+result27 = Result.new(game_name:"London Challenger", game_type:"competitive",
+  description: "A great start of the season! Victory", achievement:"1st. place at 1 div. level", date:"14.05.2017")
+result27.user = user19
+result27.save
+
+result28 = Result.new(game_name:"London Challenger", game_type:"competitive",
+  description: "A great start of the season! Victory", achievement:"1st. place at 1 div. level", date:"14.05.2017")
+result28.user = user20
+result28.save
+
+result29 = Result.new(game_name:"UK Beach Vollyball Tour 2. round", game_type:"competitive",
+  description: "Super windy day! We struggled a lot but managed to take 2. place home.", achievement:"1st. place at 1 div. level", date:"14.05.2017")
+result29.user = user19
+result29.save
+
+result30 = Result.new(game_name:"UK Beach Vollyball Tour 2. round", game_type:"competitive",
+  description: "Super windy day! We struggled a lot but managed to take 2. place home.", achievement:"1st. place at 1 div. level", date:"14.05.2017")
+result30.user = user20
+result30.save
 
 video7 = Video.new(url:"https://www.youtube.com/watch?v=UZ_4wDR4Vno")
 video7.user = user7
