@@ -673,7 +673,7 @@ user23 = User.create(email:"Nicole@dudu.com", first_name:"Nicole", usual_court_a
   in_outdoors:"mostly outdoor")
 
 user24 = User.create(email:"oren@dudu.com", first_name:"Oren", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
-  last_name:"Arbel", level:"Hobbyiest", gender:"male", password:"123456", phone_number: "+44 21 7679 9768",
+  last_name:"Arbel", level:"Hobbyist", gender:"male", password:"123456", phone_number: "+44 21 7679 9768",
   description: " Love to spend my time in the sand. I am going on a holiday soon to Spain, would be nice to meet some players there.",
   in_outdoors:"mostly outdoor")
 
