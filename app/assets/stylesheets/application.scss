@@ -1,19 +1,24 @@
-@import "bootstrap-datepicker3";
+// @import "bootstrap-datepicker3";
 
-// Graphical variables
+// // Graphical variables
 @import "config/variables";
 @import "config/bootstrap_variables";
 
-// External libraries
-@import "bootstrap-sprockets";
+
+// // External libraries
+// @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
 @import "vendor/index";
 
 // Your CSS
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
-@import "flag-icon";
+
+
+// @import "flag-icon";
+
+
 
