@@ -22,39 +22,66 @@
 
   </div>
 </div>
-<!-- <div class="home-bb-levels-banner-wrapper">
+<div class="home-bb-levels-banner-wrapper">
   <div class="text-center">
-    <h3>STUFF THAT SAYS THERE'S MORE TO READ</h3>
+    <h2>WHAT ARE THE 5 LEVELS ON BEACH BUDDY?</h2>
     <br>
   </div>
   <div class="home-bb-levels-banner-level-box-wrapper">
     <div class="home-bb-levels-banner-level-box">
-      <span class="product-level product-level-beginner">beginner</span>
+      <span class="product-level home-bb-levels-boxshadow product-level-beginner">beginner</span>
       <h4>Rising star</h4>
       <p>You just started to play beach volleyball less then 1 year ago and having a minimum of knowledge and experience. However, you can see the beauty of this sport and can’t wait to hit the ball!</p>
-      <div class="home-bb-levels-banner-level-box">
-        <span class="product-level product-level-hobbyist">hobbyist</span>
-        <h4>The honeymoon phase</h4>
-        <p>You have more than 1 year experience and everything you do comes from a place of passion and excitement, but not at a professional manner. You just can’t wait to get to your beloved ball.</p>
-      </div>
-      <div class="home-bb-levels-banner-level-box">
-        <span class="product-level product-level-trained">trained</span>
-        <h4>Little beach ninja</h4>
-        <p>You have at least 2 years experience and your game steadily improves as you continue to educate yourself on best practices. You have trained some beach volley or indoors volleyball before, so you are comfortable with you skills.</p>
-      </div>
-      <div class="home-bb-levels-banner-level-box">
-        <span class="product-level product-level-semi-pro">semi-pro</span>
-        <h4>Battle-scarred</h4>
-        <p>You participate in the National Tour and train several times a week to improve your beach volleyball skills. You are comfortable with your game, and it is better than the average players. However, you know there is still room for improvement.</p>
-      </div>
-      <div class="home-bb-levels-banner-level-box">
-        <span class="product-level product-level-pro">pro</span>
-        <h4>Google my name bitch</h4>
-        <p>You have more than 5 years of experience of participate in the National Championships and other Open tournaments.</p>
-      </div>
+    </div>
+    <div class="home-bb-levels-banner-level-box">
+      <span class="product-level home-bb-levels-boxshadow product-level-hobbyist">hobbyist</span>
+      <h4>The honeymoon phase</h4>
+      <p>You have more than 1 year experience and everything you do comes from a place of passion and excitement, but not at a professional manner. You just can’t wait to get to your beloved ball.</p>
+    </div>
+    <div class="home-bb-levels-banner-level-box">
+      <span class="product-level home-bb-levels-boxshadow product-level-trained">trained</span>
+      <h4>Little beach ninja</h4>
+      <p>You have at least 2 years experience and your game steadily improves as you continue to educate yourself on best practices. You have trained some beach volley or indoors volleyball before, so you are comfortable with you skills.</p>
+    </div>
+    <div class="home-bb-levels-banner-level-box">
+      <span class="product-level home-bb-levels-boxshadow product-level-semi-pro">semi-pro</span>
+      <h4>Battle-scarred</h4>
+      <p>You participate in the National Tour and train several times a week to improve your beach volleyball skills. You are comfortable with your game, and it is better than the average players. However, you know there is still room for improvement.</p>
+    </div>
+    <div class="home-bb-levels-banner-level-box">
+      <span class="product-level home-bb-levels-boxshadow product-level-pro">pro</span>
+      <h4>Google my name bitch</h4>
+      <p>You have more than 5 years of experience of participate in the National Championships and other Open tournaments.</p>
     </div>
   </div>
-</div> -->
+</div>
+
+<div class="home-bb-hdiw-banner-wrapper">
+    <div class="text-center">
+    <h2>How does it work?</h2>
+    <br>
+  </div>
+  <div class="home-bb-hdiw-banner-level-box-wrapper">
+    <div class="home-bb-hdiw-banner-level-box">
+      <%= link_to new_user_session_path do %>
+        <i class="fa fa-user fa-3x" aria-hidden="true"></i><br>
+      <% end %>
+      <%= link_to new_user_session_path do %>
+        <h4>Create a profile</h4>
+      <% end %>
+    </div>
+    <div class="home-bb-hdiw-banner-level-box">
+      <i class="fa fa-search fa-3x" aria-hidden="true"></i><br>
+      <h4>Search players by level,</h4>
+      <h4>location & gender</h4>
+    </div>
+    <div class="home-bb-hdiw-banner-level-box">
+      <i class="fa fa-envelope fa-3x" aria-hidden="true"></i><br>
+      <h4>Connect!</h4>
+      <h4>Organize trainings/games!</h4>
+    </div>
+  </div>
+</div>
 <%= content_for(:after_js) do %>
   <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=<%= j ENV['GOOGLE_API_BROWSER_KEY'] %>"></script>
 <% end %>

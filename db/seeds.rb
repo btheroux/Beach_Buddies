@@ -641,13 +641,13 @@ user18 = User.new(email:"jake@dudu.com", first_name:"Jake", usual_court_address:
   description: "Team GBR Gregory/Sheaf are a young and ambitious British Beach Volleyball Team. We are on our Olympic qualification journey!", in_outdoors:"mostly outdoor")
 
 user19 = User.new(email:"jess@dudu.com", first_name:"Jess", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
-  last_name:"Grimson", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 5888 6798",
+  last_name:"Grimson", level:"semi-pro", gender:"female", password:"123456", phone_number: "+44 21 5888 6798",
   facebook_page:"https://www.facebook.com/palmergrimson/",
   description: "Team Palmer/Grimson, British No 1. Follow us on our journey to qualify for the Commonwealth Games 2018!
 ", in_outdoors:"mostly outdoor")
 
 user20 = User.new(email:"Vicky@dudu.com", first_name:"Vicky", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
-  last_name:"Palmer", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 7679 9769",
+  last_name:"Palmer", level:"semi-pro", gender:"female", password:"123456", phone_number: "+44 21 7679 9769",
   facebook_page:"https://www.facebook.com/palmergrimson/",
   description: "Team Palmer/Grimson, British No 1. Follow us on our journey to qualify for the Commonwealth Games 2018!
 ", in_outdoors:"mostly outdoor")
