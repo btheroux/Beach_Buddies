@@ -29,7 +29,7 @@ class PlayersController < ApplicationController
       long = geo.first.data["geometry"]["location"]["lng"]
 
       criteria['aroundLatLng'] = "#{lat}, #{long}"
-      criteria['aroundRadius'] = 1_000_000
+      criteria['aroundRadius'] = 100_000
     end
 
     @users = User.search('*', criteria)
