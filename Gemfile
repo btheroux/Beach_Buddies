@@ -14,7 +14,7 @@ gem "algoliasearch-rails"
 gem 'clearbit'
 gem 'gendered'
 
-gem 'flag-icons-rails'
+# gem 'rails-flag-icons'
 gem 'rails', '5.0.3'
 gem 'puma'
 gem 'pg'
@@ -38,6 +38,13 @@ gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 gem 'omniauth-facebook'
 gem 'sweetalert-rails'
+
+group :development do
+  gem 'rack-mini-profiler'
+  gem 'flamegraph'
+  gem 'stackprof' # ruby 2.1+ only
+  gem 'memory_profiler'
+end
 
 group :development, :test do
   gem 'binding_of_caller'
