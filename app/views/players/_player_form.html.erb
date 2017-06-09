@@ -12,7 +12,7 @@
     <%= f.input :gender, collection: ["male", "female"], prompt: "select" %>
   </div>
   <div class="col-xs-12 col-md-3">
-    <%= f.input :level, collection: ["beginner", "hobbyist", "semi-pro", "pro"], prompt: "select a volley ball level" %>
+    <%= f.input :level, collection: ["beginner", "hobbyist", "trained", "semi-pro", "pro"], prompt: "select a volley ball level" %>
   </div>
   <div class="col-xs-12 col-md-3">
     <%= f.input :in_outdoors, label: "Do you play mostly...", collection: ["indoors", "outdoors"], prompt: "Select" %>
@@ -28,7 +28,8 @@
   </div>
   <div class="row">
   <div class="col-xs-12">
-    <%= f.input :description, label: "Description - Beach buddies telling about themselves are 30% more likely to be contacted for a match up!", as: :text %>
+    <%= f.input :description, label: "Description", as: :text %>
+    <p class="bb-alert-second-blue"><em>Beach buddies telling about themselves are 30% more likely to be contacted for a match up!</em></p>
   </div>
   <div class="col-xs-12">
     <%= f.input :photos, label: "Photos - Your beach buddies want to see you in action :)", as: :attachinary %>

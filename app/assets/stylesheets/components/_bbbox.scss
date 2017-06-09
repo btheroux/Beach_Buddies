@@ -53,10 +53,55 @@
   height: 10px;
   width: 50px;
 }
+// CONTACT ACTION ON SHOW PAGE
 .bbbox-contact-details-box-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-style: bolder;
   color: $brand-complementary-color;
+}
+// FILTER ON INDEX PAGE
+.bbbox-filter {
+  box-shadow: 0 0 1px 1px $brand-complementary-color;
+  position: relative;
+  // min-height: 10vh;
+  margin: 10px 0;
+  // z-index: -1;
+}
+.bbbox-filter-title {
+  box-shadow: 0 0 1px 1px $brand-complementary-color;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  background-color: white;
+  padding: 10px 0;
+  font-style: bolder italic capitalize;
+  border-radius: 7px;
+
+}
+.bbbox-filter-content {
+  padding: 10px 10px 10px 30px;
+  // text-align: left;
+  z-index: -1;
+  background-color: $brand-color;
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+  }
+.bbbox-filter-group {
+  // border: red solid 1px;
+  padding: 5px 0;
+}
+.bbbox-filter-location-search {
+  // background-color: red;
+  // color: #666666;
+  // outline: none;
+  // transition: all 0.15s ease;
+  padding: 0 10px;
+  line-height: 40px;
+  font-weight: lighter;
+  border: 2px solid $brand-complementary-color;
+  border-radius: 7px;
+  flex: 0 1 auto;
 }

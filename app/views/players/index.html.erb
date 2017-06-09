@@ -1,6 +1,28 @@
 <div class="container bb-container">
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
+      <div class="bbbox-filter">
+        <form action="/players" class="index-bb-filter" id="players-search-form" data-remote="true" data-type="json">
+          <div class="bbbox-filter-content">
+            <div class="bbbox-filter-group">
+              <h3>Filters</h3>
+            </div>
+
+          <!-- <div class="bbbox-filter-content"> -->
+            <% @available_facets.each do |key, values| %>
+                    <div class="bbbox-filter-group">
+                      <label for="gender" class=""><%= key.upcase %>:</label><br>
+                      <% values.each do |val| %>
+                        <input type="checkbox" name="<%= key %>[]" value="<%= val %>" class=""<%= 'checked' if @facets[key].include?(val) %>> <%= t val %>
+                    <% end %>
+                    </div>
+            <% end %>
+
+            <div class="bbbox-filter-group">
+              <input name="location" type="text" class="bbbox-filter-location-search" id="players-search" value=<%= @location %>>
+            </div>
+          </div>
+          <!-- set value for hidden field - location -->
+        </form>
+      </div>
 
  <!--    form url=players method=get
       hidden location=@location
@@ -8,18 +30,6 @@
       input level=@level
       submit -->
 
-      <form action="/players" class="home-bb-search" id="players-search-form" data-remote="true" data-type="json">
-        <% @available_facets.each do |key, values| %>
-          <label for="gender"><%= key %>:</label>
-          <% values.each do |val| %>
-            <input type="checkbox" name="<%= key %>[]" value="<%= val %>" <%= 'checked' if @facets[key].include?(val) %>> <%= t val %>
-            <br>
-          <% end %>
-        <% end %>
-
-        <input name="location" type="text" class="home-bb-search-input" id="players-search" value=<%= @location %>>
-        <!-- set value for hidden field - location -->
-      </form>
 
       <% if @users.empty? %>
         <h3 class="text-center"><%= "There are #{@users.count} players in #{params[:location]} lease try another search 😃" %></h3>
@@ -103,6 +113,4 @@
           </div> <!-- end of product card -->
         <% end %>
 
-      </div>
-    </div>
-  </div>
+</div>

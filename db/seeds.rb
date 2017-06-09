@@ -564,22 +564,22 @@ user2 = User.new(email:"line@dudu.com", first_name:"Line", usual_court_address:"
   facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts", description: "Team Tyndeskov/Trans, Med det bedste fra Fyn og Jylland danner vi Danmarks nye beachvolley-hold. Vi håber at I vil tage godt imod os og følge os :)", in_outdoors:"mostly outdoor")
 
 user3 = User.new(email:"lærke@dudu.com", first_name:"Lærke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Mygind", level: "pro", gender:"female", password:"123456", phone_number: "43124234",
+  last_name:"Mygind", level: "trained", gender:"female", password:"123456", phone_number: "43124234",
   facebook_page:"https://www.facebook.com/teammygindolsen/?fref=ts", instagram_account:"https://www.instagram.com/teammygindolsen/",
   description: "Vi er Lærke Mygind Grønfeldt og Cecilie Køllner Olsen, og vi er et nyt dansk beachvolley-hold. Velkommen til vores store boldformede verden :)", in_outdoors:"mostly outdoor")
 
 user4 = User.new(email:"cecilie@dudu.com", first_name:"Cecilie", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Olsen", level: "pro", gender:"female", password:"123456", phone_number: "74321897",
+  last_name:"Olsen", level: "trained", gender:"female", password:"123456", phone_number: "74321897",
   facebook_page:"https://www.facebook.com/teammygindolsen/?fref=ts", instagram_account:"https://www.instagram.com/teammygindolsen/",
   description: "Vi er Lærke Mygind Grønfeldt og Cecilie Køllner Olsen, og vi er et nyt dansk beachvolley-hold. Velkommen til vores store boldformede verden :)", in_outdoors:"mostly outdoor")
 
 user5 = User.new(email:"pernille@dudu.com", first_name:"Pernille", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Witt", level:"semi-pro", gender:"female", password:"123456", phone_number: "74324322",
+  last_name:"Witt", level:"trained", gender:"female", password:"123456", phone_number: "74324322",
   facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts",
   description: "Vi er Pernille Witt og Trine Bak, og vi er tossede med beachvolley. Vi gir' den gas i vores første sæson sammen, og her kan du følge os hele vejen!", in_outdoors:"mostly indoor")
 
 user6 = User.new(email:"trine@dudu.com", first_name:"Trine", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
-  last_name:"Bak", level:"semi-pro", gender:"female", password:"123456", phone_number: "78798327",
+  last_name:"Bak", level:"trained", gender:"female", password:"123456", phone_number: "78798327",
   facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts",
   description: "Vi er Pernille Witt og Trine Bak, og vi er tossede med beachvolley. Vi gir' den gas i vores første sæson sammen, og her kan du følge os hele vejen!", in_outdoors:"mostly indoor")
 

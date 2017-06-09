@@ -175,10 +175,19 @@
 .product-level-beginner {
   background-color: $brand-color;
   color: $brand-complementary-color;
+  // background-color: $brand-complementary-color;
+  // color: $brand-color;
 }
 .product-level-hobbyist {
-  background-color: $blue;
+  background-color: $orange;
+  // color: white;
+  // background-color: $brand-color;
+  color: $brand-complementary-color;
+}
+.product-level-trained {
+  background-color: $second-blue;
   color: white;
+  // color:red;
 }
 .product-level-semi-pro {
   background-color: $red;

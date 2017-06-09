@@ -8,7 +8,7 @@
   <div class='productshow-body'>
     <h3>
       <%= @user.first_name %> <%= @user.last_name %>
-      <span class="productshow-level <%= "productshow-level-" + @user.level %>"><%= @user.level %></span>
+      <span class="product-level <%= "product-level-" + @user.level %>"><%= @user.level %></span>
     </h3>
     <% unless @user.city.blank? || @user.country.blank? %>
     <em>from <%= @user.city %>, <%= @user.country %></em>. <br>

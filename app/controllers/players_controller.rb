@@ -8,7 +8,7 @@ class PlayersController < ApplicationController
 
     @available_facets = {
       gender: ["male", "female"],
-      level: ["beginner", "hobbyist", "semi-pro", "pro"]
+      level: ["beginner", "hobbyist", "trained", "semi-pro", "pro"]
     }
 
     gender = params[:gender].to_a
