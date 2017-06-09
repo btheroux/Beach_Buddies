@@ -113,10 +113,12 @@ video {
 .home-bb-levels-banner-level-box-wrapper {
   display: flex;
   justify-content:space-around;
-  align-items:center;
+  align-items:flex-start;
+  // flex-direction: row;
 }
 .home-bb-levels-banner-level-box {
-  display: flex;
-  flex-direction: column;
-  align-items:center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items:center;
+  // padding: 5px;
 }
