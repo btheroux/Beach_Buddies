@@ -22,9 +22,16 @@
 
   </div>
 </div>
-
-<div class="text-center">
-  <h3>STUFF THAT SAYS THERE'S MORE TO READ</h3>
+<div class="home-bb-levels-banner-wrapper">
+  <div class="text-center">
+    <h3>STUFF THAT SAYS THERE'S MORE TO READ</h3>
+  </div>
+  <div class="home-bb-levels-banner-level-box-wrapper">
+    <div class="home-bb-levels-banner-level-box">
+      <span class="product-level product-level-beginner">beginner</span>
+      <p>lorem ipsum</p>
+    </div>
+  </div>
 </div>
 <%= content_for(:after_js) do %>
   <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=<%= j ENV['GOOGLE_API_BROWSER_KEY'] %>"></script>
