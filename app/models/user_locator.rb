@@ -39,8 +39,6 @@ class UserLocator
         hash["types"].include?("postal_town")||hash["types"].include?("locality")
       end
 
-      binding.pry unless city_hash[0]
-
       result.city = city_hash[0]["long_name"]
 
 

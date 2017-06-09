@@ -90,13 +90,15 @@
   end
 
   def fetch_location
-
-    location = UserLocator.new self.usual_court_address, self.email
-    self.usual_court_address = location.usual_court_address
-    self.latitude = location.latitude
-    self.longitude = location.longitude
-    self.country = location.country
-    self.city = location.city
+    begin
+      location = UserLocator.new self.usual_court_address, self.email
+      self.usual_court_address = location.usual_court_address
+      self.latitude = location.latitude
+      self.longitude = location.longitude
+      self.country = location.country
+      self.city = location.city
+    rescue Exception
+    end
 
   end
 

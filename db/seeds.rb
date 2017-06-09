@@ -554,103 +554,129 @@ country97.federations << federation97
 federation97.save
 
 
-user1 = User.new(email:"maria@dudu.com", first_name:"Maria", usual_court_address:"Vesterengvej 26A, 8200 Aarhus N",
+user1 = User.create(email:"maria@dudu.com", first_name:"Maria", usual_court_address:"Vesterengvej 26A, 8200 Aarhus N",
   last_name:"Tyndeskov", level:"pro", gender:"female", password:"123456", phone_number: "93677687",
   facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts",
   description: "Team Tyndeskov/Trans, Med det bedste fra Fyn og Jylland danner vi Danmarks nye beachvolley-hold. Vi håber at I vil tage godt imod os og følge os :)", in_outdoors: "mostly outdoor")
 
-user2 = User.new(email:"line@dudu.com", first_name:"Line", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
+user2 = User.create(email:"line@dudu.com", first_name:"Line", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
   last_name:"Trans", level:"pro", gender:"female", password:"123456", phone_number: "21342342",
   facebook_page:"https://www.facebook.com/teamtyndeskovtrans/?fref=ts", description: "Team Tyndeskov/Trans, Med det bedste fra Fyn og Jylland danner vi Danmarks nye beachvolley-hold. Vi håber at I vil tage godt imod os og følge os :)", in_outdoors:"mostly outdoor")
 
-user3 = User.new(email:"lærke@dudu.com", first_name:"Lærke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
+user3 = User.create(email:"lærke@dudu.com", first_name:"Lærke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Mygind", level: "trained", gender:"female", password:"123456", phone_number: "43124234",
   facebook_page:"https://www.facebook.com/teammygindolsen/?fref=ts", instagram_account:"https://www.instagram.com/teammygindolsen/",
   description: "Vi er Lærke Mygind Grønfeldt og Cecilie Køllner Olsen, og vi er et nyt dansk beachvolley-hold. Velkommen til vores store boldformede verden :)", in_outdoors:"mostly outdoor")
 
-user4 = User.new(email:"cecilie@dudu.com", first_name:"Cecilie", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
+user4 = User.create(email:"cecilie@dudu.com", first_name:"Cecilie", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Olsen", level: "trained", gender:"female", password:"123456", phone_number: "74321897",
   facebook_page:"https://www.facebook.com/teammygindolsen/?fref=ts", instagram_account:"https://www.instagram.com/teammygindolsen/",
   description: "Vi er Lærke Mygind Grønfeldt og Cecilie Køllner Olsen, og vi er et nyt dansk beachvolley-hold. Velkommen til vores store boldformede verden :)", in_outdoors:"mostly outdoor")
 
-user5 = User.new(email:"pernille@dudu.com", first_name:"Pernille", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
+user5 = User.create(email:"pernille@dudu.com", first_name:"Pernille", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Witt", level:"trained", gender:"female", password:"123456", phone_number: "74324322",
   facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts",
   description: "Vi er Pernille Witt og Trine Bak, og vi er tossede med beachvolley. Vi gir' den gas i vores første sæson sammen, og her kan du følge os hele vejen!", in_outdoors:"mostly indoor")
 
-user6 = User.new(email:"trine@dudu.com", first_name:"Trine", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
+user6 = User.create(email:"trine@dudu.com", first_name:"Trine", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Bak", level:"trained", gender:"female", password:"123456", phone_number: "78798327",
   facebook_page:"https://www.facebook.com/TeamBakWitt/?fref=ts",
   description: "Vi er Pernille Witt og Trine Bak, og vi er tossede med beachvolley. Vi gir' den gas i vores første sæson sammen, og her kan du følge os hele vejen!", in_outdoors:"mostly indoor")
 
-user7 = User.new(email:"sara@dudu.com", first_name:"Sara", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
+user7 = User.create(email:"sara@dudu.com", first_name:"Sara", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Stief", level:"pro", gender:"female", password:"123456", phone_number: "70843270",
   facebook_page:"https://www.facebook.com/TeamStiefSchade/?fref=ts", instagram_account:"https://www.instagram.com/team_stiefschade/",
   description: "Vi er Sara Stief og Frederikke Schade Jensen. Vi er det danske U22 landshold i beachvolley. Her kan I følge vores udvikling.
 Håber vi ses i sandet!", in_outdoors:"mostly outdoor")
 
-user8 = User.new(email:"frederikke@dudu.com", first_name:"Frederikke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
+user8 = User.create(email:"frederikke@dudu.com", first_name:"Frederikke", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Schade Jensen", level:"pro", gender:"female", password:"123456", phone_number: "70213423",
   facebook_page:"https://www.facebook.com/TeamStiefSchade/?fref=ts", instagram_account:"https://www.instagram.com/team_stiefschade/",
   description: "Vi er Sara Stief og Frederikke Schade Jensen. Vi er det danske U22 landshold i beachvolley. Her kan I følge vores udvikling.
 Håber vi ses i sandet!", in_outdoors:"mostly outdoor")
 
-user9 = User.new(email:"jesper@dudu.com", first_name:"Jesper", usual_court_address:"Ny Kærvej 2A, 9000 Aalborg",
+user9 = User.create(email:"jesper@dudu.com", first_name:"Jesper", usual_court_address:"Ny Kærvej 2A, 9000 Aalborg",
   last_name:"Skovmark", level:"semi-pro", gender:"male", password:"123456", phone_number: "76623422",
   facebook_page:"https://www.facebook.com/jorgensenskovmark/?fref=ts", instagram_account:"www.instagram.com/jorgensenskovmark",
   description: "Vi har erobret Nordjylland i de senere år, nu venter resten af Danish Beachvolley Tour.", in_outdoors:"mostly indoor")
 
-user10 = User.new(email:"patrick@dudu.com", first_name:"Patrick", usual_court_address:"Ny Kærvej 2A, 9000 Aalborg",
+user10 = User.create(email:"patrick@dudu.com", first_name:"Patrick", usual_court_address:"Ny Kærvej 2A, 9000 Aalborg",
   last_name:"Jørgensen", level:"semi-pro", gender:"male", password:"123456", phone_number: "69764769",
   facebook_page:"https://www.facebook.com/jorgensenskovmark/?fref=ts", instagram_account:"www.instagram.com/jorgensenskovmark",
   description: "Vi har erobret Nordjylland i de senere år, nu venter resten af Danish Beachvolley Tour.", in_outdoors:"mostly indoor")
 
-user11 = User.new(email:"daniel@dudu.com", first_name:"Daniel", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
+user11 = User.create(email:"daniel@dudu.com", first_name:"Daniel", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
   last_name:"Jonassen", level:"pro", gender:"male", password:"123456", phone_number: "42398726",
   facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts",
   description: "Vi er et af de danske herrehold, der kommer fra Odense. I kan både se os på de danske strande samt rundt i Europa.", in_outdoors:"mostly outdoor")
 
-user12 = User.new(email:"morten@dudu.com", first_name:"Morten", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
+user12 = User.create(email:"morten@dudu.com", first_name:"Morten", usual_court_address:"Klokkestøbervej 3, 5230 Odense M",
   last_name:"Overgaard", level:"pro", gender:"male", password:"123456", phone_number: "72479822",
   facebook_page:"https://www.facebook.com/Danish-Beachvolley-Team-JonassenOvergaard-705791512926994/?fref=ts",
   description: "Vi er et af de danske herrehold, der kommer fra Odense. I kan både se os på de danske strande samt rundt i Europa. ", in_outdoors:"mostly outdoor")
 
-user13 = User.new(email:"danielt@dudu.com", first_name:"Daniel", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
+user13 = User.create(email:"danielt@dudu.com", first_name:"Daniel", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Thomsen", level:"pro", gender:"male", password:"123456", phone_number: "62736423",
   facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story",
   description: "Thomsen-Abell", in_outdoors:"mostly outdoor")
 
-user14 = User.new(email:"kristoffer@dudu.com", first_name:"Kristoffer", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
+user14 = User.create(email:"kristoffer@dudu.com", first_name:"Kristoffer", usual_court_address:"Lyngbyvej 110, 2100 København Ø",
   last_name:"Abell", level:"pro", gender:"male", password:"123456", phone_number: "82723413",
   facebook_page:"https://www.facebook.com/Thomsen-Abell-925888507514042/?pnref=story",
   description: "Thomsen-Abell", in_outdoors:"mostly outdoor")
 
-user15 = User.new(email:"livia@dudu.com", first_name:"Livia", usual_court_address: "Lyngbyvej 110, 2100 København Ø",
+user15 = User.create(email:"lvlv@citromail.hu", first_name:"Livia", usual_court_address: "Ryparken, 2100 København Ø",
   last_name:"Sebök", level:"semi-pro", gender:"female", password:"123456", phone_number: "70843217",
   facebook_page:"https://www.facebook.com/sebok.livia",
   description: "I have starting playing volleyball 12 years ago. I won medals at the National Children and Junior Volleyball Championship in Hungary then I continued playing at the 1. division in the Danish Championship. I started out beach volleyball 4 years ago and I have been competing at the Danish Beachvolley Tour.  Since August I have stopped playing indoors volleyball and training at the sand at 2-3 times a week.  Currently I am ranked as the 34. player at the official Danish ranglist. I am interested in playing challenging international games! Feel free to contact me!", in_outdoors:"mostly outdoor")
 
-user17 = User.new(email:"chris@dudu.com", first_name:"Chris", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+user16 = User.create(email:"atmosfeer@dudu.com", first_name:"Nick", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Feer", level:"pro", gender:"male", password:"123456", phone_number: "+44 20 8879 0611",
+  description: " Code and beach ninja!! ")
+
+user17 = User.create(email:"chris@dudu.com", first_name:"Chris", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Gregory", level:"pro", gender:"male", password:"123456", phone_number: "+44 20 8879 0611",
   facebook_page:"https://www.facebook.com/GregorySheaf/",
   description: "Team GBR Gregory/Sheaf are a young and ambitious British Beach Volleyball Team. We are on our Olympic qualification journey!", in_outdoors:"mostly outdoor")
 
-user18 = User.new(email:"jake@dudu.com", first_name:"Jake", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+user18 = User.create(email:"jake@dudu.com", first_name:"Jake", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
   last_name:"Sheaf", level:"pro", gender:"male", password:"123456", phone_number: "+44 21 9979 2353",
   facebook_page:"https://www.facebook.com/GregorySheaf/",
   description: "Team GBR Gregory/Sheaf are a young and ambitious British Beach Volleyball Team. We are on our Olympic qualification journey!", in_outdoors:"mostly outdoor")
 
-user19 = User.new(email:"jess@dudu.com", first_name:"Jess", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
-  last_name:"Grimson", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 5888 6798",
+user19 = User.create(email:"jess@dudu.com", first_name:"Jess", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Grimson", level:"semi-pro", gender:"female", password:"123456", phone_number: "+44 21 5888 6798",
   facebook_page:"https://www.facebook.com/palmergrimson/",
-  description: "Team Palmer/Grimson, British No 1. Follow us on our journey to qualify for the Commonwealth Games 2018!
+  description: "Team Palmer/Grimson! I am looking to compete on the UK Tour in 2017. I am regular competitor at the National tour and participated at some NEVZA and CEV beach events too. Along with my partner Vicky, I also train and play Indoor Volleyball for Wessex in the Super 8's. But we’re moving the focus to qualification for Commonwealth Games in 2018.", in_outdoors:"mostly outdoor")
+
+user20 = User.create(email:"vicky@gmail.com", first_name:"Vicky", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Palmer", level:"semi-pro", gender:"female", password:"123456", phone_number: "+44 21 7679 9769",
+  facebook_page:"https://www.facebook.com/palmergrimson/",
+  description: "Team Palmer/Grimson! I am looking to compete on the UK Tour in 2017. I am regular competitor at the National tour and participated at some NEVZA and CEV beach events too. Along with my partner Vicky, I also train and play Indoor Volleyball for Wessex in the Super 8's. But we’re moving the focus to qualification for Commonwealth Games in 2018.
 ", in_outdoors:"mostly outdoor")
 
-user20 = User.new(email:"Vicky@dudu.com", first_name:"Vicky", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
-  last_name:"Palmer", level:"pro", gender:"female", password:"123456", phone_number: "+44 21 7679 9769",
-  facebook_page:"https://www.facebook.com/palmergrimson/",
-  description: "Team Palmer/Grimson, British No 1. Follow us on our journey to qualify for the Commonwealth Games 2018!
+user21 = User.create(email:"ellie@dudu.com", first_name:"Ellie", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Austin", level:"trained", gender:"female", password:"123456", phone_number: "+44 21 7679 9768",
+  description: "GB Under 19 Beach Volleyball Champion, England Indoor International and part of the England Junior | Girls Beach Volleyball Squad | “
 ", in_outdoors:"mostly outdoor")
+
+user22 = User.create(email:"megan@dudu.com", first_name:"Megan", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Namara", level:"semi-pro", gender:"female", password:"123456", phone_number: "+44 21 7679 9768",
+  facebook_page:"https://www.facebook.com/MeganandNicoleMcNamara/",
+  description: " We are 17 years old and are from GB. We have played beach volleyball for 5 years and have competed nationally in the UK.",
+  in_outdoors:"mostly outdoor")
+
+user23 = User.create(email:"Nicole@dudu.com", first_name:"Nicole", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Namara", level:"semi-pro", gender:"female", password:"123456", phone_number: "+44 21 7679 9768",
+  facebook_page:"https://www.facebook.com/MeganandNicoleMcNamara/",
+  description: "We are 17 years old and are from GB. We have played beach volleyball for 5 years and have competed nationally in the UK.",
+  in_outdoors:"mostly outdoor")
+
+user24 = User.create(email:"oren@dudu.com", first_name:"Oren", usual_court_address: "Wimbledon Park Beach Volleyball, 131 Melrose Ave, Wimbledon, London SW19 8AU, UK",
+  last_name:"Arbel", level:"Hobbyiest", gender:"male", password:"123456", phone_number: "+44 21 7679 9768",
+  description: " Love to spend my time in the sand. I am going on a holiday soon to Spain, would be nice to meet some players there.",
+  in_outdoors:"mostly outdoor")
+
 
 
 team1 = Team.new(name:"Teamtyndeskovtrans")
@@ -693,10 +719,15 @@ team8.users << user17
 team8.users << user18
 team8.save
 
-team9 = Team.new(name:"palmergrimson")
+team9 = Team.new(name:"Palmer-Grimson")
 team9.users << user19
 team9.users << user20
 team9.save
+
+team10 = Team.new(name:"Megan & Nicole Namara")
+team10.users << user22
+team10.users << user23
+team10.save
 
 
 ranking1 = Ranking.new(score:4)
@@ -801,18 +832,35 @@ ranking18.user = user18
 ranking18.date = Date.today-rand(1..1095)
 ranking18.save
 
-ranking19 = Ranking.new(score:1)
+ranking19 = Ranking.new(score:10)
 ranking19.federation = federation14
 ranking19.user = user19
 ranking19.date = Date.today-rand(1..1095)
 ranking19.save
 
-ranking20 = Ranking.new(score:2)
+ranking20 = Ranking.new(score:15)
 ranking20.federation = federation14
 ranking20.user = user20
 ranking20.date = Date.today-rand(1..1095)
 ranking20.save
 
+ranking21 = Ranking.new(score:2)
+ranking21.federation = federation14
+ranking21.user = user21
+ranking21.date = Date.today-rand(1..1095)
+ranking21.save
+
+ranking22 = Ranking.new(score:2)
+ranking22.federation = federation14
+ranking22.user = user22
+ranking22.date = Date.today-rand(1..1095)
+ranking22.save
+
+ranking23 = Ranking.new(score:2)
+ranking23.federation = federation14
+ranking23.user = user23
+ranking23.date = Date.today-rand(1..1095)
+ranking23.save
 
 result1 = Result.new(game_name:"Ishøj Challenger", game_type:"competitive",
   description: "3. plads til Ishøj Challenger.. Masser af stærk vind, sol og tætte kampe", achievement:"1st. place at elite level", date:"03.06.2017")
@@ -904,13 +952,13 @@ result18 = Result.new(game_name:"NORTHERN EUROPEISK CHAMPIONSHIP", game_type:"co
 result18.user = user18
 result18.save
 
-result19 = Result.new(game_name:"Wold Beach Vollyball Tour, NSW, Australia", game_type:"competitive",
-  description: "As we come to our last night in Australia we are left feeling extremely frustrated and disappointed with our performance yesterday and the opportunity missed. Even after a solid week of training the occasion got the better of us. Despite this, we took the chance we had today to build from yesterday and scrimmaged against Sweden and Canada. Flash floods and extreme winds didn't stop us from making the most of our final day. We come home tomorrow and will have a day to recover and then back to it! Gym, work, train, repeat!", achievement:"4th. place at elite level", date:"14.08.2016")
+result19 = Result.new(game_name:"UK Beach Vollyball Tour", game_type:"competitive",
+  description: " We have had an unbelievably exciting day at Bournemouth 7s and finished at 4st place!! ", achievement:"4th. place at elite level", date:"14.08.2016")
 result19.user = user19
 result19.save
 
-result20 = Result.new(game_name:"Wold Beach Vollyball Tour, NSW, Australia", game_type:"competitive",
-  description: "As we come to our last night in Australia we are left feeling extremely frustrated and disappointed with our performance yesterday and the opportunity missed. Even after a solid week of training the occasion got the better of us. Despite this, we took the chance we had today to build from yesterday and scrimmaged against Sweden and Canada. Flash floods and extreme winds didn't stop us from making the most of our final day. We come home tomorrow and will have a day to recover and then back to it! Gym, work, train, repeat!", achievement:"4th. place at elite level", date:"14.08.2016")
+result20 = Result.new(game_name:"UK Beach Vollyball Tour", game_type:"competitive",
+  description: " We have had an unbelievably exciting day at Bournemouth 7s and finished at 4st place!!", achievement:"4th. place at elite level", date:"14.08.2016")
 result20.user = user20
 result20.save
 
@@ -1011,6 +1059,9 @@ user14.photo_urls = [url14]
 url15 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496827657/Livia_sydnws.jpg"
 user15.photo_urls = [url15]
 
+url16 = "http://res.cloudinary.com/duubesaxh/image/upload/v1497014306/nick_skla5i.jpg"
+user16.photo_urls = [url16]
+
 url17 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664068/jake_jmpxsb.jpg"
 user17.photo_urls = [url17]
 
@@ -1023,5 +1074,16 @@ user19.photo_urls = [url19]
 url20 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496664087/victoriaPalmer_x1g8b2.jpg"
 user20.photo_urls = [url20]
 
+url21 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496995162/ellie_meyplb.jpg"
+user21.photo_urls = [url21]
+
+url22 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496995162/namarasisters_igjjkv.jpg"
+user22.photo_urls = [url22]
+
+url23 = "http://res.cloudinary.com/duubesaxh/image/upload/v1496995162/namarasisters_igjjkv.jpg"
+user23.photo_urls = [url23]
+
+url24 = "http://res.cloudinary.com/duubesaxh/image/upload/v1497001648/oren_bgts2n.jpg"
+user24.photo_urls = [url24]
 
 puts "Seed finished"
